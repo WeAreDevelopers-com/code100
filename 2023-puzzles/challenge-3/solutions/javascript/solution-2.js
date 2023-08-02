@@ -1,25 +1,23 @@
 const puzzle = require('../../puzzle.json');
 const result = require('../../result.json');
-let out = [];
+
+let all = [];
+let entries = puzzle["linkedList"];
+let top = puzzle["top"];
 
 const isSolutionCorrect = () => {
-    return JSON.stringify(out) === JSON.stringify(result);
+    return JSON.stringify(all) === JSON.stringify(result);
 };
 
-const getEntry = (id) => {
-    puzzle["linkedList"].forEach(entry => {
-        if (entry.id === id) {
-            out.push(entry.value);
-            if (entry.next !== null) {
-                getEntry(entry.next);
-            } else {
-                console.log(out);
-                console.log('Is solution correct?', isSolutionCorrect());
-            }
-        }
-    })
+const get = (id) => {
+    all.push(id.value);
+    if (id.next !== null) {
+        get(entries.find(entry => entry.id === id.next))
+    } else {
+        console.log(all);
+        console.log('Is solution correct?', isSolutionCorrect());
+    }
 }
 
-getEntry(puzzle.top);
-
+get(entries.find(entry => entry.id === top))
 
