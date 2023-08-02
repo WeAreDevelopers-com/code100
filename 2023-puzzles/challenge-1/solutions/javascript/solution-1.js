@@ -1,14 +1,15 @@
 const puzzle = require('../../puzzle.json');
 const result = require('../../result.json');
 
-console.log(puzzle)
-
-let solution = 0;
-puzzle.split(/\D/).forEach(v => { solution += +v} );
+const solve = input =>
+    input.split(/\D/).reduce((acc, curr) => {
+        if (curr === '') return acc;
+        else return acc + parseInt(curr);
+    }, 0);
 
 const isSolutionCorrect = () => {
     return JSON.stringify(solution) === JSON.stringify(result);
 };
 
-console.log(solution);
+console.log(solve(puzzle));
 console.log('Is solution correct?', isSolutionCorrect());
