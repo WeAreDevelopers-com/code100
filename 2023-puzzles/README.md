@@ -15,8 +15,8 @@ The puzzle is a string containing any amount of characters which can be either a
 **The solution you should submit is the sum of these numbers.**
 
 ### Actual puzzles using in the competition
-- [Coding puzzle 🧩](challenge1/puzzle.json)
-- [Solution ✨](challenge1/solution.json)
+- [Coding puzzle (input) 🧩](challenge1/puzzle.json)
+- [Result (output) ✨](challenge1/result.json)
 
 ## 2️⃣ Challenge 2 (from round 4 of the competition)
 You will receive an array of strings.
@@ -34,8 +34,8 @@ Submit that array of strings, sorted from A-Z, but only supply the words that ar
 [ "lemon", "melon" ]
 ```
 ### Actual puzzles using in the competition
-- [Coding puzzle 🧩](challenge2/puzzle.json)
-- [Solution ✨](challenge2/solution.json)
+- [Coding puzzle (input) 🧩](challenge2/puzzle.json)
+- [Result (output) ✨](challenge2/result.json)
 
 
 ## 3️⃣ Challenge 3 (from round 5 of the competition)
@@ -66,5 +66,5 @@ Submit as solution an array of the values in the order that they appear in the l
 ```
 
 ### Actual puzzles using in the competition
-- [Coding puzzle 🧩](challenge3/puzzle.json)
-- [Solution ✨](challenge3/solution.json)
+- [Coding puzzle (input) 🧩](challenge3/puzzle.json)
+- [Result (output) ✨](challenge3/result.json)
