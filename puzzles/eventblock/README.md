@@ -4,7 +4,7 @@ The challenge here is to turn [this JSON object](events.json):
 
 ```JSON
 {
-    "columns": 64,
+    "columns": 80,
     "padChar": "·",
     "events": [
         { "name": "Code 100", "location": "Zagreb, Croatia", "date": "29.11.2023" },
@@ -26,6 +26,6 @@ Into a block like this:
 ································································
 ```
 
-The rules are that the location needs to be centered in the block, the name on the left and the date on the right. Each need to have spaces surrounding them. 
+The rules are that the location needs to be centered in the 80 columns wide block, the name on the left and the date on the right. Each need to have spaces surrounding them. (and no, this demo isn't the right amount of chars).
 
 Happy coding! 
