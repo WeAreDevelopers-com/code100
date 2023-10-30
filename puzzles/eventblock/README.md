@@ -29,3 +29,5 @@ Into a block like this:
 The rules are that the location needs to be centered in the 80 columns wide block, the name on the left and the date on the right. Each need to have spaces surrounding them. (and no, this demo isn't the right amount of chars).
 
 Happy coding! 
+
+You can submit your comments, explain and link to your solutions [in this gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e). 
