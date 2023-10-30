@@ -23,10 +23,10 @@ const draweventbox = (data) => {
         let location = padBoth(ev.location);
         let date = padBoth(ev.date);
         // calculate padding for centered locations
-        let pad = (columns - location.length) / 2 - 1;
+        let pad = (columns - location.length) / 2 ;
         // round and floor them to avoid half characters
-        let padLeft = padChar.repeat(Math.floor(pad) - event.length);
-        let padRight = padChar.repeat(Math.round(pad) - date.length);
+        let padLeft = padChar.repeat(Math.floor(pad) - (event.length + 1));
+        let padRight = padChar.repeat(Math.round(pad) - (date.length + 1));
         // write line 
         console.log(padChar + event + padLeft + location + padRight + date + padChar);
     })

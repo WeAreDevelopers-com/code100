@@ -30,7 +30,7 @@ The rules are that the location needs to be centered in the 80 columns wide bloc
 
 ## Solution
 
-We got quite a few submissions for solutions and you can see them in the comments on the [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e), but here is ours using JavaScript. 
+We got quite a few submissions for solutions and you can see them in the comments on the [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e), but [here is ours](https://github.com/WeAreDevelopers-com/code100/blob/main/puzzles/eventblock/solutions/javascript/solution-1.js) using JavaScript. 
 
 The first step is to load the data and call the function to write the block. This can be done in JavaScript with a `fetch` statement:
 
@@ -77,16 +77,16 @@ Drawing the upper and lower lines can be done by printing a line break followed 
 We then loop over all the events and add spaces around all the different properties.
 
 ```Javascript
-        let pad = (columns - location.length) / 2 - 1;
-        let padLeft = padChar.repeat(Math.floor(pad) - event.length);
-        let padRight = padChar.repeat(Math.round(pad) - date.length);
+        let pad = (columns - location.length) / 2;
+        let padLeft = padChar.repeat(Math.floor(pad) - (event.length + 1));
+        let padRight = padChar.repeat(Math.round(pad) - (date.length + 1));
 ```
 
-Now comes the part where the devil is in the details. First we need to center the location data in the block. We do this by subtractings its length from the amount of columns and divide it by two. However, we also need to subtract another 1 as there is a dot on the left of the event name and the right of the date, making the box complete. 
-
-We then calculate the amount of padding chars on the left by subtracting the length of the event from the earlier padding and the amount on the right by subtractung the length of the date. 
+Now comes the part where the devil is in the details. First we need to center the location data in the block. We do this by subtractings its length from the amount of columns and divide it by two. 
 
 As the location could be not an even amount of chars and we can't use `String.repeat()` with non Integers, we use `Math.floor()` and `Math.round()` to make sure our function works even with those locations.
+
+We then calculate the amount of padding chars on the left by subtracting the length of the event from the earlier padding and the amount on the right by subtractung the length of the date. However, we also need to subtract another 1 as there is a dot on the left of the event name and the right of the date, making the box complete. 
 
 ```Javascript
         console.log(padChar + event + padLeft + location + padRight + date + padChar);
