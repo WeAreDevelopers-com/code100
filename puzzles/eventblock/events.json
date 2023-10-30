@@ -1,5 +1,5 @@
 {
-    "columns": 64,
+    "columns": 80,
     "padChar": "·",
     "events": [
         { "name": "Code 100", "location": "Zagreb, Croatia", "date": "29.11.2023" },
