@@ -4,3 +4,6 @@ This repository stores challenges, examples and demos from the [CODE100](https:/
 
 We also welcome you to comment and submit your owm pull requests, showing how you would have solved the challenges.
 
+Puzzles so far:
+
+* [Event Block](eventblock/)
