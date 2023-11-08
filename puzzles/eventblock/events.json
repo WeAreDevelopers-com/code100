@@ -2,7 +2,7 @@
     "columns": 80,
     "padChar": "·",
     "events": [
-        { "name": "Code 100", "location": "Zagreb, Croatia", "date": "29.11.2023" },
+        { "name": "CODE100", "location": "Zagreb, Croatia", "date": "29.11.2023" },
         { "name": "LIVE", "date": "ongoing" },
         { "name": "Coffee With Developers", "location": "various", "date": "ongoing"} ,
         { "name": "World Congress","location": "Berlin, Germany", "date":"17-19.07.2024" }
