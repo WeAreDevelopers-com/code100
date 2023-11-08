@@ -1,6 +1,6 @@
 # Puzzle: Developer DNA
 
-Welcome to another [Code 100](https://code100.dev) puzzle. The challenge is to [take this JSON dataset](dnadata.json):
+Welcome to another [CODE100](https://code100.dev) puzzle. The challenge is to [take this JSON dataset](dnadata.json):
 
 ```JSON
 {
