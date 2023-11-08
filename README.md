@@ -6,4 +6,5 @@ We also welcome you to comment and submit your owm pull requests, showing how yo
 
 Puzzles so far:
 
-* [Event Block](eventblock/)
+* [Event Block](https://github.com/WeAreDevelopers-com/code100/tree/main/puzzles/eventblock)
+* [Developer DNA](https://github.com/WeAreDevelopers-com/code100/tree/main/puzzles/developer-dna)
