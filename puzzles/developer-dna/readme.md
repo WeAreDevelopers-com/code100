@@ -41,7 +41,7 @@ And turn into this construct:
 Some hints: 
 
 * The `cols` property is the overall amount of chars on each line and the DNA sequence should be centered in it.
-* At its peak, this wave has 15 characters between the different emoji
+* At its peak, this wave has 14 characters between the different emoji
 
 Did you find a good solution? Create a pull request or comment [on the Developer DNA gist](https://gist.github.com/codepo8/31b9ad820c03916941c294c404831829).
 
