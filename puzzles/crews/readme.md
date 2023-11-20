@@ -17,30 +17,3 @@ The structure of the file is the following (this is an excerpt):
     { "name": "Simon Tam", "ship": "Serenity", "job": "Doctor", "age": 28 }
 ]
 ```
-
-# Challenge 1: 
-
-Show a list of all the ships in the dataset (no duplicates) and the number of people on each ship. 
-
-For the demo sample above here, this would be: 
-
-```
-Planet Express Ship 2
-Millennium Falcon 1
-Heart of Gold 1
-USS Enterprise NCC-1701 1
-Serenity 2
-```
-
-# Challenge 2: 
-
-Show a list of the jobs of all the crew members over 25 years old. No duplicates and in alphabetical order.
-
-For the demo sample above here, this would be: 
-
-```
-Doctor, Paranoid Android
-```
-
-Good luck! 
-```z    
