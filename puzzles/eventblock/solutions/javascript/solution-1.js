@@ -15,6 +15,7 @@ const padBoth = (prop) => {
 const draweventbox = (data) => {
     // grab data from dataset
     let {columns, padChar, events} = data;
+    columns = 64;
     // draw upper bar
     console.log('\n' + padChar.repeat(columns));
     events.forEach(ev => {
