@@ -1,6 +1,6 @@
 # Packed snowflake
 
-Welcome to another CODE100 puzzle. This time your task, should you want to take it on, is to create an ASCII art snowflake. Here is the data you can use to do so:
+Welcome to another CODE100 puzzle. This time your task, should you want to take it on, is to create an [ASCII art snowflake](https://wearedevelopers-com.github.io/code100/puzzles/packedsnowflake/result.txt) from [this dataset](https://wearedevelopers-com.github.io/code100/puzzles/packedsnowflake/data.json):
 
 ```JSON
 [
@@ -15,7 +15,8 @@ Welcome to another CODE100 puzzle. This time your task, should you want to take 
 ]
 ```
 
-The result should look like this:
+The [result](https://wearedevelopers-com.github.io/code100/puzzles/packedsnowflake/result.txt) should look like this:
+
 
 ```
    .      .
