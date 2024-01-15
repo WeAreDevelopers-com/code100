@@ -11,7 +11,7 @@ Get the full dataset of a crew manifest of various ficticious spacecraft from th
 
 The structure of the file is the following (this is an excerpt):
 
-```JSON
+```json
 [
     { "name": "Philip J. Fry", "ship": "Planet Express Ship", "job": "Delivery Boy", "age": 25 },
     { "name": "Luke Skywalker", "ship": "Millennium Falcon", "job": "Jedi", "age": -1 },
@@ -22,8 +22,6 @@ The structure of the file is the following (this is an excerpt):
     { "name": "Simon Tam", "ship": "Serenity", "job": "Doctor", "age": 28 }
 ]
 ```
-
-# Challenge 2: 
 
 Show a list of the jobs of all the crew members over 25 years old. No duplicates and in alphabetical order.
 
