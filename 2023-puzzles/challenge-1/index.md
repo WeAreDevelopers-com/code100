@@ -25,19 +25,17 @@ world20congresss23
 - [Coding puzzle (input)](puzzle.json)
 - [Result (output)](result.json)
 
-<details>
 
-<summary>Explanation</summary>
+
+## Explanation
+<!-- details -->
+<!-- summary -->
 
 The trick here is go through the string character by character and see what is a number or not. 
 When you encounter a number, add them up until you get to the next non-number character. 
 Once you're at the end, sum up all the numbers.
 
-</details>
-
-<details>
-
-<summary>Code solutions</summary>
+## Code solutions
 
 We had quite a few submissions here, and the shortest one uses Regular Expressions for this.
 

@@ -1,0 +1,10 @@
+{% capture newline %}
+{% endcapture %}
+{% capture summary %}<!-- summary -->{% endcapture%}
+{% capture details %}<!-- details -->{% endcapture%}
+
+{% assign newhtml = include.html |
+  replace: summary, '<summary>Moo</summary>' |
+  replace: details, '<details>Eh</details>'
+%}
+{{ newhtml }}
