@@ -102,8 +102,6 @@ p, li {
   text-align: right;
 }
 .back a {
-  display: inline-block;
-  text-align: right;
   background: var(--link);
   color: var(--background);
   padding: .2em .5em;
