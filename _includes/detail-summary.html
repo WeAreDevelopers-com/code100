@@ -2,9 +2,13 @@
 {% endcapture %}
 {% capture summary %}<!-- summary -->{% endcapture%}
 {% capture details %}<!-- details -->{% endcapture%}
+{% capture endsummary %}<!-- endsummary -->{% endcapture%}
+{% capture enddetails %}<!-- enddetails -->{% endcapture%}
 
 {% assign newhtml = include.html |
-  replace: summary, '<summary>Moo</summary>' |
-  replace: details, '<details>Eh</details>'
+  replace: summary, '<summary>' |
+  replace: endsummary, '</summary>' |
+  replace: details, '<details>' |
+  replace: enddetails, '</details>'
 %}
 {{ newhtml }}

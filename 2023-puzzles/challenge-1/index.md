@@ -27,15 +27,23 @@ world20congresss23
 
 
 
-## Explanation
-<!-- details -->
 <!-- summary -->
+## Explanation
+<!-- endsummary -->
+
+<!-- details -->
 
 The trick here is go through the string character by character and see what is a number or not. 
 When you encounter a number, add them up until you get to the next non-number character. 
 Once you're at the end, sum up all the numbers.
 
+<!-- enddetails -->
+
+<!-- summary -->
 ## Code solutions
+<!-- endsummary -->
+
+<!-- details -->
 
 We had quite a few submissions here, and the shortest one uses Regular Expressions for this.
 
@@ -59,4 +67,4 @@ Other submissions:
 * [A looping JavaScript solution not using RegEx](solutions/javascript/solution-3.js)
 * [A JavaScript solution using reduce()](solutions/javascript/solution-1.js)
 
-</details>
+<!-- enddetails -->
