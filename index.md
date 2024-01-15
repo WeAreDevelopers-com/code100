@@ -1,6 +1,6 @@
 ---
 title: CODE100 - the puzzles
-layout: index
+layout: default
 ---
 
 # CODE100 Puzzles
