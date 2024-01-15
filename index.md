@@ -24,3 +24,4 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 * [Developer DNA](/puzzles/developer-dna/)
 * [Event Block](/puzzles/eventblock/)
 * [Old School Types](/puzzles/oldschooltypes/)
+* [Happy new year](/puzzles/happy-new-year/)

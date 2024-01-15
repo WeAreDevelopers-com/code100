@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance to circle demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        html {
+            background-color: powderblue;
+        }
+        body{ 
+            color: #1b1e23;
+            background-color: #fff;
+            font-family: IBM Plex Sans,sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 750px;
+            padding: 1em;
+            margin: 0 auto;
+        }
+        a {color: #369}
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        .demo {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+        .demo pre {
+            flex: 1;
+        }
+        .demo div {
+            flex: 1;
+            max-width: 300px;
+        }
+        canvas {
+            background: #fff no-repeat;
+            width: 300px;
+            height: 300px;
+            display: block;
+        }
+        output {
+            flex:1;
+            display: block;
+            text-align: center;
+        }
+        pre {
+            background-color: #eee;
+            padding: .5em 1em;
+            overflow: auto;
+        }
+        code {
+            display: inline-block;
+            background-color: #eee;
+            padding: 0 .2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Solving the "Hitting the chimney" CODE100 puzzle</h1>
+    <img src="chimney.png" alt="Santa claus facepalming as he did not hit the chimney" width="600" height="300">
+
+    <p>This CODE100 puzzle is about Santa hitting the chimney when delivering presents. You get points in a coordinate system that are the drop points of presents and you should sort them into different arrays: those that landed in the chimney, those that landed outside and those that landed on the chimney.</p>
+
+    <p>You got this <a href="coordinatesystem.json">JSON dataset</a> of a coordinate system with a height and width of 300 and a circle in its centre with a radius of 75 pixels that is 10 pixels wide.</p> 
+    
+    <p>The <code>droppoints</code> array contains the coordinates of the dropped presents, and your task is to sort them into different arrays. Copy all points that are inside the circle into the <code>innerPoints</code> array, all the ones outside the circle into the <code>outerPoints</code> array and all that landed on the chimney into the <code>onChimneyPoints</code> array. Store the size of each of the arrays in <code>inside</code>, <code>outside</code> and <code>chimnney</code> and return all of them as a JSON object.</p>
+    
+    <h2>Finding the solution</h2>
+
+    <p>The main trick was to find out which coordinates are inside, on our outside the chimney circle. We can do that by calculating the distance of the point to the centre. If the distance is smaller than the radius, the point is inside the circle, if it is larger, it is outside. If it is exactly the radius minus and plus half the <code>chimneyWidth</code>, it is on the circle.</p>
+
+    <p>You can see this in the following example. Click the circle to see a line from its center to and move your mouse around. The circle gets green when you are inside it, black when you are on it, and red when you are outside of it.</p>
+
+<div class="demo">
+<div>
+    <canvas></canvas>
+    <output></output>
+</div>
+<pre>
+    {
+        "width": 300,
+        "height": 300,
+        "chimneyWidth": 10,
+        "chimneyRadius": 75,
+        "inside": 0,
+        "outside": 0,
+        "chimney": 0,
+        "innerPoints": [],
+        "outerPoints": [],
+        "onChimneyPoints": [],
+        "droppoints": [[127,37], … ] 
+    }
+    </pre>    
+    </div>
+
+    <p>Finding the distance of the point to the center is based on old geometry, specifically the <a href="https://en.wikipedia.org/wiki/Euclidean_distance">Euclidean distance</a> based on the good old <a href="https://en.wikipedia.org/wiki/Pythagorean_theorem">Pythagorean theorem</a>.<img src="220px-Pythagorean.svg.png" alt="Pythagorean theorem" width="300" height="300"></p>
+
+    <p>In this case, a is the difference of the horizontal coordinate of point to the center of the circle, b the vertical one and we can calculate the distance using the following where <code>150</code> is half the size of the coordinate system:</p>
+
+    <pre>√(x - 150)<sup>2</sup> + (y - 150)<sup>2</sup></pre>
+
+    <p>You can see this in action when you click your mouse in the earlier interactive example. Once the logic is obvious, we can convert it to our language of choice to solve the puzzle. We <a href="solutions/javascript/presentdrop.js">used JavaScript</a>:</p>
+
+    <pre>
+import { readFileSync, write, writeFile } from 'fs';
+const drops = JSON.parse(readFileSync('coordinatesystem.json', 'utf8'));
+drops.droppoints.forEach(c => {
+    let [x ,y] = [c[0], c[1]];
+    let distance = Math.floor(Math.sqrt(
+        (x - drops.width / 2) ** 2 + 
+        (y - drops.height / 2) ** 2
+    ));
+    let inside = drops.chimneyRadius - drops.chimneyWidth / 2;
+    let outside = drops.chimneyRadius + drops.chimneyWidth / 2;
+    if (distance > outside) {
+        drops.outerPoints.push([x , y]);
+    } else if (distance &Lt; inside) {
+        drops.innerPoints.push([x , y]);
+    } else if (distance >= inside && distance &Lt;= outside){
+        drops.onChimneyPoints.push([x , y]);
+    }
+});
+drops.inside = drops.innerPoints.length;
+drops.outside = drops.outerPoints.length;
+drops.chimney = drops.onChimneyPoints.length;
+// remove the unnecessary keys
+['width', 'height', 'droppoints','chimneyWidth','chimneyRadius'].forEach(
+    k => delete drops[k]
+);    
+console.log((drops));
+    </pre>
+
+    <p>And the result is <a href="solutions/javascript/result.json">this JSON object</a>:</p>
+
+<pre>
+{
+    "inside":37,
+    "outside":141,
+    "chimney":20,
+    "innerPoints":[[202,112] …],
+    "outerPoints":[[127,37] …],
+    "onChimneyPoints":[[113,84] …]
+}
+</pre>
+<p>And that's it. Did you solve it differently? Are you looking for more complex puzzles and want to take part in the CODE100 challenge? Check out <a href="https://code100.dev">code100.dev</a>!
+    
+<script>
+    let o = document.querySelector('output');
+    let c = document.querySelector('canvas');
+    c.width = 300;
+    c.height = 300;
+    let ctx = c.getContext('2d');
+    let md = false;
+    let active = false;
+    const paintCircle = col => {
+        ctx.beginPath();
+        ctx.strokeStyle = col;
+        ctx.lineWidth = 10;
+        ctx.arc(150, 150, 75, 0, 2*Math.PI, false)
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        line(150, 145, 150, 155);
+        line(145, 150, 155, 150);
+    }
+    const line = (x1, y1, x2, y2, s = '#999', w = 1) => {
+        old = ctx.strokeStyle;
+        ctx.beginPath();
+        ctx.strokeStyle = s;
+        ctx.lineWidth = w;
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.strokeStyle = old;
+    }
+    const drawlines = e => {
+        if (!active) {return;}
+        ctx.clearRect(0, 0, c.width, c.height);
+        paintCircle(ctx.strokeStyle);
+        ctx.font = "24px sans-serif";
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let distance = Math.floor(Math.sqrt(
+            (x - 150) ** 2 + 
+            (y - 150) ** 2
+        ));
+        if (md) {
+            line(150, 150, x, 150, 'black');
+            line(x, 150, x, y, 'black');
+        }
+        ctx.beginPath();
+        if (distance < 70) {
+            ctx.strokeStyle = 'green';
+        }
+        if (distance >= 70 && distance <= 80) {
+            ctx.strokeStyle = 'black';
+        } 
+        if (distance > 80) {
+            ctx.strokeStyle = 'red';
+        }
+        if (md) {
+            ctx.fillText(`d`, x + (150 - x) / 2, y + (150 - y) / 2);
+        }
+        ctx.fillStyle = 'black';
+        line(x, y, 150, 150, 'black');
+        if (md) {
+            ctx.fillText(`y`, x, y + (155 - y) / 2);
+            ctx.fillText(`x`, x + (150 - x) / 2, 155);
+        }
+        ctx.font = "16px sans-serif";
+        if (md) {
+            o.innerHTML = `x: ${x} y: ${y} d: ${distance}`;
+            // ctx.fillText(`x: ${x} y: ${y} d: ${distance}`, 5, 320);
+        } else {
+            o.innerHTML = `Distance: ${distance}`;
+            // ctx.fillText(`Distance: ${distance}`, 5, 320);
+
+        }
+    }    
+    paintCircle('#ccc');
+    c.addEventListener('mousemove', e => drawlines(e))
+    c.addEventListener('mousedown', e => md = true);
+    c.addEventListener('mouseup', e => md = false);
+    c.addEventListener('click', e => active = !active);
+
+</script>
+</body>
+</html>

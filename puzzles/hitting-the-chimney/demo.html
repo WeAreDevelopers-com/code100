@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance to circle demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+        <style>
+    html {
+        background-color: #111;
+
+    }
+    body{
+        background-color: #111;
+        font-family: IBM Plex Sans,sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+        color:#f8f8f8;
+        width: 500px;
+        padding: 1em 5em;
+        margin: 0 auto;
+    }
+    pre {
+        color: lime;
+    }
+    a {color: #369}
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+    .demo {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .demo pre {
+        flex: 1;
+    }
+    .demo div {
+        flex: 1;
+        max-width: 300px;
+    }
+    canvas {
+        background: #eee no-repeat;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #999;
+        display: block;
+    }
+    output {
+        flex:1;
+        display: block;
+        text-align: center;
+    }
+    output p {
+        margin: 0;
+        padding: 0 0 .2em 0;
+    }
+    </style>
+</head>
+<body>
+<div class="demo">
+<div>
+    <canvas></canvas>
+    <output></output>
+</div>
+<pre>
+{
+    "width": 300,
+    "height": 300,
+    "chimneyWidth": 10,
+    "chimneyRadius": 75,
+    "inside": 0,
+    "outside": 0,
+    "chimney": 0,
+    "innerPoints": [],
+    "outerPoints": [],
+    "onChimneyPoints": [],
+    "droppoints": [[127,37], … ] 
+}
+    </pre>    
+    </div>
+
+    
+<script>
+    let o = document.querySelector('output');
+    let c = document.querySelector('canvas');
+    c.width = 300;
+    c.height = 300;
+    let ctx = c.getContext('2d');
+    let md = false;
+    let active = false;
+    const paintCircle = col => {
+        ctx.beginPath();
+        ctx.strokeStyle = col;
+        ctx.lineWidth = 10;
+        ctx.arc(150, 150, 75, 0, 2*Math.PI, false)
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        line(150, 145, 150, 155);
+        line(145, 150, 155, 150);
+    }
+    const line = (x1, y1, x2, y2, s = '#999', w = 1) => {
+        old = ctx.strokeStyle;
+        ctx.beginPath();
+        ctx.strokeStyle = s;
+        ctx.lineWidth = w;
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.strokeStyle = old;
+    }
+    const drawlines = e => {
+        if (!active) {return;}
+        ctx.clearRect(0, 0, c.width, c.height);
+        paintCircle(ctx.strokeStyle);
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let distance = Math.floor(Math.sqrt(
+            (x - 150) ** 2 + 
+            (y - 150) ** 2
+        ));
+        if (md) {
+            line(150, 150, x, 150, 'black');
+            line(x, 150, x, y, 'black');
+        }
+        ctx.beginPath();
+        if (distance < 70) {
+            ctx.strokeStyle = 'green';
+        }
+        if (distance >= 70 && distance <= 80) {
+            ctx.strokeStyle = 'black';
+        } 
+        if (distance > 80) {
+            ctx.strokeStyle = 'red';
+        }
+        ctx.font = "16px sans-serif";
+        if (md) {
+            ctx.fillText(`c`, x + (150 - x) / 2 - 10, y + (150 - y) / 2 + 10);
+        }
+        ctx.fillStyle = 'black';
+        line(x, y, 150, 150, 'black');
+        if (md) {
+            ctx.fillText(`b`, x + 10, y + (155 - y) / 2);
+            ctx.fillText(`a`, x + (150 - x) / 2, 155 + 10);
+        }
+        ctx.beginPath();
+        ctx.font = "12px sans-serif";
+        if (md) {
+            ctx.fillText(`x ${x},y ${y}`, x + 10, y - 10);
+        }
+        ctx.fillText(`150, 150`, 140, 140);
+        ctx.closePath();
+        if (md) {
+            o.innerHTML = `
+            <p>x = ${x} → a = (x - 150) = ${x - 150}</p>
+            <p>y = ${y} → b = (y - 150) = ${y - 150}</p>
+            <p>a² + b² = c² → c = √(a² + b²) = ${distance}</p>`;
+        } else {
+            o.innerHTML = `Distance: ${distance}`;
+        }
+    }    
+    paintCircle('#ccc');
+    c.addEventListener('mousemove', e => drawlines(e))
+    c.addEventListener('mousedown', e => md = true);
+    c.addEventListener('mouseup', e => md = false);
+    c.addEventListener('click', e => active = !active);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hitting the chimney documentation</title>
+    <style>
+        canvas {
+            width: 1080px;
+            height: px;
+        }
+    </style>
+</head>
+<body>
+    <canvas></canvas>
+
+<script>
+    let coordinatesystem = {
+        width: 300,
+        height: 300,
+        circleRadius: 75,
+        innerDots: [],
+        outerDots: [],
+        onCircleDots: [],
+        coords: [],
+    }
+
+    const shuffle = (array) => {
+        let currentIndex = array.length,  randomIndex;
+        while (currentIndex > 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+        return array;
+    }
+
+    let c = document.querySelector('canvas');
+    c.width = c.height = coordinatesystem.width;
+    c.style.width = c.style.height = `${coordinatesystem.width}px`;
+    let cx = c.getContext('2d');
+
+    cx.fillStyle = '#fff';
+    cx.fillRect(0,0,300,300);
+    cx.strokeStyle = '#ccc';
+    cx.beginPath();
+    cx.lineWidth = 10;
+    cx.arc(150,150,75,0,2*Math.PI,false)
+    cx.stroke();
+    cx.closePath();
+    const plot = (x, y, col = "black") => {
+            cx.lineWidth = 1;
+            cx.beginPath();
+            cx.strokeStyle = col;
+            cx.moveTo(x - 4, y - 4);
+            cx.lineTo(x + 4, y + 4)
+            cx.stroke();
+            cx.moveTo(x + 4, y - 4);
+            cx.lineTo(x - 4, y + 4)
+            cx.stroke();
+            cx.closePath();
+        }
+    for(s=0;s<2*Math.PI;s+=.7) {
+        let x = (75 * Math.cos(s) + 150);
+        let y = (75 * Math.sin(s) + 150);
+        // plot(x,y);
+        coordinatesystem.coords.push({x,y});
+    }   
+    let i = 190;
+    while(--i) {
+        let x = Math.floor(280 * Math.random())+10;
+        let y = Math.floor(280 * Math.random())+10;
+        coordinatesystem.coords.push({x,y});
+        // plot(x,y);
+    }
+    coordinatesystem.coords = shuffle(coordinatesystem.coords);
+    console.log(JSON.stringify(coordinatesystem.coords))    
+    let outer = [];
+    let inner = [];
+    let on = [];
+    coordinatesystem.coords.forEach(c => {
+        let d = Math.sqrt(
+            (c.x-150) ** 2 + (c.y-150) ** 2
+        );
+        if (d > 80) {
+            coordinatesystem.outerDots.push(c);
+            plot(c.x,c.y,"#c99");
+        } else if (d < 70) {
+            coordinatesystem.innerDots.push(c);
+            plot(c.x, c.y, "green");
+        } else {
+            coordinatesystem.onCircleDots.push(c);
+            plot(c.x, c.y, "#000");
+        }
+    });
+</script>
+</body>
+</html>
