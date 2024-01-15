@@ -21,6 +21,6 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 
 ## On-line challenges (Dev Digest)
 
-* Dev Digest Challenges
-  * [Developer DNA](/puzzles/developer-dna/)
-  * [Event Block](/puzzles/eventblock/)
+* [Developer DNA](/puzzles/developer-dna/)
+* [Event Block](/puzzles/eventblock/)
+* [Old School Types](/puzzles/oldschooltypes/)

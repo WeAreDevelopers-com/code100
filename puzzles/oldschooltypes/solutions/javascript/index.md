@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Thumbs up for the old school
 
 The challenge was the following: 
@@ -18,7 +23,7 @@ So, to type `a` you would press `2` once, to type `c` you had to pressed `2` thr
 
 To convert the message here, the first thing to do is to define the keyset as an object:
 
-```Javascript
+```javascript
 const keycodes = {
     "0": " ", "2": "abc", "3": "def",
     "4": "ghi", "5": "jkl", "6": "mno",
@@ -48,7 +53,7 @@ const decode = message => {
 
 That's all there is to decode the message. Encoding a text into this format is a bit trickier.
 
-```Javascript
+```javascript
 const encode = text => {
     return text.split('').map(letter => {
         let str = '';
@@ -81,4 +86,4 @@ console.log(encode('sore thumbs'))
 
 We need a delimiter string like - in the code, as, for example `777777` would be ambiguous. Is it `rr` or `qqq` or `ps`?
 
-Did you manage to do it? What was your solution?
+Did you manage to do it? What was your solution? You can see other people's submissions [on the Gist](https://gist.github.com/codepo8/9e7dcabb2a9b0c8f3c19441563c6318c).
