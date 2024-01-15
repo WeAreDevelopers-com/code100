@@ -93,3 +93,8 @@ header img {
   margin: 0 auto;
   max-width: 400px;
 }
+
+p, li {
+  line-height: 1.5em;
+  padding-bottom: .5em;
+}
