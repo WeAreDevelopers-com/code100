@@ -7,9 +7,9 @@ const solve = input =>
         else return acc + parseInt(curr);
     }, 0);
 
-const isSolutionCorrect = () => {
+const isSolutionCorrect = (solution, result) => {
     return JSON.stringify(solution) === JSON.stringify(result);
 };
 
 console.log(solve(puzzle));
-console.log('Is solution correct?', isSolutionCorrect());
+console.log('Is solution correct?', isSolutionCorrect(solve(puzzle), result));
