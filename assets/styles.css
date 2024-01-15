@@ -16,6 +16,12 @@ h1 {
   font-weight: normal;
   color: var(--h1colour);
 }
+h1 {
+  font-size: 1.5em;
+  font-family: IBM Plex Sans,sans-serif;
+  font-weight: normal;
+  color: var(--h1colour);
+}
 
 footer {
   font-size: .8em;
@@ -69,7 +75,7 @@ ol li code {
   border-radius: 3px;
   padding: 2px;
 }
-p a {
+a {
   color: var(--link);
 }
 header {
@@ -78,4 +84,5 @@ header {
 header img {
   display: block;
   margin: 0 auto;
+  max-width: 400px;
 }
