@@ -16,3 +16,5 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 * CODE100 Zagreb 2023
   * [Crew manifest challenge - how many on each ship?](/2023-puzzles/zagreb-challenge-1)
   * [Crew manifest challenge - what's their job?](/2023-puzzles/zagreb-challenge-2)
+* Dev Digest Challenges
+  * [Developer DNA](/puzzles/developer-dna/)

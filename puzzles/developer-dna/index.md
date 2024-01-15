@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Puzzle solution explanation: Developer DNA
 
 In this [CODE100](https://code100.dev) puzzle we asked you to [take this JSON dataset](dnadata.json):
