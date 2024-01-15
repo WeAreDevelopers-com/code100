@@ -99,7 +99,9 @@ header img {
   margin: 0 auto;
   max-width: 400px;
 }
-
+img.small {
+  max-width: 20em;
+}
 p, li {
   line-height: 1.5em;
   padding-bottom: .5em;

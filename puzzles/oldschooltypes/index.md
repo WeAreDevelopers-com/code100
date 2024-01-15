@@ -20,7 +20,7 @@ Can you do an encoder/decoder for this way of writing?
 
 What we are dealing with here is the way you texted on old feature phones. Each key represented several characters and you had to press them a few times to type a letter. 
 
-![old mobile device](mobile.jpg)
+{% include smallimg.html alt="Old Mobile Device" src="mobile.jpg" %}
 
 So, to type `a` you would press `2` once, to type `c` you had to pressed `2` three times. To type `o` you pressed `6` three times and so on…
 
