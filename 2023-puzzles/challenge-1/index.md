@@ -14,7 +14,7 @@ world20congresss23
 
 ### Example solution
 
-```JavaScript
+```Javascript
 43  // not 7
 ```
 
