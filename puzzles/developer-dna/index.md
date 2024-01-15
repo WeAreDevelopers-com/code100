@@ -3,7 +3,7 @@ title: CODE100 - the puzzles
 layout: challenge
 ---
 
-# Puzzle solution explanation: Developer DNA
+# CODE100 Puzzle: Developer DNA
 
 In this [CODE100](https://code100.dev) puzzle we asked you to [take this JSON dataset](dnadata.json):
 
@@ -42,6 +42,12 @@ And turn into this construct:
            💖      💻           
               💖💻            
 ```
+
+
+<!-- details -->
+<!-- summary -->
+## Solution explanation
+<!-- endsummary -->
 
 We got quite some good answers on the [on the Developer DNA gist](https://gist.github.com/codepo8/31b9ad820c03916941c294c404831829) in various languages, but [here's ours in JavaScript](solutions/javascript/dnadata.js).
 
@@ -96,3 +102,5 @@ We then calculate the wave by multiplying the array value with half the mid sect
 We set the array item values to the different parts emoji and join the array to a string before logging it out.
 
 Got a better solution? [Add to the gist](https://gist.github.com/codepo8/31b9ad820c03916941c294c404831829)!
+
+<!-- enddetails -->

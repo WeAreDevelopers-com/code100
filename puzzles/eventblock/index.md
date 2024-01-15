@@ -3,7 +3,7 @@ title: CODE100 - the puzzles
 layout: challenge
 ---
 
-# Puzzle: Event Block
+# CODE100 Puzzle: Event Block
 
 The challenge here is to turn [this JSON object](events.json):
 
@@ -33,7 +33,10 @@ Into a block like this:
 
 The rules are that the location needs to be centered in the 80 columns wide block, the name on the left and the date on the right. Each need to have spaces surrounding them. (and no, this demo isn't the right amount of chars).
 
-## Solution
+<!-- details -->
+<!-- summary -->
+## Solution explanation
+<!-- endsummary -->
 
 We got quite a few submissions for solutions and you can see them in the comments on the [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e), but [here is ours](solutions/javascript/solution-1.js) using JavaScript. 
 
@@ -104,3 +107,5 @@ We then calculate the amount of padding chars on the left by subtracting the len
 We add all the data together and print out the event. Once we are done with the link we paint another line on the bottom and we got the functionality we want.
 
 Thoughts? Ideas? Can you do better? Keep the conversation going at [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e). 
+
+<!-- enddetails -->

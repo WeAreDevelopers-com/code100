@@ -3,7 +3,7 @@ title: CODE100 - the puzzles
 layout: challenge
 ---
 
-# Thumbs up for the old school
+# CODE100 Puzzle: Thumbs up for the old school
 
 The challenge was the following: 
 
@@ -13,7 +13,10 @@ If `44-33-555-555-666` is `hello` and `9-666-777-555-3` is `world`, what is:
 ```
 Can you do an encoder/decoder for this way of writing?
 
-## Solution
+<!-- details -->
+<!-- summary -->
+## Solution explanation
+<!-- endsummary -->
 
 What we are dealing with here is the way you texted on old feature phones. Each key represented several characters and you had to press them a few times to type a letter. 
 
@@ -87,3 +90,5 @@ console.log(encode('sore thumbs'))
 We need a delimiter string like - in the code, as, for example `777777` would be ambiguous. Is it `rr` or `qqq` or `ps`?
 
 Did you manage to do it? What was your solution? You can see other people's submissions [on the Gist](https://gist.github.com/codepo8/9e7dcabb2a9b0c8f3c19441563c6318c).
+
+<!-- enddetails -->
