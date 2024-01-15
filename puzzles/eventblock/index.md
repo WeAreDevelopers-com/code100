@@ -1,8 +1,13 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Puzzle: Event Block
 
 The challenge here is to turn [this JSON object](events.json):
 
-```JSON
+```json
 {
     "columns": 80,
     "padChar": "·",
@@ -30,11 +35,11 @@ The rules are that the location needs to be centered in the 80 columns wide bloc
 
 ## Solution
 
-We got quite a few submissions for solutions and you can see them in the comments on the [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e), but [here is ours](https://github.com/WeAreDevelopers-com/code100/blob/main/puzzles/eventblock/solutions/javascript/solution-1.js) using JavaScript. 
+We got quite a few submissions for solutions and you can see them in the comments on the [the codeblock puzzle Gist](https://gist.github.com/codepo8/84248aea816544c8e730c8dffb975c0e), but [here is ours](solutions/javascript/solution-1.js) using JavaScript. 
 
 The first step is to load the data and call the function to write the block. This can be done in JavaScript with a `fetch` statement:
 
-```JavaScript
+```javascript
 fetch('https://wearedevelopers-com.github.io/code100/puzzles/eventblock/events.json').then((response) => {
     return response.json();
 }).then((data) => {
@@ -46,7 +51,7 @@ fetch('https://wearedevelopers-com.github.io/code100/puzzles/eventblock/events.j
 
 Each of the data items (name, date, location) needs to be padded with a space on each side, so it makes sense to write a helper method for that. This one also checks if the property exists as not all events in the dataset have a location.
 
-```JavaScript
+```javascript
 const padBoth = (prop) => {
     return prop ? ` ${prop} ` : '';
 }
@@ -54,20 +59,20 @@ const padBoth = (prop) => {
 
 Now we get to the meat, as in the function called by the successful fetch call earlier.
 
-```Javascript
+```javascript
 const draweventbox = (data) => {
     let {columns, padChar, events} = data;
 ```
 
 The first thing to do is to grab the data items from the JSON object. The shortest way is to use [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment). Now we have the amount of columns the block should have in the variable `columns`, the char to add in between data items as `padChar` and the array of all the events as `events`. 
 
-```Javascript
+```javascript
     console.log('\n' + padChar.repeat(columns));
 ```
 
 Drawing the upper and lower lines can be done by printing a line break followed by the `padChar` repeated `columns` times.
 
-```Javascript
+```javascript
     events.forEach(ev => {
         let event = padBoth(ev.name);
         let location = padBoth(ev.location);
@@ -76,7 +81,7 @@ Drawing the upper and lower lines can be done by printing a line break followed 
 
 We then loop over all the events and add spaces around all the different properties.
 
-```Javascript
+```javascript
         let pad = (columns - location.length) / 2;
         let padLeft = padChar.repeat(Math.floor(pad) - (event.length + 1));
         let padRight = padChar.repeat(Math.round(pad) - (date.length + 1));
@@ -88,7 +93,7 @@ As the location could be not an even amount of chars and we can't use `String.re
 
 We then calculate the amount of padding chars on the left by subtracting the length of the event from the earlier padding and the amount on the right by subtracting the length of the date. However, we also need to subtract another 1 as there is a dot on the left of the event name and the right of the date, making the box complete. 
 
-```Javascript
+```javascript
         console.log(padChar + event + padLeft + location + padRight + date + padChar);
     })
     // draw downer bar
