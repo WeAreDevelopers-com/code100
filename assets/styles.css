@@ -17,12 +17,17 @@ h1 {
   font-weight: normal;
   color: var(--h1colour);
 }
-h2, details {
+h2 {
   margin: 1em 0;
   font-size: 1.5em;
   font-family: IBM Plex Sans,sans-serif;
   font-weight: normal;
   color: var(--h1colour);
+}
+summary h2 {
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 footer {

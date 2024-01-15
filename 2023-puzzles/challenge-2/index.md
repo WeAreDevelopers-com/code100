@@ -18,7 +18,7 @@ Submit that array of strings, sorted from A-Z, but only supply the words that ar
 ```json
 [ "lemon", "melon" ]
 ```
-### Actual puzzles using in the competition
+### Actual data used in the competition
 
-- [Coding puzzle (input) 🧩](challenge2/puzzle.json)
-- [Result (output) ✨](challenge2/result.json)
+- [Coding puzzle (input)](challenge2/puzzle.json)
+- [Result (output)](challenge2/result.json)
