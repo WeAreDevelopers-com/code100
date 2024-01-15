@@ -84,7 +84,13 @@ ol li code {
 }
 a {
   color: var(--link);
+  transition: 100ms;
 }
+a:hover {
+  color: var(--linkhover);
+  transition: 100ms;
+}
+
 header {
   padding: 1em;
 }
