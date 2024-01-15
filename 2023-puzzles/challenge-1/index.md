@@ -14,8 +14,8 @@ world20congresss23
 
 ### Example solution
 
-```
-`43`  (not `7`)
+```JavaScript
+43  // not 7
 ```
 
 **The solution you should submit is the sum of these numbers.**
