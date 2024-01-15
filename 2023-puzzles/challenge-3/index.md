@@ -1,6 +1,6 @@
 ---
 title: CODE100 - the puzzles
-layout: default
+layout: challenge
 ---
 
 ## Linked List 
@@ -14,6 +14,7 @@ You will receive an array with nodes of a linked list and the ID of the top node
 Submit as solution an array of the values in the order that they appear in the linked list.
 
 ## Example puzzle
+
 ```json
 {
     "linkedList": [
@@ -30,9 +31,10 @@ Submit as solution an array of the values in the order that they appear in the l
 [ 1, 2, 3 ]
 ```
 
-### Actual puzzles using in the competition
-- [Coding puzzle (input) 🧩](challenge3/puzzle.json)
-- [Result (output) ✨](challenge3/result.json)
+### Actual datasets using in the competition
+
+- [Coding puzzle (input)](challenge3/puzzle.json)
+- [Result (output)](challenge3/result.json)
 
 
 
