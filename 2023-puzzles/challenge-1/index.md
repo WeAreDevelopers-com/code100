@@ -20,11 +20,13 @@ world20congresss23
 
 **The solution you should submit is the sum of these numbers.**
 
-### Actual puzzles using in the competition
+### Actual data used in the competition
+
 - [Coding puzzle (input)](puzzle.json)
 - [Result (output)](result.json)
 
 <details>
+
 <summary>Explanation</summary>
 
 The trick here is go through the string character by character and see what is a number or not. 
@@ -32,7 +34,9 @@ When you encounter a number, add them up until you get to the next non-number ch
 Once you're at the end, sum up all the numbers.
 
 </details>
+
 <details>
+
 <summary>Code solutions</summary>
 
 We had quite a few submissions here, and the shortest one uses Regular Expressions for this.
