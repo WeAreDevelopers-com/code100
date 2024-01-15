@@ -27,6 +27,7 @@ Submit as solution an array of the values in the order that they appear in the l
 ```
 
 ### Example solution
+
 ```json
 [ 1, 2, 3 ]
 ```

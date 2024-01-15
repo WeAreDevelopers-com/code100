@@ -14,5 +14,5 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
   * [Anagrams](/code100/2023-puzzles/challenge-2/)
   * [Linked List](/code100/2023-puzzles/challenge-3/)
 * CODE100 Zagreb 2023
-  * [Crews 1](/code100/zagreb/challenge-1)
-  * [Crews 2](/code100/zagreb/challenge-1)
+  * [Crew manifest challenge - how many on each ship?](/code100/zagreb-challenge-1)
+  * [Crew manifest challenge - what's their job?](/code100/zagreb-challenge-2)

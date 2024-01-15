@@ -1,0 +1,12 @@
+[
+    {"ship": "Serenity", "crewcount": 9},
+    {"ship": "Planet Express Ship", "crewcount": 8},
+    {"ship": "USS Enterprise NCC-1701-D", "crewcount": 8},
+    {"ship": "Nostromo", "crewcount": 8},
+    {"ship": "Prometheus", "crewcount": 9},
+    {"ship": "Red Dwarf", "crewcount": 6},
+    {"ship": "Orville", "crewcount": 9},
+    {"ship": "Millennium Falcon", "crewcount": 7},
+    {"ship": "Heart of Gold", "crewcount": 5},
+    {"ship": "USS Enterprise NCC-1701", "crewcount": 7}
+]

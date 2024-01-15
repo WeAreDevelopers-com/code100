@@ -1,6 +1,6 @@
 ---
 title: CODE100 - the puzzles
-layout: default
+layout: challenge
 ---
 
 ## Anagrams
