@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Crew manifest challenge - what's the job?
 
 Get the full dataset of a crew manifest of various ficticious spacecraft from the following endpoint:

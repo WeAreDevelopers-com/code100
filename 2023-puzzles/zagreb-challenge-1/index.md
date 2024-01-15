@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Crew manifest challenge - how many on each ship?
 
 Get the full dataset of a crew manifest of various ficticious spacecraft from the following endpoint:
