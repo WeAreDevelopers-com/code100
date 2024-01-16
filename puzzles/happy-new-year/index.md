@@ -38,7 +38,7 @@ Cheers and good luck!
 
 <!-- details -->
 <!-- summary -->
-## Solution explanation
+## Solution
 <!-- endsummary -->
 
 Well, the trick here is to think binary. If you take the message and replace the bottles with 0:
