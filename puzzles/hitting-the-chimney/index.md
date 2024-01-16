@@ -53,6 +53,10 @@ Good luck! You can submit your solution here [or on this gist](https://gist.gith
 ## Solution
 <!-- endsummary -->
 
+You can also see this as a [video on YouTube](https://youtu.be/nyChqqdKaXg):
+
+{% include youtube.html id="nyChqqdKaXg" %}
+
 The main trick was to find out which coordinates are inside, on our outside the chimney circle. We can do that by calculating the distance of the point to the centre. If the distance is smaller than the radius, the point is inside the circle, if it is larger, it is outside. If it is exactly the radius minus and plus half the `chimneyWidth`, it is on the circle.</p>
 
 You can see this in the following example. Click the circle to see a line from its center to and move your mouse around. The circle gets green when you are inside it, black when you are on it, and red when you are outside of it.
