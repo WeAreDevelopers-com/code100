@@ -1,1 +1,105 @@
-<h2>Py!</h2>
+<div class="demo">
+    <canvas></canvas>
+    <output></output>
+</div>
+<style>
+.demo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 300px;
+}
+canvas {
+    flex: 1;
+    background: #eee no-repeat;
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+output {
+    flex:1;
+    display: block;
+    text-align: center;
+}
+</style>
+<script>
+    let o = document.querySelector('output');
+    let c = document.querySelector('canvas');
+    c.width = 300;
+    c.height = 300;
+    let ctx = c.getContext('2d');
+    let md = false;
+    let active = false;
+    const paintCircle = col => {
+        ctx.beginPath();
+        ctx.strokeStyle = col;
+        ctx.lineWidth = 10;
+        ctx.arc(150, 150, 75, 0, 2*Math.PI, false)
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        line(150, 145, 150, 155);
+        line(145, 150, 155, 150);
+    }
+    const line = (x1, y1, x2, y2, s = '#999', w = 1) => {
+        old = ctx.strokeStyle;
+        ctx.beginPath();
+        ctx.strokeStyle = s;
+        ctx.lineWidth = w;
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.strokeStyle = old;
+    }
+    const drawlines = e => {
+        if (!active) {return;}
+        ctx.clearRect(0, 0, c.width, c.height);
+        paintCircle(ctx.strokeStyle);
+        ctx.font = "24px sans-serif";
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let distance = Math.floor(Math.sqrt(
+            (x - 150) ** 2 + 
+            (y - 150) ** 2
+        ));
+        if (md) {
+            line(150, 150, x, 150, 'black');
+            line(x, 150, x, y, 'black');
+        }
+        ctx.beginPath();
+        if (distance < 70) {
+            ctx.strokeStyle = 'green';
+        }
+        if (distance >= 70 && distance <= 80) {
+            ctx.strokeStyle = 'black';
+        } 
+        if (distance > 80) {
+            ctx.strokeStyle = 'red';
+        }
+        if (md) {
+            ctx.fillText(`d`, x + (150 - x) / 2, y + (150 - y) / 2);
+        }
+        ctx.fillStyle = 'black';
+        line(x, y, 150, 150, 'black');
+        if (md) {
+            ctx.fillText(`y`, x, y + (155 - y) / 2);
+            ctx.fillText(`x`, x + (150 - x) / 2, 155);
+        }
+        ctx.font = "16px sans-serif";
+        if (md) {
+            o.innerHTML = `x: ${x} y: ${y} d: ${distance}`;
+            // ctx.fillText(`x: ${x} y: ${y} d: ${distance}`, 5, 320);
+        } else {
+            o.innerHTML = `Distance: ${distance}`;
+            // ctx.fillText(`Distance: ${distance}`, 5, 320);
+
+        }
+    }    
+    paintCircle('#ccc');
+    c.addEventListener('mousemove', e => drawlines(e))
+    c.addEventListener('mousedown', e => md = true);
+    c.addEventListener('mouseup', e => md = false);
+    c.addEventListener('click', e => active = !active);
+
+</script>

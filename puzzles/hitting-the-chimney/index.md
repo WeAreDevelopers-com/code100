@@ -15,7 +15,7 @@ The `droppoints` array contains the coordinates of the dropped presents, and you
 
 For example, the original dataset is: 
 
-```JSON
+```json
 {
     "width": 300,
     "height": 300,
@@ -33,8 +33,7 @@ For example, the original dataset is:
 
 Your result should be something like: 
 
-```JSON
-
+```json
 {
     "inside": 30,
     "outside": 120,
@@ -60,10 +59,9 @@ You can see this in the following example. Click the circle to see a line from i
 
 {% include pythagoras.html %}
 
-
 Finding the distance of the point to the center is based on old geometry, specifically the [Euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance) based on the good old [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem).
 
-{% include smallimage.html alt="Pythagorean theorem" src="220px-Pythagorean.svg.png" %}
+{% include smallimage.html alt="Pythagorean theorem" src="hitting-the-chimney/220px-Pythagorean.svg.png" %}
 
 In this case, `a` is the difference of the horizontal coordinate of point to the center of the circle, `b` the vertical one and we can calculate the distance using the following where `150` is half the size of the coordinate system:
 
