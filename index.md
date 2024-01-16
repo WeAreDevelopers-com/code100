@@ -11,13 +11,16 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 
 ## On-stage challenges
 
-* CODE100 at WeAreDevelopers World Congress 2023
-  * [Numbers from string](/2023-puzzles/challenge-1/)
-  * [Anagrams](/2023-puzzles/challenge-2/)
-  * [Linked List](/2023-puzzles/challenge-3/)
-* CODE100 Zagreb 2023
-  * [Crew manifest challenge - how many on each ship?](/2023-puzzles/zagreb-challenge-1)
-  * [Crew manifest challenge - what's their job?](/2023-puzzles/zagreb-challenge-2)
+CODE100 at WeAreDevelopers World Congress 2023
+
+* [Numbers from string](/2023-puzzles/challenge-1/)
+* [Anagrams](/2023-puzzles/challenge-2/)
+* [Linked List](/2023-puzzles/challenge-3/)
+
+CODE100 Zagreb 2023
+
+* [Crew manifest challenge - how many on each ship?](/2023-puzzles/zagreb-challenge-1)
+* [Crew manifest challenge - what's their job?](/2023-puzzles/zagreb-challenge-2)
 
 ## On-line challenges (Dev Digest)
 
