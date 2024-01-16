@@ -29,3 +29,4 @@ CODE100 Zagreb 2023
 * [Old School Types](/puzzles/oldschooltypes/)
 * [Happy new year](/puzzles/happy-new-year/)
 * [Packed snowflake](/puzzles/packedsnowflake/)
+* [Hitting the Chimney](/puzzles/hitting-the-chimney/)

@@ -56,6 +56,7 @@ When we [look these up](https://www.ascii-code.com/), we can see that `46` is a 
 Time to code. Let's use JavaScript.
 
 ```javascript
+
 // get the JSON data from the URL
 fetch('https://wearedevelopers-com.github.io/code100/puzzles/packedsnowflake/data.json').then((response) => {
     return response.json();
