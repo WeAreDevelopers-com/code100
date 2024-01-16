@@ -10,6 +10,16 @@ article {
   max-width: 40em;
   margin: 0 auto;
 }
+ul {
+  margin: 0 0 1em 0em;
+  padding: 0;  
+}
+ul ul {
+  margin: 1em 0 0 1em;
+}
+li {
+  list-style-image: url(/assets/images/star.png);
+}
 
 h1 {
   font-size: 2em;
@@ -24,10 +34,23 @@ h2 {
   font-weight: normal;
   color: var(--h1colour);
 }
+h3 {
+  margin: 1em 0;
+  font-size: 1.2em;
+  font-family: IBM Plex Sans,sans-serif;
+  font-weight: normal;
+  color: var(--h1colour);
+}
 summary h2 {
   display: inline;
   margin: 0;
   padding: 0;
+}
+
+summary {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 
 footer {
@@ -97,14 +120,20 @@ header {
 header img {
   display: block;
   margin: 0 auto;
+  width: 90%;
   max-width: 400px;
 }
 img.small {
   max-width: 20em;
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 p, li {
   line-height: 1.5em;
-  padding-bottom: .5em;
+  padding-bottom: 1em;
 }
 .back {
   text-align: right;
