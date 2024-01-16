@@ -61,6 +61,10 @@ summary h2 {
   padding: 0;
 }
 
+details {
+  margin: 1em 0;
+}
+
 summary {
   cursor: pointer;
   font-size: 1.5em;
