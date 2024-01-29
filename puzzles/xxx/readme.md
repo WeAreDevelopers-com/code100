@@ -8,7 +8,7 @@ In any case, this time the puzzle is to celebrate Amsterdam and it's flag:
 
 The challenge is to take a collection of 292 games of noughts and crosses (or Tic Tac Toe) and to find out how many were won by the player using the X like shown in this animation:
 
-![Animation of 292 games of Tic Tac Toe and the result of how many were won by the player x](xxx-challenge.gif)
+{% include smallimage.html alt="Animation of 292 games of Tic Tac Toe and the result of how many were won by the player x" src="/puzzles/xxx/xxx-challenge.gif" %}
 
 You can use [this text file of all the games as the source](games.txt). The file consist of played games separated by a blank line. For example:
 
