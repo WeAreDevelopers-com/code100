@@ -51,4 +51,4 @@ console.log(T9.encode('we are developers'));
 console.log(T9.encode('hello'));
 console.log(T9.encode('maximum effort for a text'));
 console.log(T9.translate('world'));
-console.log(T9.translate('9-33-0-2-777-33-0-3-33-888-33-555-666-7-33-777-7777'));
+console.log(T9.translate('9-33-0-2-777-33-0-3-33-888-33-555-666-7-33-777-7777'))
