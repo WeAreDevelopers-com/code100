@@ -36,4 +36,5 @@ In this case, the first game was won by O and the second and third by X. The rul
 
 How many games were won by X? 
 
+Submit your thoughts and solutions [on this Github gist](https://gist.github.com/codepo8/458953213aae249cdcd4b073e522b4cf).
 
