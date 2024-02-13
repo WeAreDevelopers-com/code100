@@ -1,0 +1,7 @@
+{
+    "name": "016-xxx",
+    "version": "1.0.0",
+    "main": "generator.js",
+    "license": "MIT",
+    "type": "module"
+}

@@ -102,3 +102,5 @@ const drawASCII = data => {
 ```
 
 Got a better, faster and simpler way? Tell us about it [on this Gist](https://gist.github.com/codepo8/8a3947ffdd18bf2eb9ab22b34d055272).
+
+<!-- enddetails -->
