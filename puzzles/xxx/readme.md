@@ -69,7 +69,7 @@ In order to win, you need to have any of the following patterns:
 
 Horizontal lines, vertical lines or diagonals. Zero-indexed, we can translate that to the following lookup array:
 
-``` Javascript
+``` javascript
 let lines = [
     [0,1,2],[3,4,5],[6,7,8], /* horizontal */
     [0,3,6],[1,4,7],[2,5,8], /* vertical */
@@ -82,7 +82,7 @@ Now, the issue we have left is that the games in the file are not a 3 x 3 matrix
 
 One way is to change the numbers and instead of counting by hand we can use this:
 
-```Javascript
+``` javascript
 let game = ` X │ X │ X 
 ───┼───┼───
  X │ X │ X 
@@ -99,7 +99,7 @@ console.log(xlocations);
 
 This results in:
 
-```Javascript
+``` javascript
 [
    1,  5,  9, 
    25, 29, 33, 
@@ -108,7 +108,7 @@ This results in:
 ```
 ## Solution 2: remove all characters that aren't needed
 
-``` Javascript
+``` javascript
 // convert display to 3x3 array
 let game = `
  X │ O │ O 
@@ -133,7 +133,7 @@ let g = game.
 
 Regardless of which solution, the main way to find out which games were won by `X` is to compare the game with the winning pattern array. 
 
-```Javascript
+``` javascript
 let lines = [
     [0,1,2],[3,4,5],[6,7,8], 
     [0,3,6],[1,4,7],[2,5,8], 
