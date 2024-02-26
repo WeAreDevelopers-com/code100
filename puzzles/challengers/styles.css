@@ -3,22 +3,29 @@
 body {
   font-family: IBM Plex Sans,sans-serif;
   margin: 0;
+  padding:0;
   background: #000;
   text-align: center;
 
 }
 h1 {
-  color: white;
+  color: black;
+  background: lime;
   font-size: 2em;
-  text-align: center;
-  font-size: 1.5em;
-  padding-top: 1em;
-        
+  margin:0;
+  text-transform: uppercase;
+  line-height: 3em;
+  text-align: center;        
 }
 footer {
-  color: white;
+  color: black;
+  background: lime;
+  padding: .5em 0;
 }
-a { color: lime;}
+a { 
+  color: black;
+  font-weight: bold;
+}
 
 .scene {
   margin: 40px 0;
@@ -52,6 +59,10 @@ a { color: lime;}
     width: 100%;
     display: block;
 }
+.carousel li:hover a img {
+    transform: scale(0.9);
+    transition: 400ms;
+}
 
 button {
   background: lime;
@@ -63,6 +74,11 @@ button {
   font-weight: bold;
   font-size: 1.3em;
   font-family: inherit;
+  transition: 400ms;
+}
+button:hover {
+  background: white;
+  transition: 400ms;
 }
 .carousel a {
     display: block;
@@ -75,11 +91,11 @@ button {
     top: -100vh;
     z-index: 5;
     transition: 1000ms;
-    /* width: 640px; */
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 2em;
-    padding: 2em;
+    padding: 3em 4em;
+    border-radius: 1em;
     background-color: rgba(0   , 0, 0, .8); 
 }
 #yt button {
@@ -91,7 +107,7 @@ button {
     padding: .5em 1em;
     cursor: pointer;
     right: 0;
-    top: -1em;
+    top: 0em;
 }
 .chosen #yt {
     top: 30vh;
