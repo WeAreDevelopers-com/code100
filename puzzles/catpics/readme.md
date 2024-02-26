@@ -1,4 +1,4 @@
-# Cat pics challenge
+# Cat pics challenge =^_^=
 
 You have a [JSON dataset of cat pictures](catdata.json), each with a file name, dimensions and alternative text that starts with the name of the cat and a description of what it looks like. 
 
