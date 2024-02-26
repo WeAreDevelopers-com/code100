@@ -1,0 +1,107 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: IBM Plex Sans,sans-serif;
+  margin: 0;
+  background: #000;
+  text-align: center;
+
+}
+
+.scene {
+  margin: 40px 0;
+  position: relative;
+  width: 30vw;
+  height: 20vw;
+  margin: 60px auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-288px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel li {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 5%;
+  top: 5%;
+  transition: transform 1s, opacity 1s;
+}
+.carousel li img {
+    width: 100%;
+    display: block;
+}
+
+button {
+  background: lime;
+  border-radius: .5em;
+  padding: .5em 1em;
+  border: none;
+  cursor: pointer;
+  margin: 1em;
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: inherit;
+}
+.carousel a {
+    display: block;
+}
+#yt {
+    position: absolute;
+    top: -100vh;
+    z-index: 5;
+    transition: 1000ms;
+    /* width: 640px; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 2em;
+    padding: 2em;
+    background-color: rgba(0   , 0, 0, .8); 
+}
+#yt button {
+    position: absolute;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+    right: 0;
+    top: -1em;
+}
+.chosen #yt {
+    top: 30vh;
+    transition: 1000ms;
+}
+.carousel a::before {
+    content: 'Click to watch video';
+    position: absolute;
+    top: -1em;
+    font-size: 1.1em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: .5em 0;
+    text-align:center;
+}
+h1 {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 1em;
+        
+}
+footer {
+  color: white;
+}
+a { color: lime;}
