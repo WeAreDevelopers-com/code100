@@ -51,6 +51,7 @@ prevButton.addEventListener( 'click', function() {
   selectedIndex--;
   rotateCarousel();
   window.clearInterval(selfrot);
+  document.querySelector('.play-button').innerText = "Play";
 });
 
 var nextButton = document.querySelector('.next-button');
@@ -58,9 +59,11 @@ nextButton.addEventListener( 'click', function() {
   selectedIndex++;
   rotateCarousel();
   window.clearInterval(selfrot);
+  document.querySelector('.play-button').innerText = "Play";
 });
 
 function changeCarousel() {
+  cellWidth = carousel.offsetWidth;
   theta = 360 / cellCount;
   var cellSize = cellWidth;
   radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
@@ -91,3 +94,34 @@ function onPlayerReady(event) {
   event.target.playVideo();
 }
 
+// carousel.addEventListener('mouseover', e => {
+//   window.clearInterval(selfrot);
+// });
+// carousel.addEventListener('mouseout', e => {
+//   selfrot = window.setInterval(function() {
+//     selectedIndex++;
+//     rotateCarousel();
+//   }, 1200);
+// });
+
+onresize = (event) => {
+  changeCarousel();
+}
+
+document.addEventListener('visibilitychange', function() {
+  document.visibilityState === 'visible' ? selfrot : window.clearInterval(selfrot);
+});
+
+document.querySelector('.play-button').addEventListener('click', e => {
+  let but = document.querySelector('.play-button');
+  if (but.innerText === "Pause") {
+    window.clearInterval(selfrot);
+    but.innerText = "Play";
+  } else {
+    selfrot = window.setInterval(function() {
+      selectedIndex++;
+      rotateCarousel();
+    }, 1200);      
+    but.innerText = "Pause";
+  }
+})
