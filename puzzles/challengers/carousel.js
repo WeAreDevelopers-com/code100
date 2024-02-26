@@ -1,3 +1,5 @@
+/* Here be dragons, this is a mess and I should be ashamed of myself. */
+
 var carousel = document.querySelector('.carousel');
 var cells = carousel.querySelectorAll('.carousel li');
 var cellCount = cells.length;
@@ -13,7 +15,7 @@ document.querySelector('#yt button').addEventListener('click', function(e) {
     player.stopVideo();
 });
 
-carousel.addEventListener('click', function(e) {
+carousel.addEventListener('click', e => {
     let t = e.target;
     if (t.tagName === 'IMG') {
       if (t.parentElement.tagName === 'A'){
@@ -38,7 +40,7 @@ carousel.addEventListener('click', function(e) {
 }
 });
 
-function rotateCarousel() {
+const rotateCarousel = _ => {
   var angle = theta * selectedIndex * -1;
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)';
@@ -62,7 +64,7 @@ function changeCarousel() {
   theta = 360 / cellCount;
   var cellSize = cellWidth;
   radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-  for ( var i=0; i < cells.length; i++ ) {
+  for (var i = 0; i < cells.length; i++ ) {
     var cell = cells[i];
       cell.style.opacity = 1;
       var cellAngle = theta * i;
@@ -78,22 +80,14 @@ selfrot = window.setInterval(function() {
   rotateCarousel();
 }, 1200);
 
+/* Youtube API */
 
-          // 2. This code loads the IFrame Player API code asynchronously.
-          var tag = document.createElement('script');
-    
-          tag.src = "https://www.youtube.com/iframe_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-          // 3. This function creates an <iframe> (and YouTube player)
-          //    after the API code downloads.
-          var player;
-
-    
-          // 4. The API will call this function when the video player is ready.
-          function onPlayerReady(event) {
-            console.log(event)
-            event.target.playVideo();
-          }
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
 

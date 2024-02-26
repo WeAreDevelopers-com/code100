@@ -7,6 +7,18 @@ body {
   text-align: center;
 
 }
+h1 {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 1em;
+        
+}
+footer {
+  color: white;
+}
+a { color: lime;}
 
 .scene {
   margin: 40px 0;
@@ -55,6 +67,9 @@ button {
 .carousel a {
     display: block;
 }
+.carousel-options {
+  padding: 1em 0;
+}
 #yt {
     position: absolute;
     top: -100vh;
@@ -91,17 +106,5 @@ button {
     transform: translate(-50%, -50%);
     color: white;
     padding: .5em 0;
-    text-align:center;
+    text-align: center;
 }
-h1 {
-  color: white;
-  font-size: 2em;
-  text-align: center;
-  font-size: 1.5em;
-  padding-top: 1em;
-        
-}
-footer {
-  color: white;
-}
-a { color: lime;}
