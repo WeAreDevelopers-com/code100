@@ -9,8 +9,7 @@ body {
 
 }
 h1 {
-  color: black;
-  background: lime;
+  color: lime;
   font-size: 2em;
   margin:0;
   text-transform: uppercase;
@@ -18,9 +17,11 @@ h1 {
   text-align: center;        
 }
 footer {
-  color: black;
-  background: lime;
+  color: white;
   padding: .5em 0;
+}
+footer a {
+  color: lime;
 }
 a { 
   color: black;
@@ -125,7 +126,13 @@ button:hover {
     text-align: center;
 }
 .fade {
+border: 2px solid #fff;
+padding-bottom: 2em;
+position: relative;
+
 }
+
+
 .fade::before {
   z-index: 2;
   content: '';
