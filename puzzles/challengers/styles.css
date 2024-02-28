@@ -111,8 +111,8 @@ button:hover {
     top: 0em;
 }
 .chosen #yt {
-    top: 30vh;
-    transition: 1000ms;
+    top: 300px;
+    transition: 400ms;
 }
 .carousel a::before {
     content: 'Click to watch video';
@@ -130,8 +130,6 @@ button:hover {
   position: relative;
 
 }
-
-
 .fade::before {
   z-index: 2;
   content: '';
