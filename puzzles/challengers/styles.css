@@ -126,9 +126,8 @@ button:hover {
     text-align: center;
 }
 .fade {
-border: 2px solid #fff;
-padding-bottom: 2em;
-position: relative;
+  padding-bottom: 2em;
+  position: relative;
 
 }
 
