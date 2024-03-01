@@ -16,7 +16,7 @@ Write a solution that shows:
 
 For example, if the dataset were to be: 
 
-```JSON
+```json
 [
     {
         "width":200,"height":300,
@@ -43,7 +43,7 @@ For example, if the dataset were to be:
 
 The result you should create is: 
 
-```JSON
+```json
 {
   "uniquenames": 3,
   "widest": 800,
@@ -65,7 +65,7 @@ This wasn't a tough assignment, but it needed some looking up of the data.
 
 In JavaScript, it can look like this:
 
-```JavaScript
+```javascript
 // Grab the data
 import { readFileSync } from 'fs';
 const dataset = 'catdata.json';

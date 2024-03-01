@@ -25,7 +25,7 @@ CODE100 Zagreb 2023
 CODE100 Amsterdam 2024
 
 * [Web proposal strings](/puzzles/web-proposal)
-* [Cat image sorter](/puzzles/catpics)
+* [Cat pic challenge](/puzzles/catpics)
 * [Stars in their eyes](/puzzles/stars-in-their-eyes/)
 
 ## On-line challenges (Dev Digest)
