@@ -22,6 +22,12 @@ CODE100 Zagreb 2023
 * [Crew manifest challenge - how many on each ship?](/2023-puzzles/zagreb-challenge-1)
 * [Crew manifest challenge - what's their job?](/2023-puzzles/zagreb-challenge-2)
 
+CODE100 Amsterdam 2024
+
+* [Web proposal strings](/puzzles/web-proposal)
+* [Cat image sorter](/puzzles/catpics)
+* [Stars in their eyes](/puzzles/stars-in-their-eyes/)
+
 ## On-line challenges (Dev Digest)
 
 * [Developer DNA](/puzzles/developer-dna/)
