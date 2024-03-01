@@ -22,7 +22,8 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 * [Crew manifest challenge - how many on each ship?](/2023-puzzles/zagreb-challenge-1)
 * [Crew manifest challenge - what's their job?](/2023-puzzles/zagreb-challenge-2)
 
-### Amsterdam 2024
+
+### Amsterdam 2024
 
 * [Quiz and knowledge rounds with explanations and comment](/quizrounds/amsterdam/)
 * [Web proposal strings](/puzzles/web-proposal)
