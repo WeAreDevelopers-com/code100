@@ -33,9 +33,9 @@ What is the result of the call of WHAT with this data?
 * P:4 L:3 S:1 (correct answer)
 * P:3 L:3 S:2
 
-*Explanation:* This is an array of image data with width and height and the function counts if the images are portrait, landscape or square. The trick to find out fast is to realise that there is only one square one (`{w:74,h:74}`) and then count the landscape ones (wider than high). Originally, I planned to also ask for this in the [cat puzzle challenge](/puzzles/catpics/), so this was a leftover.
+**Explanation:** This is an array of image data with width and height and the function counts if the images are portrait, landscape or square. The trick to find out fast is to realise that there is only one square one (`{w:74,h:74}`) and then count the landscape ones (wider than high). Originally, I planned to also ask for this in the [cat puzzle challenge](/puzzles/catpics/), so this was a leftover.
 
-### Question 2
+### Question 2
 
 You are given the following pseudo code:
 
@@ -116,7 +116,7 @@ Calling WHAT with the following values: `734`, `1432`, `200030017010`, `396`, `1
 
 **Explanation:** The moderator hated reading this one out and it feels pretty random. What this does is take the largest single digit in a number string and validates if the sum of all the others makes up that number. So, in the case of `734` this means it takes the `7` and checks of `3 + 4` makes up `7`, which it does. 
 
-## Question 5
+### Question 5
 
 You are given the following pseudo code:
 
@@ -222,7 +222,7 @@ These were pretty straight forward multiple choice questions. Some were submitte
 
 ## Audience Shout Out Rounds
 
-### Shoutout block 1 
+### Shoutout Block 1
 
 How many arrays with how many elements does this `console.log()` return?
 
@@ -230,7 +230,11 @@ How many arrays with how many elements does this `console.log()` return?
 function A() { return [[1,2,3],[4,5,6],[7,8,9]] }
 function B() { return [1,2,2,5] }
 function C() { return [1,4,4,2,[1,1]] }
-console.log( [...new Set( [ B(), C(), A() ].map (e => e.flat() ).flat() ) ] )
+console.log( [...new Set( 
+    [ B(), C(), A() ].map (
+        e => e.flat() 
+    ).flat() 
+) ] )
 ```
 
 Answers: 
@@ -242,7 +246,7 @@ Answers:
 
 **Solution:** One array with 9 elements. Each array gets flattened into a single one and the result is turned into a Set, returning only the unique elements. The last `flat()` turns it into one array. It is the classic question of "If you have 1 hay stack and you add two haystacks to it, how many do you get?"
 
-## Shoutout block 2
+### Shoutout Block 2
 
 What does the following CSS do?
 
@@ -261,7 +265,7 @@ Answers:
 
 **Solution:** the not() selector checks if an image has an `alt` attribute and if it does not it adds a border around it. You can still provide other ways to give an image alternative text than the `alt` attribute, hence it's not the third option.
 
-### Shoutout block 3
+### Shoutout Block 3
 
 How many of the following are not valid named CSS colours:
 
@@ -278,7 +282,8 @@ Answers:
 
 Solution: Greysmoke, Milkshake, Ebony and Pistachio are made up. Amazing if you think about Ivory being a valid one. If you feel like playing a game with named colours, I (made one some time ago](https://codepo8.github.io/css-colour-names/). 
 
-### Shoutout block 4
+
+### Shoutout Block 4
 
 What does the following CSS do?
 
@@ -286,6 +291,7 @@ What does the following CSS do?
 a[href^=http]::after {
   content: " ↗";
 }
+```
 
 Answers: 
 
