@@ -1,0 +1,66 @@
+<style>
+    body {
+        background-color: grey;
+    }
+    .canvas {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        transition: 1s;
+        background: grey;
+        border: 4em solid transparent;
+    }
+    .star {
+        position: absolute;
+        width: 100px;
+        height: 150px;
+    }
+    .tl {
+        top: 0;
+        left: 0;
+        background: url(../puzzles/stars-in-their-eyes/stars.png) no-repeat;
+        background-position: -106px -96px;
+    }    
+    .tr {
+        top: 0;
+        right: 0;
+        background: url(../puzzles/stars-in-their-eyes/stars.png) no-repeat;
+        background-position: -206px -96px;
+    }    
+    .bl {
+        bottom: 0;
+        left: 0;
+        background: url(../puzzles/stars-in-their-eyes/stars.png) no-repeat;
+        background-position: -106px -246px;
+    }    
+    .br {
+        bottom: 0;
+        right: 0;
+        background: url(../puzzles/stars-in-their-eyes/stars.png) no-repeat;
+        background-position: -206px -246px;
+    }
+    .canvas:hover .br {
+        transform:translate(-100px, -150px);
+        transition: 500ms 900ms;
+    }    
+    .canvas:hover .tl {
+        transform:translate(100px, 150px);
+        transition: 500ms 1800ms;
+    }    
+    .canvas:hover .bl {
+        transform:translate(100px, -150px);
+        transition: 500ms 2300ms;
+    }    
+    .canvas:hover .tr {
+        transform:translate(-100px, 150px);
+        transition: 500ms 2800ms;
+    }    
+ </style>
+
+<div class="canvas">
+    <div class="star tl"></div>
+    <div class="star tr"></div>
+    <div class="star bl"></div>
+    <div class="star br"></div>
+</div>
+
