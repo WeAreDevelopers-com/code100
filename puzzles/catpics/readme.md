@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles - Amsterdam 2024 - Web Proposal
+layout: challenge
+--- 
+
 # Cat pics challenge =^_^=
 
 You have a [JSON dataset of cat pictures](catdata.json), each with a file name, dimensions and alternative text that starts with the name of the cat and a description of what it looks like. 
@@ -106,7 +111,7 @@ console.log(result);
 
 Which results in the following data:
 
-```JSON
+```json
 {
   "uniquenames": 57,
   "widest": 2076,

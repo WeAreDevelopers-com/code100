@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles - Amsterdam 2024 - Web Proposal
+layout: challenge
+---
+
 # Web proposal scraping
 
 You get the [text of Tim Berners-Lee proposal](web-proposal.txt) for the web (slightly abridged).
@@ -79,7 +84,7 @@ console.log(JSON.stringify(out));
 
 This results in: 
 
-```JSON
+```json
 {
     "Longest without comma":"It discusses the problems of loss of 
     information about complex evolving systems and derives a solution 
