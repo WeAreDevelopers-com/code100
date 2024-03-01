@@ -28,13 +28,11 @@ OK, this one was slightly evil. The trick is to not get distracted by the comple
 
 ![slicing the star and moving each part so it becomes an oval](startocircle.gif)
 
-That way you think of the green pixels as a rectangle and the black ones as an oval covering them. 
+* That way you think of the green pixels as a rectangle and the black ones as an oval covering them. 
+* The amount of green pixels is the width of the star multiplied by the height minus the area of the oval. 
+* You can calculate the area of the oval by taking half the width multiplied by half the height and multiply this with PI. 
 
-The amount of green pixels is then the width of the star multiplied by the height minus the area of the oval. 
-
-You can calculate the area of the oval by taking half the width multiplied by half the height and multiply this with PI. 
-
-In JavaScript, using this dataset, this could be: 
+In JavaScript, using the dataset, this could be: 
 
 ```javascript
 let pixels = 0;
