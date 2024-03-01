@@ -6,7 +6,7 @@ Your challenge is to return the amount of green pixels in the following image:
 
 He're is a [JSON dataset](stars.json) with the dimensions of each star.
 
-```JSON
+```json
 [
     { "width": 200, "height": 300 },
     { "width": 200, "height": 150 },
@@ -14,3 +14,9 @@ He're is a [JSON dataset](stars.json) with the dimensions of each star.
 ]
 ```
 
+<!-- details -->
+<!-- summary -->
+## Solution
+<!-- endsummary -->
+
+<!-- enddetails -->
