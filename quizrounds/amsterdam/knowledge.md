@@ -1,3 +1,7 @@
+---
+title: Amsterdam CODE100 Knowledge Questions 
+layout: challenge
+---
 
 # Amsterdam CODE100 Quiz and Knowledge rounds
 
@@ -80,4 +84,4 @@ These were pretty straight forward multiple choice questions. Some were submitte
     * So Very Graphical
     * Sustainable Velocity Graphics
     * Sizeable Vector Graphics
-    * Scalable Vector Graphics
+    * Scalable Vector Graphics (correct answer)

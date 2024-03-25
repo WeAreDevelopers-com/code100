@@ -1,3 +1,7 @@
+---
+title: Amsterdam CODE100 Audience Shout Out Rounds
+layout: challenge
+---
 
 # Amsterdam CODE100 Quiz and Knowledge rounds
 

@@ -25,9 +25,9 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 ### Amsterdam 2024
 
 * Quiz and knowledge rounds with explanations and comment 
-    - [Development Knowledge round](quizrounds/amsterdam/knowledge.md)
-    - [Pseudo code round](quizrounds/amsterdam/pseudo-code.md)
-    - [Audience Shoutout rounds](quizrounds/amsterdam/audience-rounds.md)
+    - [Development Knowledge Round](quizrounds/amsterdam/knowledge.md)
+    - [Pseudo Code Round](quizrounds/amsterdam/pseudo-code.md)
+    - [Audience Shout Out Rounds](quizrounds/amsterdam/audience-rounds.md)
 * Code challenges
     - [Web proposal strings](/puzzles/web-proposal)
     - [Cat pic challenge](/puzzles/catpics)

@@ -1,7 +1,11 @@
+---
+title: Amsterdam CODE100 Pseudo Code Quiz Round
+layout: challenge
+---
 
 # Amsterdam CODE100 Quiz and Knowledge rounds
 
-## Pseudo Code Quizround
+## Pseudo Code Quiz Round
 
 These rounds are run on Slido and challengers need to pick an answer on their phones. This means both understanding the question and speed are of the essence.
 
