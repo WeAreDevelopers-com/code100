@@ -24,10 +24,14 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 
 ### Amsterdam 2024
 
-* [Quiz and knowledge rounds with explanations and comment](/quizrounds/amsterdam/)
-* [Web proposal strings](/puzzles/web-proposal)
-* [Cat pic challenge](/puzzles/catpics)
-* [Stars in their eyes](/puzzles/stars-in-their-eyes/)
+* Quiz and knowledge rounds with explanations and comment 
+    - [Development Knowledge round](quizrounds/amsterdam/knowledge.md)
+    - [Pseudo code round](quizrounds/amsterdam/pseudo-code.md)
+    - [Audience Shoutout rounds](quizrounds/amsterdam/audience-rounds.md)
+* Code challenges
+    - [Web proposal strings](/puzzles/web-proposal)
+    - [Cat pic challenge](/puzzles/catpics)
+    - [Stars in their eyes](/puzzles/stars-in-their-eyes/)
 
 ## On-line challenges (Dev Digest)
 
