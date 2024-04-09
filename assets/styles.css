@@ -162,3 +162,6 @@ li::marker {
   padding: .2em .5em;
   text-decoration: none;
 }
+p img {
+  width: 100%;
+}
