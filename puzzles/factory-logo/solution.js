@@ -10,5 +10,4 @@ total += ((dimensions.roofs[0] * dimensions.roofs[1]) / 2) * 3;
 total += dimensions.chimney[0] * dimensions.chimney[1];
 total += (dimensions.connect[0] * dimensions.connect[1]) / 2;
 
-console.log(Math.round(total));
-
+console.log(Math.floor(total));
