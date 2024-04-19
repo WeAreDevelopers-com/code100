@@ -46,15 +46,15 @@ if (pixels[i + 3] === 0 ||
         (pixels[i] === 0 && 
          pixels[i + 1] === 0 && 
          pixels[i + 2] === 0)) {
-        black++;
+        blackPixels++;
     } else {
-        nonblack++;
+        otherPixels++;
     }
 }
 console.log(blackPixels);
 console.log(otherPixels);
 // testing the outcome - this should be zero
-console.log(data.width * data.height - black - nonblack)
+console.log(data.width * data.height - blackPixels - otherPixels)
 ```
 
 Canvas and pixel manipulation is so much fun.

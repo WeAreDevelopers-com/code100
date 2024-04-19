@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function countpixels(data) {
+    // define the black/transparent and non-black pixel amounts
+    let blackPixels = 0;
+    let otherPixels = 0;
+    // get the pixels and store the length to speed up the loop
+    let pixels = data.pixels;
+    let all = pixels.length;
+    // loop through the pixel data in fours
+    for (let i = 0; i < all; i += 4) {
+    // the pixel colour of a canvas is stored in RGBA format
+    // This means if the fourth value is 0, the pixel is transparent
+    // If the first three values are 0, the pixel is black
+    if (pixels[i + 3] === 0 || 
+            (pixels[i] === 0 && 
+             pixels[i + 1] === 0 && 
+             pixels[i + 2] === 0)) {
+            black++;
+        } else {
+            nonblack++;
+        }
+    }
+    console.log(blackPixels);
+    console.log(otherPixels);
+    // testing the outcome - this should be zero
+    console.log(data.width * data.height - black - nonblack)
+    }
+    // get the JSON data from the URL
+    fetch('https://puzzles.code100.dev/puzzles/unknown-pleasures/pixels.json').then((response) => {
+        return response.json();
+    }).then((data) => {
+        countpixels(data);
+    }).catch((err) => {
+        console.log(err);
+    });
+</script>    
+</body>
+</html>
