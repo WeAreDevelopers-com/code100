@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE 100 bets</title>
+    <link rel="stylesheet" href="../assets/dark-theme.css">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80vw;
+            position: relative;
+        }
+        .item {
+            font-weight: bold;
+            background: var(--h1colour);
+            color: black;
+            padding:.5em 1em;
+            border-bottom: 5px solid black;
+            width: calc(100% - 2em);
+            position: absolute;
+            top: 0;
+            transition: transform 0.5s ease;
+            transform: translateY(calc(var(--order) * 100%));
+            display: flex;
+            justify-content: space-between;
+        }
+        .value {
+            text-align: right;
+        }
+        .item>span {
+            flex:1;
+        }
+        .headerimg {
+            width: 20vw;
+            margin: 10px;
+
+        }
+</style>
+</head>
+<body>
+    <a href="https://code100.dev"><img class="headerimg" src="../assets/images/code100-transparent.png" alt="LOGO100 logo"></a>
+    <h1>Bets leaderboard</h1>
+    <div class="container">
+    </div>
+
+<div id="leaderboard"></div>    
+
+<script>
+    let leaderboard = document.querySelector('#leaderboard');
+    let bets = [
+        {name: 'Alice', bet: 100,key:'a1'},
+        {name: 'Bob', bet: 200,key:'a2'},
+        {name: 'Charlie', bet: 300,key:'a3'},
+        {name: 'David', bet: 400,key:'a4'},
+        {name: 'Eve', bet: 500,key:'a5'},
+        {name: 'Frank', bet: 600,key:'a6'},
+        {name: 'Grace', bet: 700,key:'a7'},
+        {name: 'Heidi', bet: 800,key:'a8'},
+        {name: 'Ivan', bet: 900,key:'a9'},
+        {name: 'Judy', bet: 1000,key:'a10'},
+    ];
+    const drawboard = (bets) => {
+        let html = '';
+        bets.forEach((bet,k) => {
+            html += `<div class="item" id="${bet.key}" style="--order:${k+1}"><span class="name">${bet.name}</span><span class="value">${bet.bet}</span></div>`;
+        });
+        document.querySelector('.container').innerHTML = html;
+        shuffleboard();
+    };
+    const shuffleboard = () => {
+        bets.forEach(bet => {
+            bet.bet = Math.floor(Math.random() * 1000);
+        });
+        bets.sort((a, b) => b.bet - a.bet);
+        bets.forEach((bet,k) => {
+            let item = document.getElementById(bet.key);
+            item.innerHTML = `<span class="name">${bet.name}</span> <span class="value">${bet.bet}</span>`;
+            item.style.setProperty('--order', k+1);
+        });
+        setTimeout(shuffleboard, 1000);
+    };
+    drawboard(bets);
+</script>
+</body>
+</html>
