@@ -25,7 +25,7 @@
             width: calc(100% - 2em);
             position: absolute;
             top: 0;
-            transition: transform 0.5s ease;
+            transition: transform 1s ease;
             transform: translateY(calc(var(--order) * 100%));
             display: flex;
             justify-content: space-between;
@@ -37,20 +37,15 @@
             flex:1;
         }
         .headerimg {
-            width: 20vw;
-            margin: 10px;
-
+            width: 20vw
         }
 </style>
 </head>
 <body>
-    <a href="https://code100.dev"><img class="headerimg" src="../assets/images/code100-transparent.png" alt="LOGO100 logo"></a>
+    <img class="headerimg" src="../assets/images/code100-transparent.png" alt="LOGO100 logo">
     <h1>Bets leaderboard</h1>
     <div class="container">
     </div>
-
-<div id="leaderboard"></div>    
-
 <script>
     let leaderboard = document.querySelector('#leaderboard');
     let bets = [
@@ -68,7 +63,11 @@
     const drawboard = (bets) => {
         let html = '';
         bets.forEach((bet,k) => {
-            html += `<div class="item" id="${bet.key}" style="--order:${k+1}"><span class="name">${bet.name}</span><span class="value">${bet.bet}</span></div>`;
+            html += `
+            <div class="item" id="${bet.key}" style="--order:${k+1}">
+                <span class="name">${bet.name}</span>
+                <span class="value">${bet.bet}</span>
+            </div>`;
         });
         document.querySelector('.container').innerHTML = html;
         shuffleboard();
@@ -80,7 +79,10 @@
         bets.sort((a, b) => b.bet - a.bet);
         bets.forEach((bet,k) => {
             let item = document.getElementById(bet.key);
-            item.innerHTML = `<span class="name">${bet.name}</span> <span class="value">${bet.bet}</span>`;
+            item.innerHTML = `
+                <span class="name">${bet.name}</span>
+                <span class="value">${bet.bet}</span>
+            `;
             item.style.setProperty('--order', k+1);
         });
         setTimeout(shuffleboard, 2000);
