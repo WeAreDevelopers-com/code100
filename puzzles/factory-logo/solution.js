@@ -11,4 +11,3 @@ total += dimensions.chimney[0] * dimensions.chimney[1];
 total += (dimensions.connect[0] * dimensions.connect[1]) / 2;
 
 console.log(Math.floor(total));
-

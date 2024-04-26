@@ -1,16 +1,18 @@
-# Factory Records Logo challenge
+# Factory Records Logo Challenge
 
-![Factory Records logo showing a stylised factory with a wave over it](factory-records.png)
+This challenge asks you to return the amount of black pixels in the factory records logo with the following dimensions:
 
-The challenge is to take the logo of the iconic Factory Records label and return how many black pixels are in when the dimensions are as defined [in this dataset](dataset.json):
+![Factory logo with dimensions](factory-records.png)
+
+You get a [JSON dataset](dataset.json) with the dimensions:
 
 ```json
 {
     "halls": [100,100],
     "chimney": [35,120],
-    "connect": [25,25],
+    "connect": [25,35],
     "roofs": [100,70] 
 }
 ```
 
-Return the amount of pixels rounded up to the next full decimal number, like `12123`.
+The result of your code should be a number rounded down to the nearest integer. So if your result were to be `23538.7`, you should return `23538`.
