@@ -47,6 +47,11 @@
     <div class="container">
     </div>
     <div class="livecontainer">
+        <div class="item">
+            <img src="" alt="">
+            <div class="name"><span class="name"></span>Name
+            </div>
+        </div>
     </div>
 <script>
     let leaderboard = document.querySelector('#leaderboard');
@@ -81,10 +86,10 @@
         bets.sort((a, b) => b.bet - a.bet);
         bets.forEach((bet,k) => {
             let item = document.getElementById(bet.key);
-            item.innerHTML = `
-                <span class="name">${bet.name}</span>
-                <span class="value">${bet.bet}</span>
-            `;
+            // item.innerHTML = `
+            //     <span class="name">${bet.name}</span>
+            //     <span class="value">${bet.bet}</span>
+            // `;
             item.style.setProperty('--order', k+1);
         });
         setTimeout(shuffleboard, 2000);

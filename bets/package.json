@@ -1,0 +1,7 @@
+{
+    "name": "bets",
+    "version": "1.0.0",
+    "main": "convert.js",
+    "license": "MIT",
+    "type": "module"
+}
