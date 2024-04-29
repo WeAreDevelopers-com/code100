@@ -46,11 +46,13 @@
     <h1>Bets leaderboard</h1>
     <div class="container">
     </div>
+    <div class="livecontainer">
+    </div>
 <script>
     let leaderboard = document.querySelector('#leaderboard');
     let bets = [
-        {name: 'Alice', bet: 100,key:'a1'},
-        {name: 'Bob', bet: 200,key:'a2'},
+        {name: 'Challenger 1', bet: 100,key:'a1'},
+        {name: 'Challenger 2', bet: 200,key:'a2'},
         {name: 'Charlie', bet: 300,key:'a3'},
         {name: 'David', bet: 400,key:'a4'},
         {name: 'Eve', bet: 500,key:'a5'},
@@ -88,6 +90,65 @@
         setTimeout(shuffleboard, 2000);
     };
     drawboard(bets);
+
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ56agzljGMCu52ppQLKucxl7VNPfhSkkfae6OpKepByIS_GYM3_1ErztB9yjg02sbRz9m78giiVTLQ/pub?output=csv').then((response) => {
+        return response.text();
+    }).then((data) => {
+        console.log(data);
+        let rows = data.split('\n');
+        let newbets = [];
+        let winners = [];
+        let followups = [];
+        rows.forEach((row,i) => {
+            if (i>1){
+                let data = row.split(',');
+                winners.push(data[1].trim());
+                followups.push(data[2].trim());
+            }
+        });
+        let win = {};
+        winners.forEach((winner) => {
+            if (win[winner]) {
+                win[winner]++;
+            } else {
+                win[winner] = 1;
+            }
+        });
+        let follow = {}
+        followups.forEach((f) => {
+            if (follow[f]) {
+                follow[f]++;
+            } else {
+                follow[f] = 1;
+            }
+        });
+        let overall = {};
+        Object.keys(win).forEach((key) => {
+            if(overall[key]){
+                overall[key] += win[key];
+            } else {
+                overall[key] = win[key];
+            }
+        });
+        Object.keys(follow).forEach((key) => {
+            console.log(key, win[key])
+            if(overall[key]){
+                overall[key] += follow[key] / 2;
+            } else {
+                overall[key] = follow[key] / 2;
+            }
+        });
+        overall = Object.fromEntries(
+            Object.entries(overall).sort(([,a],[,b]) => b-a)
+        );
+        overall = Object.keys(overall).map((key) => {
+            return {name: key, all: overall[key], win: win[key] || 0, follow: follow[key] || 0};
+        });
+
+        console.log(overall);
+    }).catch((err) => {
+        console.log(err);
+    });
 </script>
 </body>
 </html>
