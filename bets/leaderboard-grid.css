@@ -33,7 +33,6 @@ h1 {
 }
 .item img {
     max-width: 10em;
-    height: auto;
     border: 5px solid #fff;
     border-radius: 50%;
     display: block;
@@ -78,9 +77,10 @@ h1 {
 }
 .name {
     display: flex;
-    justify-content: cente-start;
+    justify-content: start;
     align-items: center;
     gap: 1em;
+    min-width: 10em;
 }
 .name svg {
     height: 1.5em;
