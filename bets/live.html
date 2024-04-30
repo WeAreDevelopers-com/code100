@@ -37,7 +37,7 @@
         }
         .item img {
             max-width: 10em;
-            height: auto;
+            max-height: 10em;
             border: 5px solid #fff;
             border-radius: 50%;
             display: block;
@@ -64,6 +64,7 @@
             font-weight: normal;
             font-style: italic;
             color: #fff;
+            min-width: 10em;
         }
         .valuecontainer {
             flex: 1;
@@ -196,8 +197,8 @@
                 <div class="namecontainer">
                         <h2 class="name">
                             <span>${name} ${lastname}</span>
-                            ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': ''}
-                            ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': ''}
+                            ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': '&nbsp;'}
+                            ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': '&nbsp;'}
                         </h2>
                         <div class="slogan">${slogan}</div>
                         <div class="meta">
