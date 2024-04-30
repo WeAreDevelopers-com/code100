@@ -1,0 +1,158 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+h1 {
+    text-align: center;
+}
+.container {
+    width: 80vw;
+    position: relative;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* MARK: leadeboard/grid item 
+*/
+.item {
+    border: 5px solid var(--h1colour);
+    border-radius: 1em;
+    color: var(--h1colour);
+    display: flex;
+    width: 40%;
+    padding: 1em;
+    gap: 1em;
+    flex-wrap: wrap;
+    min-width: 12em;
+    position: relative;
+    justify-content: space-between;
+}
+.item img {
+    max-width: 10em;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin:0 auto;
+}
+.leaderboard .item img {
+    max-width: 6em;
+}
+.leaderboard .item {
+    background: #000;
+    height: 7em;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 2em);
+    transition: transform 1s ease;
+    transform: translateY(calc(var(--order) * 10em));
+}
+/* MARK: Entry items
+*/
+.value {
+    text-align: right;
+}
+.namecontainer {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: space-between;
+
+}
+.slogan {
+    font-weight: normal;
+    font-style: italic;
+    color: #fff;
+}
+.valuecontainer {
+    flex: 1;
+}
+.headerimg {
+    width: 20vw;
+    margin: 1em 0;
+}
+.name {
+    display: flex;
+    justify-content: cente-start;
+    align-items: center;
+    gap: 1em;
+}
+.name svg {
+    height: 1.5em;
+    width: 1.5em;
+}
+.item h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.2em;
+}
+.meta {
+    display: flex;
+    gap: 1em;
+}
+.valuecontainer {
+    display:none;
+}
+
+/* MARK: Options and buttons 
+*/
+.options {
+    display: flex;
+    gap: 1em;
+    margin: 1em;
+    align-items: center;
+}
+
+input[type="radio"],input[type="checkbox"] {
+    display: none;
+}
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    background: black;
+    color: white;
+    padding: .5em 1em;
+    cursor: pointer;
+    border: 1px solid var(--h1colour);
+}
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label{
+    background: var(--h1colour);
+    color: black;
+
+}
+
+/* MARK: YouTube Player 
+*/
+#yt {
+    position: absolute;
+    top: -100vh;
+    z-index: 5;
+    transition: 1000ms;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 2em;
+    padding: 3em 4em;
+    border-radius: 1em;
+    background-color: rgba(0   , 0, 0, .8); 
+}
+#yt button {
+    position: absolute;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: .5em 1em;
+    cursor: pointer;
+    right: 0;
+    top: 0em;
+}
+.chosen #yt {
+    top: 300px;
+    transition: 400m;
+}
