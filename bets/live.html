@@ -11,31 +11,43 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
         }
         .container {
             width: 80vw;
             position: relative;
             display: flex;
             gap: 1em;
-            min-height: 2000px;
+            flex-direction: row;
             flex-wrap: wrap;
-            flex-direction: column;
+            justify-content: center;
         }
         .item {
             border: 5px solid var(--h1colour);
             border-radius: 1em;
             color: var(--h1colour);
-            padding:.5em 1em;
-            width: calc(100% - 2em);
             display: flex;
+            width: 40%;
+            padding: 1em;
             gap: 1em;
+            flex-wrap: wrap;
+            min-width: 12em;
             position: relative;
             justify-content: space-between;
         }
         .item img {
+            max-width: 10em;
+            height: auto;
             border: 5px solid #fff;
             border-radius: 50%;
             display: block;
+            margin:0 auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .leaderboard .item img {
+            max-width: 6em;
         }
         .value {
             text-align: right;
@@ -57,11 +69,13 @@
             flex: 1;
         }
         .headerimg {
-            width: 20vw
+            width: 20vw;
+            margin: 1em 0;
         }
         .name {
             display: flex;
-            justify-content: flex-start;
+            justify-content: cente-start;
+            align-items: center;
             gap: 1em;
         }
         .name svg {
@@ -78,26 +92,88 @@
             display: flex;
             gap: 1em;
         }
-        .item {
+        input[type="radio"],input[type="checkbox"] {
+            display: none;
+        }
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            background: black;
+            color: white;
+            padding: .5em 1em;
+            cursor: pointer;
+            border: 1px solid var(--h1colour);
+        }
+        input[type="radio"]:checked + label,
+        input[type="checkbox"]:checked + label{
+            background: var(--h1colour);
+            color: black;
+        
+        }
+        .leaderboard .item {
             background: #000;
             height: 7em;
             position: absolute;
             top: 0;
+            width: calc(100% - 2em);
             transition: transform 1s ease;
-            transform: translateY(calc(var(--order) * 9em));
+            transform: translateY(calc(var(--order) * 10em));
         }
-
-
+        .options {
+            display: flex;
+            gap: 1em;
+            margin: 1em;
+            align-items: center;
+        }
+        .valuecontainer {
+            display:none;
+        }
+        #yt {
+            position: absolute;
+            top: -100vh;
+            z-index: 5;
+            transition: 1000ms;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-top: 2em;
+            padding: 3em 4em;
+            border-radius: 1em;
+            background-color: rgba(0   , 0, 0, .8); 
+        }
+        #yt button {
+            position: absolute;
+            background: red;
+            color: white;
+            border: none;
+            font-size: 1em;
+            padding: .5em 1em;
+            cursor: pointer;
+            right: 0;
+            top: 0em;
+        }
+        .chosen #yt {
+            top: 300px;
+            transition: 400m;
+        }
 </style>
 </head>
 <body>
     <img class="headerimg" src="../assets/images/code100-transparent.png" alt="LOGO100 logo">
-    <h1>Bets leaderboard</h1>
-    <div class="container">
+    <h1>CODE100 Manchester Challengers</h1>
+    <a class="youtube" href="https://www.youtube.com/watch?v=YThAruu2ZTM">asdasd</a>
+    <div class="options">
+        Show as: 
+        <input type="radio" checked id="grid" name="show"><label for="grid">Grid</label>
+        <input type="radio" id="leaderboard" name="show"><label for="leaderboard">Leaderboard</label>
+        <input type="checkbox" id="ani" checked><label for="ani">animated</label>
     </div>
-    <div class="livecontainer">
+    <div class="container animation">
     </div>
+    <div id="yt">
+        <button>X</button>
+        <div id="player"></div>
+      </div>
     <script>
+        let animated = true;
         let githubsvg = '<svg viewBox="0 0 64 64" width="1em" height="1em"><title>#title</title><path stroke-width="0" fill="currentColor" d="M32 0 C14 0 0 14 0 32 0 53 19 62 22 62 24 62 24 61 24 60 L24 55 C17 57 14 53 13 50 13 50 13 49 11 47 10 46 6 44 10 44 13 44 15 48 15 48 18 52 22 51 24 50 24 48 26 46 26 46 18 45 12 42 12 31 12 27 13 24 15 22 15 22 13 18 15 13 15 13 20 13 24 17 27 15 37 15 40 17 44 13 49 13 49 13 51 20 49 22 49 22 51 24 52 27 52 31 52 42 45 45 38 46 39 47 40 49 40 52 L40 60 C40 61 40 62 42 62 45 62 64 53 64 32 64 14 50 0 32 0 Z"></path></svg>'
         let linkedinsvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><title>#title</title><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>';
         let bets = [];
@@ -114,6 +190,7 @@
                 item.classList.add('item');
                 item.style.setProperty('--order', (k));
                 item.setAttribute('id', 'challenger' + (k + 1))
+                item.style.order =  (k + 1);
                 out =`
                 <img src="challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
                 <div class="namecontainer">
@@ -142,12 +219,70 @@
         bets.sort((a, b) => b.bet - a.bet);
         bets.forEach((bet,k) => {
             let item = document.querySelector('#'+bet.key);
-            item.style.setProperty('--order', k);
+            if (animated) {
+                item.style.setProperty('--order', k);
+                item.style.order = k;
+            }
+            item.querySelector('.value').textContent = (k+1);;
         });
         setTimeout(shuffleboard, 2000);
     };
     shuffleboard();
+    document.querySelector('.options').addEventListener('change', () => {
+        if (document.querySelector('#leaderboard').checked){
+            document.querySelector('.container').classList.add('leaderboard');
+        } else {
+            document.querySelector('.container').classList.remove('leaderboard');
+        }
+        if (!document.querySelector('#ani').checked){
+            document.querySelector('.container').classList.remove('animation');
+            animated = false;
+        } else {
+            document.querySelector('.container').classList.add('animation');
+            animated = true;
+        }
+    });
+    document.querySelector('#yt button').addEventListener('click', function(e) {
+    document.querySelector('body').classList.remove('chosen');
+    player.stopVideo();
+});
+document.body.addEventListener('click', e => {
+    let t = e.target;
+    if (t.tagName === 'A') {
+      if (t.classList.contains('youtube')){
+          e.preventDefault();
+          animated = false;
+          document.querySelector('#ani').checked = false;
+          let src = t.getAttribute('href');
+          src = src.split('v=')[1];
+          if (player) {
+            player.loadVideoById(src);
+          } else {
+              player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: src,
+                playerVars: {
+                  'playsinline': 1,
+                    'autoplay': 1
+                }
+              });
+          }
+         document.querySelector('body').classList.add('chosen');
+      }
+}
+});
 
+/* Youtube API */
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var player;
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
     </script>
 </script>
 </body>
