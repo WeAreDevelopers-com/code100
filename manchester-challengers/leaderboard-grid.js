@@ -14,7 +14,7 @@ const drawboard = (challengers) => {
         item.style.order =  (k + 1);
         //MARK: item HTML
         out =`
-        <img src="challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
+        <img src="/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
         <div class="namecontainer">
                 <h2 class="name">
                     <span>${name} ${lastname}</span>
@@ -116,7 +116,7 @@ function onPlayerReady(event) {
 
 //MARK: pull data
 let url = 'http://localhost:8080/bets/challengers.csv';
-url = 'https://puzzles.code100.dev/bets/challengers.csv';
+url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
 fetch(url).then(response => response.text()).then(text => {
     let lines = text.split('\n');
     lines.shift();
