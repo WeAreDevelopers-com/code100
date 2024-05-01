@@ -114,6 +114,7 @@ function onPlayerReady(event) {
 }
 //#endregion
 
+
 //MARK: pull data
 let url = 'http://localhost:8080/bets/challengers.csv';
 url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
