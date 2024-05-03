@@ -44,13 +44,16 @@ h1 {
 }
 .leaderboard .item {
     background: #000;
-    height: 9em;
+    height: 5em;
     flex-wrap: nowrap;
     position: absolute;
     top: 0;
     width: calc(100% - 2em);
     transition: transform 1s ease;
-    transform: translateY(calc(var(--order) * 12em));
+    transform: translateY(calc(var(--order) * 8em));
+}
+.leaderboard .linkedin, .leaderboard .github, .leaderboard .meta, .leaderboard .youtube {
+    display: none;
 }
 /* MARK: Entry items
 */
