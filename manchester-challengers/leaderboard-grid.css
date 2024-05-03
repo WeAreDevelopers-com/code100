@@ -39,16 +39,18 @@ h1 {
     margin:0 auto;
 }
 .leaderboard .item img {
-    max-width: 6em;
+    max-width: 3em;
+    height: 3em;
 }
 .leaderboard .item {
     background: #000;
-    height: 7em;
+    height: 9em;
+    flex-wrap: nowrap;
     position: absolute;
     top: 0;
     width: calc(100% - 2em);
     transition: transform 1s ease;
-    transform: translateY(calc(var(--order) * 10em));
+    transform: translateY(calc(var(--order) * 12em));
 }
 /* MARK: Entry items
 */
