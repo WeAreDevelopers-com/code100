@@ -14,7 +14,7 @@ const drawboard = (challengers) => {
         item.style.order =  (k + 1);
         //MARK: item HTML
         out =`
-        <img src="/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
+        <img src="https://puzzles.code100.dev/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
         <div class="namecontainer">
                 <h2 class="name">
                     <span class="place"></span>
