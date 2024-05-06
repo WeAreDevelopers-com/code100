@@ -126,6 +126,7 @@ url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
 fetch(url).then(response => response.text()).then(text => {
     let lines = text.split('\n');
     lines.shift();
+    console.log(lines);
     let challengers = lines.map(line => line.split(';'));
     drawboard(challengers);
 });
