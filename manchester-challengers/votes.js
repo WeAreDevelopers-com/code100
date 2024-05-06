@@ -1,3 +1,5 @@
+const vote = _ => {
+
 fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ56agzljGMCu52ppQLKucxl7VNPfhSkkfae6OpKepByIS_GYM3_1ErztB9yjg02sbRz9m78giiVTLQ/pub?output=csv').then((response) => {
     return response.text();
 }).then((data) => {
@@ -55,7 +57,6 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ56agzljGMCu52ppQLKucxl7
     console.log(bets);
     Object.keys(overall).forEach((key) => {
         let id = overall[key].name.toLowerCase().replace(' ','');
-        document.querySelector(`#${id}`);
         let player = bets.find(bet => bet.key === id);
         if (player) {
             player.all = overall[key].all;
@@ -68,3 +69,5 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQ56agzljGMCu52ppQLKucxl7
 }).catch((err) => {
     console.log(err);
 });
+};
+window.setInterval(vote, 5000);

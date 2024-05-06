@@ -17,10 +17,12 @@ const drawboard = (challengers) => {
         <img src="/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
         <div class="namecontainer">
                 <h2 class="name">
+                    <span class="place"></span>
                     <span>${name} ${lastname}</span>
                     ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': '&nbsp;'}
                     ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': '&nbsp;'}
                 </h2>
+                <div class="valuecontainer"><span class="value">100</span></div>
                 <div class="slogan">${slogan}</div>
                 <div class="youtube">
                 ${youtube ? '<a href="'+youtube+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
@@ -31,7 +33,6 @@ const drawboard = (challengers) => {
                     <!-- <span class="years">${years}</span> -->
                 </div>
             </div>
-            <div class="valuecontainer"><span class="value">100</span></div>
         `;
         item.innerHTML = out;
         document.querySelector('.container').appendChild(item);
@@ -43,7 +44,6 @@ const shuffleboard = () => {
     bets.forEach(bet => {
         bet.bet = Math.floor(Math.random() * 1000);
     });
-    console.log(window.location.href);
     if(window.location.href.indexOf('live.html') === -1){
         bets.sort((a, b) => b.bet - a.bet);
     } else {
@@ -55,7 +55,11 @@ const shuffleboard = () => {
             item.style.setProperty('--order', k);
             item.style.order = k;
         }
-        item.querySelector('.value').textContent = (k+1);;
+        let valuestring = '';
+        valuestring += bet.wins ? ` 🏆 ｘ ${bet.wins}` : '';
+        valuestring += bet.follow ? ` 🏃🏼‍♂️ ｘ ${bet.follow}` : '';
+        item.querySelector('.place').textContent = k + 1;
+        item.querySelector('.value').textContent = valuestring;
     });
     setTimeout(shuffleboard, 2000);
     };
@@ -121,12 +125,12 @@ function onPlayerReady(event) {
 
 
 //MARK: pull data
-let url = 'http://localhost:8080/bets/challengers.csv';
-url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
+let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
+// url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
 fetch(url).then(response => response.text()).then(text => {
     let lines = text.split('\n');
     lines.shift();
-    console.log(lines);
+    lines = lines.filter(line => !line.startsWith('-'));
     let challengers = lines.map(line => line.split(';'));
     drawboard(challengers);
 });
