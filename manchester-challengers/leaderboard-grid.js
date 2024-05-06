@@ -57,6 +57,7 @@ const shuffleboard = () => {
         }
         if (document.querySelector('body').classList.contains('live')) {
             let valuestring = ' ';
+            
             valuestring += bet.wins ? `${bet.wins} ｘ 🏆 ` : '';
             valuestring += bet.follow ? `${bet.follow} ｘ 🏃🏼‍♂️ ` : '';
             item.querySelector('.place').textContent = k + 1;
