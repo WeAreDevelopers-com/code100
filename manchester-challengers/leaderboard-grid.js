@@ -55,11 +55,13 @@ const shuffleboard = () => {
             item.style.setProperty('--order', k);
             item.style.order = k;
         }
-        let valuestring = '';
-        valuestring += bet.wins ? ` 🏆 ｘ ${bet.wins}` : '';
-        valuestring += bet.follow ? ` 🏃🏼‍♂️ ｘ ${bet.follow}` : '';
-        item.querySelector('.place').textContent = k + 1;
-        item.querySelector('.value').textContent = valuestring;
+        if (document.querySelector('body').classList.contains('live') {
+            let valuestring = ' ';
+            valuestring += bet.wins ? `${bet.wins} ｘ 🏆 ` : '';
+            valuestring += bet.follow ? `${bet.follow} ｘ 🏃🏼‍♂️ ` : '';
+            item.querySelector('.place').textContent = k + 1;
+            item.querySelector('.value').textContent = valuestring;
+        }
     });
     setTimeout(shuffleboard, 2000);
     };
