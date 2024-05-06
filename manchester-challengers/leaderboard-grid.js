@@ -44,7 +44,7 @@ const shuffleboard = () => {
     bets.forEach(bet => {
         bet.bet = Math.floor(Math.random() * 1000);
     });
-    if(window.location.href.indexOf('live.html') === -1){
+    if (document.querySelector('body').classList.contains('live')) {
         bets.sort((a, b) => b.bet - a.bet);
     } else {
         bets.sort((a, b) => b.all - a.all);
