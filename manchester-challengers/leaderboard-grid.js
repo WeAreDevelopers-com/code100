@@ -55,7 +55,7 @@ const shuffleboard = () => {
             item.style.setProperty('--order', k);
             item.style.order = k;
         }
-        if (document.querySelector('body').classList.contains('live') {
+        if (document.querySelector('body').classList.contains('live')) {
             let valuestring = ' ';
             valuestring += bet.wins ? `${bet.wins} ｘ 🏆 ` : '';
             valuestring += bet.follow ? `${bet.follow} ｘ 🏃🏼‍♂️ ` : '';
