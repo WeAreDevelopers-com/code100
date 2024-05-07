@@ -95,6 +95,21 @@ h1 {
     gap: 1em;
     min-width: 10em;
 }
+.leaderboard .name {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+.leaderboard .place {
+    font-size: 1.5em;
+    background: white;
+    color: black;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
 .name svg {
     height: 1.5em;
     width: 1.5em;

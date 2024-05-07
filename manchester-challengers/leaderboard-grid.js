@@ -23,7 +23,7 @@ const drawboard = (challengers) => {
                     ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': '&nbsp;'}
                     ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': '&nbsp;'}
                 </h2>
-                <div class="valuecontainer"><span class="value">100</span></div>
+                <div class="valuecontainer"><span class="value"></span></div>
                 <div class="slogan">${slogan}</div>
                 <div class="youtube">
                 ${youtube ? '<a href="'+youtube+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
