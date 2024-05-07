@@ -72,14 +72,14 @@ h1 {
     flex: 6;
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: .2em;
     justify-content: space-between;
-
 }
 .slogan {
     font-weight: normal;
     font-style: italic;
     color: #fff;
+    font-size: .7em;
 }
 .valuecontainer {
     flex: 1;
@@ -100,11 +100,11 @@ h1 {
     flex-direction: row-reverse;
 }
 .leaderboard .place {
-    font-size: 1.5em;
+    font-size: 1.1em;
     background: white;
     color: black;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.3em;
+    height: 1.3em;
     border-radius: 50%;
     display: flex;
     align-items: center;

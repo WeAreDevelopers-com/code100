@@ -20,8 +20,9 @@ const drawboard = (challengers) => {
                 <h2 class="name">
                     <span class="place"></span>
                     <span>${name} ${lastname}</span>
-                    ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': '&nbsp;'}
-                    ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': '&nbsp;'}
+                    ${github ? '<a href="'+github+'" class="github">'+githubsvg+'</a>': ''}
+                    ${linkedin ? '<a href="'+linkedin+'" class="linkedin">'+linkedinsvg+'</a>': ''}
+                
                 </h2>
                 <div class="valuecontainer"><span class="value"></span></div>
                 <div class="slogan">${slogan}</div>
