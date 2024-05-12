@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>{page_title}</title>
+</head>
+<body>
+
+  <div id="meh"></div>
+
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <script>
+    var options01 = {
+      id: 'meh',
+      width: 640
+    };
+
+    var video01Player = new Vimeo.Player('{video01_name}', options01);
+
+    video01Player.setVolume(0);
+    video02Player.setVolume(0);
+    https://vimeo.com/944787464?share=copy
+    video01Player.on('play', function() {
+      console.log('Played the first video');
+    });
+  </script>
+
+</body>
+</html>
