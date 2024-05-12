@@ -138,3 +138,17 @@ fetch(url).then(response => response.text()).then(text => {
     let challengers = lines.map(line => line.split(';'));
     drawboard(challengers);
 });
+
+/* Live 
+//MARK: pull data
+// let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
+// url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
+let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-JAF8Pa2CaCUeLINNY94EYfC0RDmuV22_13SbpQ3KGje4jKELgMhNJQM7f8INSAufwRayvCCWLirD/pub?output=csv';
+fetch(url).then(response => response.text()).then(text => {
+    let lines = text.split('\n');
+    lines.shift();
+    lines = lines.filter(line => !line.startsWith('-'));
+    let challengers = lines.map(line => line.split(','));
+    drawboard(challengers);
+});
+*/
