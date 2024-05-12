@@ -13,7 +13,7 @@ const drawboard = (challengers) => {
         item.setAttribute('id', name.toLowerCase().trim()+lastname.toLowerCase().trim());
         item.style.order =  (k + 1);
         //MARK: item HTML\
-        
+        console.log(youtube);
         out =`
         <img src="https://puzzles.code100.dev/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
         <div class="namecontainer">
@@ -27,11 +27,11 @@ const drawboard = (challengers) => {
                 <div class="valuecontainer"><span class="value"></span></div>
                 <div class="slogan">${slogan}</div>
                 <div class="youtube">
-                ${youtube ? '<a href="'+youtube+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
+                ${youtube.length > 1 ? '<a href="'+youtube+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
                 </div>
                 <div class="meta">
                     <!-- <span class="company">${company}</span> -->
-                    <span>Languages: ${languages}</span>
+                    <span>Languages: ${languages.replaceAll(';',', ')}</span>
                     <!-- <span class="years">${years}</span> -->
                 </div>
             </div>
@@ -61,8 +61,10 @@ const shuffleboard = () => {
             let valuestring = ' ';
             valuestring += bet.wins ? `${bet.wins} ｘ 🏆 ` : '';
             valuestring += bet.follow ? `${bet.follow} ｘ 🏃🏼‍♂️ ` : '';
-            item.querySelector('.place').textContent = k + 1;
             item.querySelector('.value').textContent = valuestring;
+        }
+        if (document.querySelector('.container').classList.contains('leaderboard')) {
+            item.querySelector('.place').textContent = k + 1;
         }
     });
     setTimeout(shuffleboard, 2000);
@@ -128,21 +130,18 @@ function onPlayerReady(event) {
 //#endregion
 
 
-//MARK: pull data
-let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
-url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
-fetch(url).then(response => response.text()).then(text => {
-    let lines = text.split('\n');
-    lines.shift();
-    lines = lines.filter(line => !line.startsWith('-'));
-    let challengers = lines.map(line => line.split(';'));
-    drawboard(challengers);
-});
-
-/* Live 
-//MARK: pull data
+/* Local */
 // let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
 // url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
+// fetch(url).then(response => response.text()).then(text => {
+//     let lines = text.split('\n');
+//     lines.shift();
+//     lines = lines.filter(line => !line.startsWith('-'));
+//     let challengers = lines.map(line => line.split(';'));
+//     drawboard(challengers);
+// });
+
+//MARK: pull data
 let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-JAF8Pa2CaCUeLINNY94EYfC0RDmuV22_13SbpQ3KGje4jKELgMhNJQM7f8INSAufwRayvCCWLirD/pub?output=csv';
 fetch(url).then(response => response.text()).then(text => {
     let lines = text.split('\n');
@@ -151,4 +150,3 @@ fetch(url).then(response => response.text()).then(text => {
     let challengers = lines.map(line => line.split(','));
     drawboard(challengers);
 });
-*/
