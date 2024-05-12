@@ -129,17 +129,16 @@ function onPlayerReady(event) {
 
 
 //MARK: pull data
-let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
-url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
-fetch(url).then(response => response.text()).then(text => {
-    let lines = text.split('\n');
-    lines.shift();
-    lines = lines.filter(line => !line.startsWith('-'));
-    let challengers = lines.map(line => line.split(';'));
-    drawboard(challengers);
-});
+// let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
+// url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
+// fetch(url).then(response => response.text()).then(text => {
+//     let lines = text.split('\n');
+//     lines.shift();
+//     lines = lines.filter(line => !line.startsWith('-'));
+//     let challengers = lines.map(line => line.split(';'));
+//     drawboard(challengers);
+// });
 
-/* Live 
 //MARK: pull data
 // let url = 'http://localhost:8080/manchester-challengers/challengers.csv';
 // url = 'https://puzzles.code100.dev/manchester-challengers/challengers.csv';
@@ -151,4 +150,3 @@ fetch(url).then(response => response.text()).then(text => {
     let challengers = lines.map(line => line.split(','));
     drawboard(challengers);
 });
-*/
