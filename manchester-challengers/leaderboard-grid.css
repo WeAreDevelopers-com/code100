@@ -33,6 +33,7 @@ h1 {
     background-image: linear-gradient(45deg, var(--h1colour), var(--h2colour));
 }
 .item img {
+    object-fit: cover;
     width: 10em;
     height: 10em;
     border: 5px solid #fff;
