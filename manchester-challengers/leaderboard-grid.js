@@ -12,8 +12,7 @@ const drawboard = (challengers) => {
         item.style.setProperty('--order', (k));
         item.setAttribute('id', name.toLowerCase().trim()+lastname.toLowerCase().trim());
         item.style.order =  (k + 1);
-        //MARK: item HTML\
-        console.log(youtube);
+        //MARK: item HTML
         out =`
         <img src="https://puzzles.code100.dev/manchester-challengers/challengers/${name.toLowerCase()}${lastname.toLowerCase()}.jpg" alt="Photo of ${name} ${lastname}">
         <div class="namecontainer">
