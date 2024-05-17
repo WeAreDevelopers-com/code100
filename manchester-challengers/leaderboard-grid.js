@@ -26,7 +26,7 @@ const drawboard = (challengers) => {
                 <div class="valuecontainer"><span class="value"></span></div>
                 <div class="slogan">${slogan}</div>
                 <div class="youtube">
-                ${youtube.length > 1 ? '<a href="'+youtube+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
+                ${youtube.length > 1 ? '<a href="'+youtube.trim()+'" class="youtube">Watch '+name+'\'s interview</a>': '&nbsp;'}
                 </div>
                 <div class="meta">
                     <!-- <span class="company">${company}</span> -->
@@ -98,10 +98,17 @@ document.body.addEventListener('click', e => {
     let t = e.target;
     if (t.tagName === 'A' && t.classList.contains('youtube')) {
         e.preventDefault();
+        let top = t.getBoundingClientRect().top;
+        yt.style.top = top + 'px';
         animated = false;
         document.querySelector('#ani').checked = false;
         let src = t.getAttribute('href');
         src = src.split('v=')[1];
+        if (src.includes('v=')) {
+            src = src.split('v=')[1];
+        } else {
+            src = src.split('be/')[1];
+        }
         if (player) {
             player.loadVideoById(src);
         } else {
