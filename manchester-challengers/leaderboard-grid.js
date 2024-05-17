@@ -93,18 +93,20 @@ document.querySelector('.options').addEventListener('change', () => {
 document.querySelector('#yt button').addEventListener('click', function(e) {
     document.querySelector('body').classList.remove('chosen');
     player.stopVideo();
+    document.querySelector('#yt').style.top = "-100vh";
 });
 document.body.addEventListener('click', e => {
     let t = e.target;
     if (t.tagName === 'A' && t.classList.contains('youtube')) {
         e.preventDefault();
         let top = t.getBoundingClientRect().top;
-        yt.style.top = top + 'px';
+        let doc = document.documentElement;
+        let s = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+        yt.style.top = (top + s) + 'px';
         animated = false;
         document.querySelector('#ani').checked = false;
         let src = t.getAttribute('href');
-        src = src.split('v=')[1];
-        if (src.includes('v=')) {
+        if (src.indexOf('v=') !== -1) {
             src = src.split('v=')[1];
         } else {
             src = src.split('be/')[1];
