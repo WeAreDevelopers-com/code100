@@ -51,7 +51,6 @@ const shuffleboard = () => {
         bets.sort((a, b) => b.bet - a.bet);
     }
     bets.forEach((bet,k) => {
-        let oldbet = 1;
         let item = document.querySelector('#'+bet.key);
         if (animated) {
             item.style.setProperty('--order', k);
@@ -64,9 +63,10 @@ const shuffleboard = () => {
             item.querySelector('.value').textContent = valuestring;
         }
         if (document.querySelector('.container').classList.contains('leaderboard')) {
-            if (k > 1 && bets[k].all !== bets[k-1].all) {
-                item.querySelector('.place').textContent = k + 1;
-            }
+                let add = (k > 1 && bets[k].all !== bets[k-1].all) ? 1 : 0;
+                console.log(add);
+                item.querySelector('.place').textContent = k + add;
+            
         }
     });
     setTimeout(shuffleboard, 2000);
