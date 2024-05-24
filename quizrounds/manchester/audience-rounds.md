@@ -20,8 +20,6 @@ Given the following CSS and HTML, what will the web site show?
 <p>Hello <p style="color: green">green</p> World</p>
 ```
 
-Answers: 
-
 * A blue text “Hello green world” with the word green in green
 * Styles in the body are invalid, nothing will be shown
 * Hello green world in black
@@ -43,8 +41,6 @@ const calculator = {
 console.log(calculator.add(5).pow(3).getValue())
 ```
 
-Answers: 
-
 * Nothing, this is invalid JS
 * 15
 * 125 (correct answer)
@@ -53,8 +49,6 @@ Answers:
 ### Shoutout Block 3
 
 Which of the following lines of JavaScript will return a string without errors?
-
-Answers: 
 
 * console.log(42.toString());
 * console.log((42).toString()); (correct answer)
@@ -66,8 +60,6 @@ The other options will all return syntax errors, despite looking correct at firs
 ### Shoutout Block 4
 
 4. Which of the following is a deprecated HTML element?
-
-Answers: 
 
 * ​<​iframe>
 * ​<​legend>

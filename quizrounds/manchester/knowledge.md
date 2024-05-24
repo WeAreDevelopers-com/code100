@@ -63,7 +63,6 @@ ping, download, center, translate, block, poster,
 controls, multiple, loading, spellcheck, preload
 ```
 
-
 * 2 (correct answer) 
 * all are valid
 * 4
@@ -105,7 +104,6 @@ document.body.style.background = '#cccccc'
 console.log(document.body.style.background)
 ```
 
-
 * #cccccc
 * “cccccc”
 * #CCCCCC
@@ -117,14 +115,10 @@ console.log(document.body.style.background)
 
 Which of the following CSS, when applied to a parent element, will centre child elements centrally along both axes?
 
-* display: block;
-text-align: center;
-* display: flex;
-justify-content: center;
-align-items: center;
-* display: block;
-margin: 0 auto;
+* display: block; text-align: center;
+* display: flex; justify-content: center; align-items: center;
+* display: block; margin: 0 auto;
 * All of the above
 
-See codepen: https://codepen.io/Dan-Cranney/pen/wvZxZOa
+See [codepen](https://codepen.io/Dan-Cranney/pen/wvZxZOa).
 

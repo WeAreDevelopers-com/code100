@@ -58,7 +58,7 @@ If X were 5, and Y were 17, what would this function return?
 * 16 (correct answer)
 * 2
 
-See codepen: https://codepen.io/Dan-Cranney/pen/rNbvrNV
+See [codepen](https://codepen.io/Dan-Cranney/pen/rNbvrNV). 
 
 ### Question 3
 
@@ -84,7 +84,7 @@ If x were 6, what would this function return?
 * 3 (correct answer)
 * 23
 
-See codepen: https://codepen.io/Dan-Cranney/pen/vYMrrWG
+See [codepen](https://codepen.io/Dan-Cranney/pen/vYMrrWG). 
 
 ### Question 4
 
@@ -109,7 +109,7 @@ End Function
 * Converts an arbitrary number to a string
 * Converts a value from celsius to fahrenheit (correct answer)
 
-See codepen: https://codepen.io/Dan-Cranney/pen/BaEPMzK
+See [codepen](https://codepen.io/Dan-Cranney/pen/BaEPMzK).
 
 
 ### Question 5
@@ -137,5 +137,5 @@ Which input would correctly return “Manchester”?
 * Ftfybrbdry
 * Mbpfljy{m{ (correct answer)
 
-See codepen: https://codepen.io/Dan-Cranney/pen/XWQBQbj
+See [codepen](https://codepen.io/Dan-Cranney/pen/XWQBQbj). 
 
