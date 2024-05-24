@@ -96,7 +96,7 @@ What was PHP originally an abbreviation of?
 * Hypertext Preprocessor
 * Portable HTML Processor
 
-### Question 9
+### Question 9
 
 What is the result of the following console.log() command in a browser?
 
