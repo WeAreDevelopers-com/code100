@@ -11,7 +11,7 @@ layout: challenge
 
 Given the following CSS and HTML, what will the web site show?
 
-```HTML
+```html
 <style>
     body { color: black; }
     p { color: blue; display: inline }
@@ -59,7 +59,7 @@ The other options will all return syntax errors, despite looking correct at firs
 
 ### Shoutout Block 4
 
-4. Which of the following is a deprecated HTML element?
+Which of the following is a deprecated HTML element?
 
 * ​<​iframe>
 * ​<​legend>
