@@ -8,4 +8,3 @@ layout: default
 * [Quiz and knowledge rounds with explanations and comment](/quizrounds/manchester/)
 
 # Code challenges 
-
