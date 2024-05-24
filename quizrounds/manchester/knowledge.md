@@ -63,6 +63,7 @@ ping, download, center, translate, block, poster,
 controls, multiple, loading, spellcheck, preload
 ```
 
+
 * 2 (correct answer) 
 * all are valid
 * 4
@@ -103,6 +104,7 @@ What is the result of the following console.log() command in a browser?
 document.body.style.background = '#cccccc'
 console.log(document.body.style.background)
 ```
+
 
 * #cccccc
 * “cccccc”

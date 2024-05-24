@@ -114,6 +114,7 @@ footer a {
 div.highlight {
   padding: 0 .5em;
   overflow: scroll;
+  margin-bottom: 1em;
 }
 ol li code {
   color: var(--codetext);
