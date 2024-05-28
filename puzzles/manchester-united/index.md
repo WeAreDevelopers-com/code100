@@ -88,7 +88,7 @@ Object.keys(URLS).forEach(key => {
         // if it's HTML, split it by </li>, 
         // grab the second part of the split
         // and filter out the empty strings
-        // this skips the commented out <li> tagslike 
+        // this skips the commented out <li> tags like 
         /*
                 <li class="ak2f2j">Bipolar Sunshine</li>
                 <!-- <li class="wrap"></li> -->

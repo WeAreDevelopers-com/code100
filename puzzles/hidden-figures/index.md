@@ -44,7 +44,7 @@ The result we expect from your code is `2056`.
 <!-- details -->
 <!-- summary -->
 ## Solution explanation
-<!-- endsummary-->
+<!-- endsummary -->
 
 This could be achieved in many different ways. The easiest is to use regular expressions. 
 In [JavaScript](solution/solution.js), this could be:
