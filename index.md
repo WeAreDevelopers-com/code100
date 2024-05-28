@@ -41,7 +41,8 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
     - [Audience Shout Out Rounds](quizrounds/manchester/audience-rounds.md)
 * Code challenges
     - [Manchester United](/puzzles/manchester-united/)
-
+    - [Hidden figures](puzzles/hidden-figures/)
+    - [How does it feel?](puzzles/blue-monday/)
 
 ## On-line challenges (Dev Digest)
 

@@ -7,7 +7,7 @@ layout: challenge
 
 This puzzle is about getting information about Manchester from three different datasets in three different formats.
 
-You get a JSON dataset explaining from which URL you can get the information and what format it is in. In this case, you get a list of actors, actresses and producers from the world for film and stage, a list of movies set in or about Manchester and a list of bands. 
+You get a [JSON dataset](dataset.json) explaining from which URL you can get the information and what format it is in. In this case, you get a list of actors, actresses and producers from the world for film and stage, a list of movies set in or about Manchester and a list of bands. 
 
 ```json
 {
@@ -46,7 +46,7 @@ Happy uniting!
 This is a pretty common task, and the main stumbling block here was to not rely on data to be clean as it never is in real life. 
 The biggie here is the HTML, which features list items that are empty. These are actually pointless as CSS creates the columns, but we've seen extraneous HTML elements like that a lot in the wild (remember `clearfix`?)…
 
-Here is how we solved this problem in JavaScript. 
+Here is how we [solved this problem in JavaScript](solution/solution.js). 
 
 ```javascript
 import { readFileSync, writeFileSync } from 'fs';
