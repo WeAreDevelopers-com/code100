@@ -39,6 +39,9 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
     - [Development Knowledge Round](quizrounds/manchester/knowledge.md)
     - [Pseudo Code Round](quizrounds/manchester/pseudo-code.md)
     - [Audience Shout Out Rounds](quizrounds/manchester/audience-rounds.md)
+* Code challenges
+    - [Manchester United](/puzzles/manchester-united/)
+
 
 ## On-line challenges (Dev Digest)
 
