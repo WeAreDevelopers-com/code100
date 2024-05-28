@@ -1,0 +1,9 @@
+[
+    {"input":"chainlink","result":"chainlink"},
+    {"input":"chaa*inlinn*k","result":"chainlink"},
+    {"input":"abc*de*f ","result":"abdf"},
+    {"input":"a*b*c*d","result":" d"},
+    {"input":"abcd","result":"abcd"},
+    {"input":"abc*de*","result":"abd"}
+]
+
