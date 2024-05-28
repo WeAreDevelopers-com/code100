@@ -1,0 +1,7 @@
+{
+    "name": "024-blue-monday",
+    "version": "1.0.0",
+    "main": "generator.js",
+    "license": "MIT",
+    "type": "module"
+}

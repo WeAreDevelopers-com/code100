@@ -1,0 +1,14 @@
+{
+  "acting":{
+    "format":"csv",
+    "URL":"https://puzzles.code100.dev/puzzles/machester-united/acting.csv"
+  },
+  "movies": {
+    "format":"json",
+    "URL":"https://puzzles.code100.dev/puzzles/machester-united/movies.json"
+  },
+  "bands": {
+    "format":"HTML",
+    "URL":"https://puzzles.code100.dev/puzzles/machester-united/bands.html"
+  }
+}  

@@ -1,0 +1,7 @@
+{
+    "name": "manchester-united",
+    "version": "1.0.0",
+    "main": "solution.js",
+    "license": "MIT",
+    "type": "module"
+}
