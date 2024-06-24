@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: apply
+---
+
 # CODE100 Puzzle - 100 hits!
 
 This time the puzzle is about points in a coordinate system and determining which ones are on a `100` logo.
