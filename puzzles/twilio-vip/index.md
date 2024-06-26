@@ -56,6 +56,6 @@ These tests are available in the [dataset.json](dataset.json) file to use to cre
 
 ## Submitting your answer 
 
-Fill out [this form]() pointing us to your code solution and tell us how you solved the problem. We will pick from the submissions one lucky winner to get a VIP Ticket worth > 1000 Euro for the WeAreDevelopers World Congress in Berlin, Germany 17-19th of July. 
+Fill out [this form](https://forms.gle/hRaCD75AYV4jmnYk9) pointing us to your code solution and tell us how you solved the problem. We will pick from the submissions one lucky winner to get a VIP Ticket worth > 1000 Euro for the WeAreDevelopers World Congress in Berlin, Germany 17-19th of July. 
 
 Good luck! 
