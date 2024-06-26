@@ -1,6 +1,6 @@
 ---
 title: CODE100 - GSM-7 or UCS-2
-layout: apply
+layout: challenge
 --- 
 
 This challenge was given to WeAreDevelopers by our partners [Twilio](ttps://twilio.com). 
