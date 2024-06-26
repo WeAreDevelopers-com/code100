@@ -1,0 +1,8 @@
+{
+    "messages": [
+        {"text":"Ahoy World","encoding":"GSM-7","length":70},
+        {"text":"This is a test message with special characters: ñáéíóú","encoding":"UCS-2","length":880},
+        {"text":"Visit the Twilio booth at Hall A 03 during WeAreDeveloper World Congress", "encoding":"GSM-7","length":504},
+        {"text":"Rumors say Twilio will provide healthy smoothies 🥤🍓🍍", "encoding":"UCS-2","length":1184}
+    ]
+}
