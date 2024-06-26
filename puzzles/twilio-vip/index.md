@@ -5,7 +5,7 @@ layout: challenge
 
 This challenge was given to WeAreDevelopers by our partners [Twilio](ttps://twilio.com). 
 
-[![Twilio developers logo](twiliodevs.png)](https://twilio.com)
+[![Twilio developers logo](twilio-devs.png)](https://twilio.com)
 
 ## Intro
 
