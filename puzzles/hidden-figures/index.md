@@ -65,7 +65,11 @@ story.split(/\D+/).forEach(number => {
 // loop through all the figures
 figures.forEach((figure,i) => {
     // count them in the story
-    let count = story.match(new RegExp(figure, 'gi')).length;
+    let match = story.match(new RegExp("[a-z]?"+figure+"[a-z]?", 'gi'));
+    // filter out number words in other words, like "ten" in hypotenuse
+    match = match.filter(
+        v => v.toLowerCase() === figure.toLowerCase()
+    );
     // add the count multiplied by the position in the array
     all += (i+1) * count;
 });
@@ -74,6 +78,6 @@ writeFileSync('result.json', JSON.stringify(all));
 console.log(all);
 ```
 
-The result us `2050`. Would you have done it differently?
+The result is `2030`. Would you have done it differently?
 
 <!-- enddetails -->
