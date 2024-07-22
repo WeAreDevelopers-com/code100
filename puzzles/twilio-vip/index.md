@@ -54,8 +54,44 @@ These tests are available in the [dataset.json](dataset.json) file to use to cre
 - [How to count Unicode characters in Javascript](https://coolaj86.com/articles/how-to-count-unicode-characters-in-javascript/)
 * [Messaging Segment Calculator](https://twiliodeved.github.io/message-segment-calculator/)
 
-## Submitting your answer 
+<!-- details -->
+<!-- summary -->
+## Solutions
+<!-- endsummary -->
 
-Fill out [this form](https://forms.gle/hRaCD75AYV4jmnYk9) pointing us to your code solution and tell us how you solved the problem. We will pick from the submissions one lucky winner to get a VIP Ticket worth > 1000 Euro for the WeAreDevelopers World Congress in Berlin, Germany 17-19th of July. 
+Solution in JS
 
-Good luck! 
+```javascript
+function determineEncodingAndLength(message) {
+    const gsm7Characters = '@£$¥èéùìòÇ\nØø\rÅåΔ_ΦΓΛΩΠΨΣΘΞ\x1bÆæßÉ' +
+          ' !"#$%&\'()*+,-./0123456789:;<=>?¡ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÑÜ`' +
+          '¿abcdefghijklmnopqrstuvwxyzäöñüà';
+    function isGSM7Character(char) {
+        return gsm7Characters.indexOf(char) !== -1;
+    }
+    let isGSM7 = true;
+    for (let i = 0; i < message.length; i++) {
+        if (!isGSM7Character(message[i])) {
+            isGSM7 = false;
+            break;
+        }
+    }
+    const encoding = isGSM7 ? 'GSM-7' : 'UCS-2';
+    const lengthInBits = isGSM7 ? message.length * 7 : message.length * 16;
+    return [encoding, lengthInBits];
+}
+// Test messages
+const messages = [
+    "Ahoy World",
+    "This is a test message with special characters: ñáéíóú.",
+    "Visit the Twilio booth at Hall A 03 during WeAreDeveloper World Congress",
+    "Rumors say Twilio will provide healthy smoothies 🥤🍓🍍",
+];
+messages.forEach(msg => {
+    const [encoding, messageLength] = determineEncodingAndLength(msg);
+    console.log(`Message: ${msg}`);
+    console.log(`Encoding: ${encoding}`);
+    console.log(`Length: ${messageLength}`);
+    console.log();
+});
+```

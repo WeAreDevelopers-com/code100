@@ -10,10 +10,16 @@ let all = 0
 story.split(/\D+/).forEach(number => {
     all += +number;
 })
+
+// regular expression string to match the variable figure surrounded by other than letters
+let figure = "figure";
+
 // loop through all the figures
 figures.forEach((figure,i) => {
     // count them in the story
-    let count = story.match(new RegExp(figure, 'gi')).length;
+    let match = story.match(new RegExp("[a-z]?"+figure+"[a-z]?", 'gi'));
+    match = match.filter((v) => v.toLowerCase() === figure.toLowerCase());
+    let count = match ? match.length : 0;
     // add the count multiplied by the position in the array
     all += (i+1) * count;
 });
