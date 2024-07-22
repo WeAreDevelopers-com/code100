@@ -10,7 +10,7 @@ This challenge was given to WeAreDevelopers by our partners [Twilio](ttps://twil
 ## Intro
 
 SMS messages can be encoded in different character encodings to optimize space. The two main types of encodings are:
-
+    
 - **GSM-7**: This encoding packs the most commonly used letters and symbols in many languages into 7 bits per character. This allows up to 160 characters in a single SMS segment.
 - **UCS-2**: This encoding uses 16 bits per character and is the fallback for characters not supported by GSM-7. This allows up to 70 characters in a single SMS segment.
 
