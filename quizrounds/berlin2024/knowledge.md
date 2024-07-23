@@ -60,16 +60,16 @@ These were pretty straight forward multiple choice questions.
 
     * ~70
     * ~700
-    * ~7 000
+    * ~7 000 (correct answer)
     * ~70 000
 
-    Notes: https://en.wikipedia.org/wiki/List_of_programming_languages
+    Notes: [https://en.wikipedia.org/wiki/List_of_programming_languages]
 
 1. Which of these programming languages is the oldest?
 
-* ActionScript
-* Visual Basic
-* Pascal
-* ALGOL 58
+    * ActionScript
+    * Visual Basic
+    * Pascal
+    * ALGOL 58 (correct answer)
 
-Notes: https://en.wikipedia.org/wiki/List_of_programming_languages
+    Notes: [https://en.wikipedia.org/wiki/List_of_programming_languages]

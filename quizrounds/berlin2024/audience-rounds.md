@@ -21,7 +21,7 @@ These rounds were done in Slido for the audience. The first was submitted by Twi
 
 1. Given the following CSS, what colour will the text be in the grandchild element?
 
-    ```CSS
+    ```css
     .parent .child .grandchild { color: red; }
     .parent > .child > .grandchild { color: blue; }
     .grandchild { color: green; }
@@ -39,7 +39,7 @@ These rounds were done in Slido for the audience. The first was submitted by Twi
 
 1. Based on the following CSS, what will the height of the parent element be?
 
-    ```CSS
+    ```css
     #parent {
         width: 100px; 
         height: auto;
