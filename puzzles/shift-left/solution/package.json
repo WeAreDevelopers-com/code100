@@ -1,0 +1,7 @@
+{
+    "name": "021-shift-left",
+    "version": "1.0.0",
+    "main": "solution.js",
+    "license": "MIT",
+    "type": "module"
+}

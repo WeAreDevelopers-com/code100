@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Rotation</title>
+    <style>
+        body {
+            font-size: 1em;
+            font-family: IBM Plex Sans,sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align:center;
+        }
+        form {
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+        }
+        .arrow {
+            font-size: 10em;
+            width: 50%;
+            height: 50%;
+            color: red;
+        }
+        section {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        section .arrow {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s;
+            width: 160px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="#">
+            <label for="angle">Rotation angle</label>
+            <input type="range" id="angle" min="0" max="360" value="0">
+            <output>.arrow { transform: rotate(0deg) }</output>
+        </form>
+        <div class="arrow">⬅</div>
+    </section>    
+    <script>
+
+        let arrow = document.querySelector('.arrow');
+        let output = document.querySelector('output');
+        document.querySelector('input').addEventListener('change', ev => {
+            let v = ev.target.value
+            output.innerText = `.arrow { transform: rotate(${v}deg) }`;
+            arrow.style.transform = `translate(-50%, -50%) rotate(${v}deg)`;
+            if (v > 90 && v < 270) {
+                arrow.style.color = 'black';
+            } else {
+                arrow.style.color = `hsla(${Math.random()*170}, 100%, 50%)`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -44,6 +44,17 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
     - [Hidden figures](puzzles/hidden-figures/)
     - [How does it feel?](puzzles/blue-monday/)
 
+### WeAreDevelopers World Congress 2024
+
+* Quiz and knowledge rounds with explanations and comment 
+    - [Development Knowledge Round](quizrounds/berlin2024/knowledge.md)
+    - [Pseudo Code Round](quizrounds/berlin2024/pseudo-code.md)
+    - [Audience Shout Out Rounds](quizrounds/berlin2024/audience-rounds.md)
+* Code challenges
+    - [Shift Left](/puzzles/shift-left)
+    - [No Babel needed](/puzzles/no-babel-needed)
+
+
 ## On-line challenges (Dev Digest)
 
 * [Developer DNA](/puzzles/developer-dna/)
