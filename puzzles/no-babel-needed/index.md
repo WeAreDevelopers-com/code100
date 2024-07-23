@@ -7,7 +7,7 @@ layout: challenge
 
 You get a [JSON object](dataset.json) that contains the words for the numbers 1 to 100 in various languages.
 
-```JSON
+```json
 {
     "English": ["one","two","three","four","five","six"…],
     "German": ["eins","zwei","drei","vier","fünf","sechs"…],
@@ -20,7 +20,7 @@ The challenge is to sort the languages alphabetically and return an array of num
 
 For example, image an imaginary language `shloumph` where the numnbers 1 to 10 are:
 
-```JSON
+```json
 "Shloumph": [
     "ona", "dodzette", "turna", "frotsa", "abla",
     "tro", "bababdook", "deezes", "oran", "bordernone"
@@ -29,13 +29,13 @@ For example, image an imaginary language `shloumph` where the numnbers 1 to 10 a
 
 In this case, the desired result would be:
 
-```JSON 
+```json 
  "Shloumph": [5, 7, 10, 8, 2, 4, 1, 9, 6, 3]
 ```
 
 As the order is like this: 
 
-```JSON
+```json
 "Shloumph": {
     "abla": 5,
     "bababdook": 7,
@@ -52,7 +52,7 @@ As the order is like this:
 
 Return a JSON object of all the languages and the numbers 1 to 100 sorted like this. For example:
 
-```JSON
+```json
 {
     "English":[79,71,77,76,73,72,6,22,… ],
     "German":[45,25,15,50,100,9,89,39,…],
@@ -70,13 +70,13 @@ Happy sorting!
 
 OK, this looked a lot more complex as it is. In essence, what we wanted here was to sort an array by alphabet anr return the index as another array. So, if the input array were:
 
-```json
+```javascript
 ['b','d','a','c'];
 ```
 
 The result should be: 
 
-```json
+```javascript
 [2,4,1,3]
 ```
 
@@ -106,6 +106,6 @@ writeFileSync('./result.json', JSON.stringify(out));
 console.log(out);
 ```
 
-Other languages have built-in functions for that, and we are sure there are even shorter versions in JavaScript…
+Other programming languages have built-in functions for that, and we are sure there are even shorter versions in JavaScript…
 
 <!-- enddetails -->

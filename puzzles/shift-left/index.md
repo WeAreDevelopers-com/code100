@@ -1,3 +1,8 @@
+---
+title: CODE100 - the puzzles 
+layout: challenge
+---
+
 # Challenge: Shift Left challenge
 
 You get a [JSON object](dataset.json) that contains an [HTML document](gridpage.html) that shows a lot of differently coloured arrows:
@@ -27,11 +32,9 @@ Give back the amount of arrows pointing to the right as an integer, f.e. `45`.
 
 The trick here is to check the rotation values in the CSS transform. An arrow pointing to the left like the one in the HTML `⬅` points to the right when it is rotated between 90 and 270 degrees. 
 
-You can try this out here (click the image to get to [the interactive page](arrow-demo.html)):
+You can try this out here (click the image to get to [the interactive page](arrow-demo.html)). Arrows pointing to the left are all colourful and the ones to the right black:
 
 [![screen recording of the demo in action](arrow-demo.gif)](arrow.demo.html)
-
-Arrows pointing to the left are all colourful and the ones to the right black.
 
 This means all we have to do is to get all the rotations and filter out those whose angle is not larger than 90 or less than 270. In JavaScript, this could be:
 
