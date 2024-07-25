@@ -120,7 +120,7 @@ ol li code {
   color: var(--codetext);
   display: inline-block;
   background: var(--codebackground);;
-  border: 1px var(--codeborder) solid;
+  /* border: 1px var(--codeborder) solid; */
   border-radius: 3px;
   padding: 2px;
 }

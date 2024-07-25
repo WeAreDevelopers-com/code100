@@ -1,0 +1,1423 @@
+WEBVTT
+
+00:00.175 --> 00:03.951
+To build soign european AI compute infrastructure. Please welcome on
+
+00:03.983 --> 00:07.615
+stage Marus Hacr from Nvidia, Roseanne Kinsset Smith
+
+00:07.655 --> 00:11.815
+from Norton Data Group, Daniel Abu from German AI association,
+
+00:11.935 --> 00:13.995
+and Michael Bradley from NA.
+
+00:29.435 --> 00:33.051
+So hello and thank you for attending our little chat
+
+00:33.083 --> 00:36.523
+for the next 30 minutes. My name is Daniel Abou, general manager of the
+
+00:36.539 --> 00:40.851
+German AI association. We represent like 460
+
+00:40.963 --> 00:44.315
+startups and scale ups from Germany with the focus on
+
+00:44.355 --> 00:48.051
+AI development. And I'm really happy to moderate this panel here
+
+00:48.083 --> 00:51.915
+at the world of the we are Developers conference, and thank you so much also
+
+00:51.955 --> 00:55.279
+to the organization of inviting us, and we are very
+
+00:55.327 --> 00:59.079
+happy to chat to you today about the
+
+00:59.127 --> 01:02.847
+important issue on how to build a sovereign AI compute
+
+01:02.951 --> 01:07.071
+infrastructure. Roseanne Kincai Smith
+
+01:07.223 --> 01:10.583
+is the CEO of the Northern Data group. She is one of
+
+01:10.599 --> 01:13.807
+the driving forces behind northern Data to ascend as
+
+01:13.831 --> 01:18.155
+one of the premier providers of high performance computing.
+
+01:18.495 --> 01:21.727
+And of course, Rosean drives the business strategy and
+
+01:21.751 --> 01:25.225
+has successfully overseen the global teams. And rose
+
+01:25.345 --> 01:28.633
+expertise extends to managing and comprehensive
+
+01:28.689 --> 01:33.169
+organizational transformation for northern data, but of course also
+
+01:33.297 --> 01:37.089
+for their clients. Michael Bradley
+
+01:37.257 --> 01:40.965
+is the CEO and founder of Nua Software.
+
+01:41.305 --> 01:45.617
+N Software is implementing state of the art technology and the restaurant
+
+01:45.721 --> 01:49.409
+industry. They have a very quick, easy self checkout
+
+01:49.457 --> 01:53.097
+solution for a company. Company restaurants in
+
+01:53.121 --> 01:56.929
+Germany we call them Cantina, but now they're called business or company
+
+01:56.977 --> 02:00.513
+restaurants. That requires the latest technology in the
+
+02:00.529 --> 02:04.689
+field of artificial intelligence and computer vision. We will be very interesting
+
+02:04.817 --> 02:08.769
+to hear how AI is implemented in the canain and
+
+02:08.897 --> 02:12.537
+someone who is also quite an extensive knowledge about the restaurant
+
+02:12.601 --> 02:16.641
+business, but now definitely in other ways, is Marus
+
+02:16.673 --> 02:20.725
+Har. He is the regional director enterprises for
+
+02:20.765 --> 02:24.349
+Nvidia in the so called Dach region. The Dach region is
+
+02:24.397 --> 02:26.985
+the Deutschtereich Schweitz.
+
+02:27.725 --> 02:31.141
+Since 2019, he leads the activities in
+
+02:31.213 --> 02:34.025
+Central Europe and encourages, of course,
+
+02:34.805 --> 02:38.989
+also his clients of adapting these products. He has an engineering
+
+02:39.037 --> 02:42.709
+background and he built a successful it career at Microsoft T Systems
+
+02:42.757 --> 02:46.383
+in AgMA. So guys, this, this is
+
+02:46.439 --> 02:50.039
+our topic today, how to build a sovereign AI
+
+02:50.087 --> 02:53.703
+compute infrastructure. I think it's always
+
+02:53.759 --> 02:57.447
+interesting to know why it's important. Why do
+
+02:57.471 --> 03:01.295
+we need a sovereign AI infrastructure in
+
+03:01.335 --> 03:04.807
+Europe? Perhaps, Rosanne, you can start with your
+
+03:04.911 --> 03:08.915
+preliminary thinking about that luminary thinking. I like that.
+
+03:09.575 --> 03:12.561
+I think broadly for us as a business,
+
+03:12.703 --> 03:17.901
+and we are an infrastructure business, high performance computing solutions has
+
+03:17.933 --> 03:20.425
+its foundations in the AI revolution.
+
+03:21.245 --> 03:24.653
+AI is full of promise, and I think we've heard a number of speakers mention
+
+03:24.709 --> 03:28.437
+about the sort of revolutionary steps that it is bringing to business as a
+
+03:28.461 --> 03:33.105
+whole. And as Michael will walk us through just how advancing
+
+03:33.645 --> 03:36.925
+what we can get from society. But more broadly,
+
+03:37.045 --> 03:40.745
+everything from Cyberur to medicine is
+
+03:40.785 --> 03:44.169
+being impacted by AI. But that then starts
+
+03:44.217 --> 03:47.205
+to ask a lot of questions. Data privacy,
+
+03:47.625 --> 03:51.513
+sustainability, how we
+
+03:51.529 --> 03:54.985
+are investing, where we are investing, and making sure
+
+03:55.025 --> 03:59.041
+that all of that information is curated effectively to
+
+03:59.073 --> 04:02.937
+get the right outcomes. If we are not purposeful about how we
+
+04:03.001 --> 04:07.365
+implement that infrastructure, we will get the wrong results from AI.
+
+04:09.325 --> 04:12.717
+Michael, in the sense of why is it important to
+
+04:12.741 --> 04:15.845
+have european infrastructure in AI?
+
+04:15.965 --> 04:19.005
+Could you tell us, because of your company,
+
+04:19.165 --> 04:22.625
+why it is important for you to adapt this?
+
+04:22.925 --> 04:27.333
+Well, I would say that in
+
+04:27.349 --> 04:30.945
+the case of our company, it's a must have.
+
+04:31.325 --> 04:36.229
+It's imperative that we have a local ecosystem here supplying
+
+04:36.277 --> 04:38.985
+our customers. The product we build,
+
+04:39.325 --> 04:42.653
+sure, it's a global product. It can be used in America, it can be used
+
+04:42.669 --> 04:46.277
+in China, but our customer base is very european
+
+04:46.461 --> 04:50.365
+related. And there are many, many stipulations about
+
+04:50.445 --> 04:51.585
+data security,
+
+04:54.685 --> 04:57.865
+all the regulations that to be found in Germany,
+
+04:58.165 --> 05:02.225
+it's essential that the data that we store in our system is
+
+05:02.265 --> 05:06.209
+located on european soil. And that's where we partnered with
+
+05:06.297 --> 05:09.785
+Taiga Cloud. If I may ask, Michael, in the sense of,
+
+05:09.865 --> 05:13.553
+when you say the business, restaurants and stuff like that, perhaps people will ask,
+
+05:13.729 --> 05:16.969
+why is data sensitivity and what I eat
+
+05:17.057 --> 05:20.233
+important? The food on the
+
+05:20.249 --> 05:23.565
+tray is irrelevant as long as they pay for it.
+
+05:24.105 --> 05:27.915
+No, typically, you will not just find
+
+05:28.215 --> 05:31.755
+food, but there are plenty of non food items which are
+
+05:32.135 --> 05:35.995
+maybe less critical, like a person's employee card.
+
+05:36.775 --> 05:40.655
+Not such a big issue. But you could have documents
+
+05:40.775 --> 05:42.955
+and all sorts of data,
+
+05:45.415 --> 05:49.039
+all sorts of things on the tray, which would violate
+
+05:49.087 --> 05:52.303
+the users privacy if they were sent to the cloud unfiltered.
+
+05:52.439 --> 05:56.095
+All right. And stored in a foreign country. Yeah, it's a very
+
+05:56.135 --> 06:00.475
+valid point you're making. Marus Nvidia is a global company
+
+06:00.775 --> 06:04.675
+that you can definitely say. So why
+
+06:05.015 --> 06:09.503
+is it important for a global company also to emphasize
+
+06:09.639 --> 06:14.439
+that Europe has its own sovereign AI infrastructure?
+
+06:14.567 --> 06:18.543
+That's a very good question. And actually, I just would
+
+06:18.599 --> 06:22.079
+need to repeat what Roseanne said and what Michael said, because they
+
+06:22.167 --> 06:25.943
+actually, they wrapped it already up pretty nicely. But to
+
+06:25.999 --> 06:28.635
+extend that a little bit from how we see it.
+
+06:29.655 --> 06:33.087
+So you're obviously right. We are a global company,
+
+06:33.191 --> 06:36.735
+but we think in local ecosystems, and we are
+
+06:36.775 --> 06:40.143
+very eager to support local ecosystems. So the ecosystem in
+
+06:40.159 --> 06:44.491
+the Dachch region, the ecosystem in Germany, and for that, we need local partnerships.
+
+06:44.663 --> 06:48.387
+We need organizations like nor VA or Tiger is
+
+06:48.571 --> 06:52.215
+their cloud brand, who invests
+
+06:52.715 --> 06:55.811
+in, as we call it, AI factories.
+
+06:55.963 --> 06:59.387
+We can call it infrastructure for AI, but we actually call
+
+06:59.411 --> 07:03.235
+it AI factories. And in this, Roseann called it
+
+07:03.275 --> 07:06.611
+thei revolution. And I heard some other people who call it in a
+
+07:06.643 --> 07:10.523
+similar way. It's the fourth industrial revolution that
+
+07:10.539 --> 07:13.625
+we see here. And at the first time,
+
+07:14.045 --> 07:17.625
+we as human mankind, we have the capability
+
+07:18.005 --> 07:22.105
+to build factories that produce intelligence, so called tokens,
+
+07:22.605 --> 07:25.893
+technically speaking, by putting data and electrons
+
+07:25.989 --> 07:29.309
+into such a factory and getting tokens, hands intelligence
+
+07:29.357 --> 07:32.885
+out of that factory. And that's a pretty big step.
+
+07:33.005 --> 07:36.725
+And it's important to do that step, of course, globally, but also think
+
+07:36.765 --> 07:41.205
+locally, so support local ecosystem. And also
+
+07:42.145 --> 07:46.625
+one of our key values globally is to democratize
+
+07:46.785 --> 07:50.489
+AI. So we are not looking that
+
+07:50.537 --> 07:54.201
+AI is a tool which is just in the hands of a couple of
+
+07:54.233 --> 07:57.513
+people or a couple of big companies, but we want to
+
+07:57.569 --> 08:01.961
+support that. AI is being used by as many people as possible, and also is
+
+08:01.993 --> 08:05.741
+used by smaller companies. And neweroft obviously is a startup
+
+08:05.813 --> 08:09.389
+company. And Michael summarized it for all that topics
+
+08:09.437 --> 08:13.305
+like data sovereignty, data protection, GDPR. He was looking
+
+08:13.885 --> 08:17.501
+for a local partner in the region, and we were able by the partnership with
+
+08:17.533 --> 08:21.357
+Tiger north and data to offer that partnership. And basically we
+
+08:21.381 --> 08:25.181
+want to let the customer choose. We have global partnerships with all the big cloud
+
+08:25.253 --> 08:28.669
+providers. That's good, that's important, and that's the global strategy.
+
+08:28.797 --> 08:32.753
+But in the end, the customer should and needs to decide
+
+08:32.849 --> 08:36.137
+on where he wants to go to. And for that, it's important to provide
+
+08:36.161 --> 08:39.409
+their choices. And we are pretty glad to have that partnership and are
+
+08:39.457 --> 08:44.665
+supporting that in many ways. Roseanne Marcus
+
+08:44.745 --> 08:48.329
+just spoke about local ecosystems. How important
+
+08:48.377 --> 08:51.921
+are local ecosystems for you at the northern
+
+08:51.953 --> 08:55.745
+data group? And certainly also a question which belongs to that
+
+08:55.865 --> 08:59.985
+is, how can Europe remain competitive
+
+09:00.405 --> 09:03.985
+in AI? Because your firm, situated in London,
+
+09:04.405 --> 09:08.229
+I would say I think that's no breaking news for anyone, that the
+
+09:08.277 --> 09:12.173
+US and China are quite on the forefront of AI. But how can
+
+09:12.229 --> 09:15.773
+Europe make this? And what importance do local ecosystems
+
+09:15.829 --> 09:19.693
+have? Yeah, I mean, I think you've got this massive
+
+09:19.749 --> 09:22.829
+global race on with AI at the moment. And Marcus
+
+09:22.877 --> 09:26.189
+mentioned democratization, and that is a core ethos of our business
+
+09:26.237 --> 09:30.545
+too. And that goes hand in hand with local ecosystems.
+
+09:31.005 --> 09:34.445
+As a business, we have a responsibility to ensure that that
+
+09:34.525 --> 09:37.933
+access is granted, but not just the access,
+
+09:38.109 --> 09:41.605
+making sure that skills are provided, that we as a business
+
+09:41.685 --> 09:45.445
+encourage the right types of partnerships or the right type of customers,
+
+09:45.565 --> 09:49.177
+and we expand that ecosystem. If we
+
+09:49.201 --> 09:53.265
+don't take that accountability, AI will definitely
+
+09:53.385 --> 09:56.689
+take that swerve into being the purview of just a few
+
+09:56.857 --> 10:00.569
+and so that local ecosystem, making sure that it's fit for purpose
+
+10:00.617 --> 10:04.089
+to that environment, that the skills are being developed, is what's
+
+10:04.137 --> 10:07.809
+going to help drive Europe forward and hopefully
+
+10:07.857 --> 10:11.729
+outpace the rest of the world. Because certainly Europe has some of the brightest
+
+10:11.817 --> 10:15.177
+minds and some of the highest educational standards in the
+
+10:15.201 --> 10:18.753
+world. So the more we can embrace that to bring
+
+10:18.809 --> 10:22.425
+AI into the local ecosystems and use some of the high
+
+10:22.505 --> 10:26.105
+standards that Europe applies to businesses, the better for
+
+10:26.145 --> 10:29.937
+us. Marus, if I can, back to you
+
+10:30.081 --> 10:34.457
+what Roa just said, having a kind of
+
+10:34.561 --> 10:38.225
+european AI. So a good friend of mine once told me the sentence,
+
+10:38.385 --> 10:42.279
+if you asked cheat CPTT a question, you get a californian answer.
+
+10:42.457 --> 10:46.695
+So in this sense, I found it at least
+
+10:47.435 --> 10:51.043
+noteworthy to say this. But why is it
+
+10:51.099 --> 10:54.683
+important? Is it important about languages, cultures? Why do you think
+
+10:54.779 --> 10:57.835
+it's important to have that, all of that, what you just said is important?
+
+10:57.875 --> 11:01.307
+Languages matters because languages are actually
+
+11:01.411 --> 11:05.643
+culture. And in
+
+11:05.659 --> 11:09.371
+the end, it comes down to the data that models are being trained
+
+11:09.403 --> 11:13.171
+with. Those models are not
+
+11:13.363 --> 11:15.867
+selfident beings or whatever,
+
+11:15.971 --> 11:19.131
+but it's an algorithm
+
+11:19.203 --> 11:23.419
+that is using basically later in inferencing
+
+11:23.587 --> 11:26.975
+the data which is being trained with. And of course,
+
+11:27.955 --> 11:31.715
+you can see probably which kind of data had been used to train which
+
+11:31.755 --> 11:35.355
+algorithm, and that's then influencing
+
+11:35.435 --> 11:39.571
+the answers that you get. And speaking of local ecosystem,
+
+11:39.603 --> 11:43.147
+and speaking of local companies, we are quite proud to have a
+
+11:43.211 --> 11:46.923
+company like DeepL, also in the region, who and
+
+11:46.939 --> 11:52.171
+you spoke about language and about culture and deep else wion
+
+11:52.203 --> 11:55.963
+is to break down those language barriers by providing
+
+11:56.019 --> 11:59.083
+translation systems that can be used by everyone in
+
+11:59.099 --> 12:03.393
+a proper way. And they use AI basically to. To transl
+
+12:03.449 --> 12:08.297
+meanwh translate, meanwhile, 35 and 40 languages into
+
+12:08.321 --> 12:11.673
+the other one, and in neutral tests,
+
+12:11.809 --> 12:15.965
+seen as the most accurate platform for that
+
+12:16.345 --> 12:20.005
+globally. Michael, can I ask you about the
+
+12:20.545 --> 12:23.537
+competitiveness? So you're from Ireland originally,
+
+12:23.601 --> 12:26.753
+you're now situated in Munich, so you have also a european
+
+12:26.809 --> 12:32.031
+perspective on things. How do you see the AI infrastructure
+
+12:32.103 --> 12:35.991
+problematic in Europe? And how do you profit,
+
+12:36.063 --> 12:38.835
+perhaps from a local ecosystem? Well,
+
+12:40.575 --> 12:44.895
+an ecosystem consists of many components, starting with
+
+12:45.015 --> 12:49.223
+GPU's, when we're talking about AI that Nvidia provide,
+
+12:49.399 --> 12:53.603
+Taiga cloud providing a platform for developers or companies,
+
+12:53.759 --> 12:57.587
+startups like me, but it also needs people.
+
+12:57.771 --> 13:00.055
+And I see a serious.
+
+13:02.555 --> 13:06.363
+When I compare where we are in Europe today with the
+
+13:06.379 --> 13:10.099
+likes of other global places like the States
+
+13:10.227 --> 13:13.899
+and China, I see a great deficit in the
+
+13:13.947 --> 13:17.763
+number of data scientists, engineers here that can really
+
+13:17.819 --> 13:21.183
+make this ecosystem come alive. And I
+
+13:21.199 --> 13:24.751
+would love to see european initiatives that help out
+
+13:24.903 --> 13:28.471
+small startups and educating
+
+13:28.663 --> 13:32.887
+our workforceces. You're totally right. We have some of the brightest minds
+
+13:33.071 --> 13:36.367
+in Europe and we need to make a europ force in
+
+13:36.391 --> 13:38.635
+AI and this only happens with people.
+
+13:39.855 --> 13:43.431
+So one of the things I realized that in my
+
+13:43.503 --> 13:46.953
+position in the german AI associated is that when we have
+
+13:46.969 --> 13:50.593
+a call with our members and we talk to them,
+
+13:50.729 --> 13:54.925
+sometimes I'call it group therapy. But in this case, you know,
+
+13:55.905 --> 13:59.449
+we ask them what are your biggest challenges? And as there are mostly
+
+13:59.537 --> 14:02.913
+startups and scale ups, of course financing is always place one.
+
+14:03.009 --> 14:06.929
+But the second thing they have really a challenge is the
+
+14:07.057 --> 14:10.369
+implementation of AI products in SME's, in european
+
+14:10.417 --> 14:14.601
+or german SME's. So what
+
+14:14.633 --> 14:18.209
+can you do as company and firms besides selling
+
+14:18.257 --> 14:22.305
+the products of helping german and european industry reap
+
+14:22.345 --> 14:25.605
+the benefits of AI? Where are the possibilities?
+
+14:26.465 --> 14:30.017
+So I mean, as we were saying, democratization is core to
+
+14:30.041 --> 14:33.401
+our ethos and we share that as an ethos with Nvidia
+
+14:33.433 --> 14:37.075
+and with our customers. Our right
+
+14:37.115 --> 14:40.491
+there is our accountability as a business is to make sure
+
+14:40.523 --> 14:44.419
+that we actually practice what we preach. And so when we say we democratize
+
+14:44.507 --> 14:47.707
+access, we actually have a program that we run at our business. It's called
+
+14:47.731 --> 14:51.371
+the AI accelerator. We invite companies who
+
+14:51.483 --> 14:55.403
+do not have access to the kinds of capital that is required
+
+14:55.459 --> 14:58.803
+to operate on H 100s for instance, and for
+
+14:58.819 --> 15:02.147
+them to pitch that idea to us. We then give them access free
+
+15:02.171 --> 15:05.883
+of charge to our hardware to allow them to develop that proof
+
+15:05.899 --> 15:09.291
+of concept. We also provide coaching for their mentorship,
+
+15:09.443 --> 15:12.211
+including opportunities to raise capital,
+
+15:12.323 --> 15:16.563
+including investment from us. Because as I said and
+
+15:16.579 --> 15:20.131
+as Michael and everybody
+
+15:20.163 --> 15:23.691
+has underscored, that we need to make sure that we are
+
+15:23.763 --> 15:27.619
+providing substance to the ecosystem and skills is definitely
+
+15:27.667 --> 15:30.911
+the parth to that. And so the least we can do is to provide that
+
+15:30.983 --> 15:34.519
+access to the hardware. How do
+
+15:34.527 --> 15:38.327
+you see the possibilities and where can you help the
+
+15:38.391 --> 15:42.103
+european or AI industry? About AI? Because selling the
+
+15:42.159 --> 15:45.479
+product is one thing, but implementing is I think definitely another.
+
+15:45.527 --> 15:48.775
+Yeah, I fully agree. Andman,
+
+15:48.815 --> 15:52.247
+the famous german midittelstand is actually the
+
+15:52.271 --> 15:56.435
+backbone of our economy. That'something which
+
+15:56.475 --> 16:00.219
+we need to explain often
+
+16:00.267 --> 16:04.075
+globally, because this way how the
+
+16:04.115 --> 16:07.875
+german economy works is pretty unique. That is
+
+16:07.915 --> 16:11.195
+not the same in the US, that is not the same in other countries,
+
+16:11.235 --> 16:14.935
+but that's very specific in Germany. And that's kind of,
+
+16:15.675 --> 16:20.031
+how should I say, eangelism almost that we need to do with
+
+16:20.083 --> 16:23.335
+our global organization. Say listen, this is
+
+16:23.495 --> 16:27.567
+an important part of the german economy and we need to help them and we
+
+16:27.591 --> 16:31.303
+need to make sure that they have the ability to
+
+16:31.319 --> 16:35.383
+adopt a eye. And Michael just made a very good point. That's about people.
+
+16:35.519 --> 16:38.671
+It's about people. It's about talent and talent in
+
+16:38.703 --> 16:42.431
+AI. They, and they are looking for places where
+
+16:42.503 --> 16:46.001
+they can do their work. And data scientists,
+
+16:46.103 --> 16:49.265
+they need proper infrastructure, they need access to compute,
+
+16:50.485 --> 16:53.581
+to proper compute, to train the models to
+
+16:53.613 --> 16:57.517
+inference, the models to fine tune them. And therefore,
+
+16:57.541 --> 17:00.773
+it's also important to give them opportunities locally where
+
+17:00.789 --> 17:04.597
+they can access, compute and do their work. And that's one thing, another thing
+
+17:04.621 --> 17:08.053
+that is important, which is also deeply in the DNA of Nvidia.
+
+17:08.229 --> 17:11.568
+We are very eager to engage with developers.
+
+17:11.676 --> 17:14.392
+That's why we are here. That's why we have a bo here. I can just
+
+17:14.448 --> 17:18.324
+encourage everyone to come to Ourus at Hall 2.2.
+
+17:19.104 --> 17:23.448
+And we, for example, do courses to
+
+17:23.576 --> 17:26.920
+refine the skills of programmers.
+
+17:26.952 --> 17:30.644
+In terms of AI, there's different courses in computer vision,
+
+17:31.624 --> 17:35.192
+in building different AI platforms, and it's all about people, and it's
+
+17:35.208 --> 17:39.101
+all about talent, and hence that trans of knowledge into
+
+17:39.133 --> 17:42.733
+the community of developers. It's another thing where we
+
+17:42.829 --> 17:46.533
+put a very high emphasis to and want to support the local ecosystem also
+
+17:46.549 --> 17:50.573
+with their efforts. And Marcus is forgetting that in
+
+17:50.629 --> 17:54.125
+Europe, we tend to be a little bit more skeptical of everything, and particularly
+
+17:54.165 --> 17:57.765
+the Germans. Yeah, but ro, exactly to your point,
+
+17:57.925 --> 18:01.985
+the skeptical thing. So when we talk to our companies,
+
+18:03.295 --> 18:07.115
+what is the problematics between you connecting to SME's?
+
+18:07.655 --> 18:11.895
+And I think the picture that, it's just my personal opinion,
+
+18:12.015 --> 18:15.311
+but we have, you have on the one side, the 65
+
+18:15.383 --> 18:18.335
+year old family SME owner. Yeah,
+
+18:18.375 --> 18:21.815
+from Swabia or from Bavaria, who lives like for
+
+18:21.855 --> 18:25.071
+40 years in his data silo. On the other hand,
+
+18:25.103 --> 18:29.407
+you have the 25 year old AI entrepreneur from Berlinreutitzberg,
+
+18:29.591 --> 18:32.895
+we talks, who says to the 65 year old, well,
+
+18:32.935 --> 18:36.111
+you should do data sharing with your competitors
+
+18:36.263 --> 18:39.631
+that we should do in a cloud system, and then we can perhaps develop an
+
+18:39.663 --> 18:44.583
+AI project. And when the 65 year old hears
+
+18:44.679 --> 18:48.195
+that he should do data sharing with his competitors, he's out.
+
+18:49.215 --> 18:53.151
+So what danger? Isn't this also a
+
+18:53.183 --> 18:57.035
+kind of, I would like, say, generational problem with handling of
+
+18:57.075 --> 19:00.779
+data? I mean, so quite, I was recently attended
+
+19:00.907 --> 19:04.683
+a dinner where people were sort of talking about the priorities between AI and
+
+19:04.739 --> 19:08.139
+politics. So what's being discussed at your boardroom table at the moment?
+
+19:08.307 --> 19:12.307
+And almost without exception, people were talking about AI and
+
+19:12.331 --> 19:16.171
+not about pending elections, which I thought was quite interesting because they kind of go
+
+19:16.203 --> 19:19.483
+hand in hand. But that does show generational gap,
+
+19:19.579 --> 19:22.939
+because actually, what's front and center was for the
+
+19:22.987 --> 19:26.451
+majority of younger people is, well, one, what is
+
+19:26.483 --> 19:29.867
+AI going to mean for me in the future for older people? You're like,
+
+19:29.971 --> 19:33.555
+does that mean that it's going to impact my business, impact my job?
+
+19:33.675 --> 19:37.219
+Where does the longevity of that sit? And that goes back to my comments
+
+19:37.267 --> 19:40.555
+about us being quite skeptical about what AI will,
+
+19:40.675 --> 19:43.987
+how it will impact us. So it's in the nature of
+
+19:44.011 --> 19:47.579
+us certainly I think to look at the negative side, in contrast
+
+19:47.627 --> 19:50.915
+maybe to the North Americans, where everything is an opportunity.
+
+19:51.375 --> 19:54.511
+So we've tended to focus ono those sort of narrow things.
+
+19:54.543 --> 19:57.995
+And it's why I think we are seeing the gaps emerge on skills
+
+19:58.535 --> 20:01.967
+and the sort of like gaps in the ecosystem because there's too
+
+20:01.991 --> 20:05.311
+much cynicism around it, because we think the
+
+20:05.383 --> 20:08.951
+impact will be negative. And as I mentioned to you guys
+
+20:09.023 --> 20:12.607
+outside, so people tend to be scared of AI, but it's no competition for
+
+20:12.631 --> 20:16.297
+natural human stupidity. So I think we're going to be okay
+
+20:16.441 --> 20:20.409
+if we learn to use it the right way. One question
+
+20:20.457 --> 20:23.833
+for the group is that in exactly what you say, the skepticism and
+
+20:23.849 --> 20:27.609
+stuff like that, but isn't the problem also in the skepticism that
+
+20:27.657 --> 20:30.961
+the discussion about AI is like in extremes,
+
+20:31.113 --> 20:34.785
+you have the tech bubble who says I overemphasize my point.
+
+20:34.865 --> 20:38.721
+It's a reincarnation of Jesus Christ. And the contraoint is that
+
+20:38.833 --> 20:41.741
+AI is, is the terminate,
+
+20:41.893 --> 20:46.221
+the worst thing that ever happens. Isn't it time to
+
+20:46.253 --> 20:49.781
+demystify AI to make it about concrete products,
+
+20:49.853 --> 20:53.629
+which Michael is doing and things
+
+20:53.677 --> 20:57.701
+like that? 100% agreed. And Michael's
+
+20:57.733 --> 21:01.781
+offering, the offering of his company is a perfect example
+
+21:01.893 --> 21:05.973
+because it really solves and accurates and an actual
+
+21:06.029 --> 21:09.567
+problem. All those operators of those
+
+21:09.631 --> 21:12.959
+canteens of those business restaurants, they simply don't find
+
+21:13.007 --> 21:17.111
+people who do the checkout anymore. And, you know,
+
+21:17.303 --> 21:21.015
+so people have the choice of using the alpha checkout or don't
+
+21:21.055 --> 21:23.767
+get lunch. What do you prefer? Do you want to get lunch or do you
+
+21:23.791 --> 21:27.703
+want to use the AI checkout system? It's about making use cases
+
+21:27.879 --> 21:31.071
+that are touchable for people. And I, I see
+
+21:31.103 --> 21:34.545
+the same like controversy discussions that you just
+
+21:34.585 --> 21:37.897
+mentioned, Daniel, and I think the only way to get rid of that step by
+
+21:37.921 --> 21:41.817
+step, and that will take a while and it will be a
+
+21:41.841 --> 21:45.081
+journey for all of us in this industry.
+
+21:45.193 --> 21:48.441
+We need to take people with us on the journey and we need to
+
+21:48.473 --> 21:53.297
+explain it. We need to make it judgeable. That's the
+
+21:53.321 --> 21:57.673
+levers that we need to pull to get rid of this very controversial
+
+21:57.729 --> 22:00.913
+discussions that we have. How do you convince a
+
+22:00.969 --> 22:05.105
+skeptical cantteen owner to adapt
+
+22:05.225 --> 22:09.153
+something which is normally something very manual. People are cooking,
+
+22:09.289 --> 22:12.633
+people are getting their food, they're eating. How do you
+
+22:12.689 --> 22:16.217
+convince them of doing AI,
+
+22:16.401 --> 22:19.961
+to do generalization and doing
+
+22:19.993 --> 22:23.465
+it automatically? How can you convince. And it
+
+22:23.545 --> 22:26.321
+depends on the stakeholder. So, for example,
+
+22:26.393 --> 22:29.961
+the owner of the canteen, he's trying to solve
+
+22:29.993 --> 22:33.385
+a problem that he wants to sell food,
+
+22:33.505 --> 22:36.857
+but nobody wants to man the cashier. And then you've
+
+22:36.881 --> 22:40.481
+got the retri slider. So the person
+
+22:40.553 --> 22:44.537
+responsible for the restaurant, you have to make their
+
+22:44.681 --> 22:48.929
+job simple. You cannot overcomplicate
+
+22:48.977 --> 22:53.101
+matters. It has to be as simple as I take an image of
+
+22:53.173 --> 22:56.865
+the food on the day AI goes away, does its thing,
+
+22:57.645 --> 23:00.933
+five minutes later they're ready for service. It has to be
+
+23:00.949 --> 23:04.173
+that simple. The only thing in pre sales,
+
+23:04.229 --> 23:07.533
+which is always an issue, is you have to take away the fear. The fear.
+
+23:07.589 --> 23:11.385
+Where'my data landing? I don't want to harp on, on data, but data is,
+
+23:11.765 --> 23:14.893
+and it depends always on the size of the company you're operating with.
+
+23:15.029 --> 23:18.131
+There are regular in place and you have to take away that fear
+
+23:18.243 --> 23:22.339
+that, for example, if a customer wants on premise inferencing,
+
+23:22.467 --> 23:26.091
+we give it to them because they don't want to take the risk that the
+
+23:26.123 --> 23:30.187
+data is landing on some cloud in some location where
+
+23:30.211 --> 23:33.731
+they have no control over. So it's about flexibility and taking away
+
+23:33.763 --> 23:37.215
+fear. I can, don't know what else I should say.
+
+23:37.995 --> 23:41.387
+So one of the challenges that we realized, especially in
+
+23:41.411 --> 23:45.017
+the data infrastructure for AI, also with project that we
+
+23:45.041 --> 23:49.645
+did, is that one is convincing
+
+23:50.545 --> 23:54.193
+the SME's but also big companies, as I think before JatGPTt
+
+23:54.249 --> 23:58.201
+was even worse. So thankfully, this certainly gave
+
+23:58.233 --> 24:02.097
+the discussion some momentum. But how
+
+24:02.121 --> 24:05.721
+can we see, especially in a time where some,
+
+24:05.873 --> 24:10.049
+some economic indicators are, are not that good to
+
+24:10.137 --> 24:14.217
+invest in this kind of data infrastructure? Because they'saying,
+
+24:14.281 --> 24:17.245
+hey, we don't know where the world is in five years,
+
+24:17.945 --> 24:21.081
+why should we invest in this kind of cases?
+
+24:21.273 --> 24:24.925
+I mean, I'actually, I've had a number of panelsr
+
+24:25.585 --> 24:29.337
+about investment in AI and we can
+
+24:29.361 --> 24:32.193
+say that about everything. We won't know where the world will be in five years
+
+24:32.249 --> 24:36.109
+time. But the opportunity that AI represents,
+
+24:36.157 --> 24:39.885
+certainly to me and from an investment standpoint, is the
+
+24:39.965 --> 24:43.549
+opportunity to shape that future, to develop the
+
+24:43.597 --> 24:46.813
+technologies in the right way, to bring value
+
+24:46.909 --> 24:50.341
+to all the right ecosystems. To your point, take out the fear,
+
+24:50.413 --> 24:53.765
+make it really simple about how this will improve your
+
+24:53.805 --> 24:56.785
+life and invest behind that.
+
+24:58.245 --> 25:01.275
+That's where I see the opportunity. See? Yeah,
+
+25:02.415 --> 25:06.127
+I would like to turn it around also in a positive way a little bit.
+
+25:06.151 --> 25:10.127
+Daniel I think you guys from Kunusand
+
+25:10.231 --> 25:13.967
+play an important role in that'a, very important role inle
+
+25:14.151 --> 25:18.039
+in that whole journey to convince people to make it
+
+25:18.087 --> 25:21.719
+more a normal technology that simplifies our daily lives,
+
+25:21.887 --> 25:25.813
+that solves problems in our daily life, that solves some of the hardest
+
+25:25.919 --> 25:30.085
+problems that we have in human mankind. I mean, we still develop
+
+25:30.505 --> 25:33.809
+pharmaceuticals, not from a technology
+
+25:33.857 --> 25:38.001
+point of view that's very modern, but from a structured
+
+25:38.073 --> 25:41.685
+approach. Fromarmaceuticals are still developed like 100 years ago,
+
+25:42.585 --> 25:46.385
+the systematic is still the same. So using
+
+25:46.425 --> 25:49.337
+AI to develop pharmaceuticals,
+
+25:49.481 --> 25:52.111
+drugs for especially rare diseases,
+
+25:52.273 --> 25:55.467
+is something which can solve some of the biggest problems that we have in human
+
+25:55.491 --> 25:58.827
+mankind, but it can't happen only in
+
+25:58.851 --> 26:02.619
+the tech bubble. So, so just that, you know, we have a project running,
+
+26:02.667 --> 26:06.855
+it's called liam large european AI models, which is
+
+26:07.155 --> 26:11.443
+trying to get the people and the SME's to get data
+
+26:11.499 --> 26:15.587
+center time that they can do their models. And we're not talking about GPT
+
+26:15.651 --> 26:19.475
+five, six, seven or eight and something like that, but specialized model
+
+26:20.095 --> 26:23.555
+which is adaptable for SME's, which is adaptable
+
+26:23.855 --> 26:27.635
+for smaller solutions. And exactly what you're saying is that
+
+26:28.415 --> 26:32.199
+we have AI can help. It is not the question,
+
+26:32.247 --> 26:35.303
+it's not the answer to everything. It's certainly not.
+
+26:35.439 --> 26:38.887
+But I think that especially in the time where we have
+
+26:38.911 --> 26:42.527
+a skill worker shortage in the time where we have.
+
+26:42.631 --> 26:46.035
+So can you tell us the example that you say about
+
+26:46.075 --> 26:50.211
+the at the moment or
+
+26:50.283 --> 26:53.547
+in other areas where we simply don't have the
+
+26:53.611 --> 26:56.699
+human resources anymore to do the things we
+
+26:56.707 --> 27:00.655
+are used to do in the current time?
+
+27:01.155 --> 27:05.107
+I mean you just said it, it's something that
+
+27:05.251 --> 27:08.823
+Deutschean is also dealing very, very openly with,
+
+27:09.019 --> 27:12.463
+that they miss like 5000 train drivers currently.
+
+27:12.639 --> 27:15.755
+And the structure of age
+
+27:16.495 --> 27:19.591
+of this workforce is in a way that
+
+27:19.623 --> 27:23.215
+you can clearly forecast how many people go
+
+27:23.375 --> 27:26.887
+are going to retire in the next ten years and
+
+27:26.911 --> 27:30.703
+that will make the problem huge. So in ten years we
+
+27:30.719 --> 27:34.135
+will have just 50% of the train drivers that we would need to
+
+27:34.175 --> 27:37.361
+operate trains. So we
+
+27:37.393 --> 27:41.009
+need to invest into create self driving trains. Otherwise probably
+
+27:41.057 --> 27:44.569
+our transportation system will. And the aren't late,
+
+27:44.617 --> 27:47.929
+they simply not there. Exactly. Yeah.
+
+27:48.057 --> 27:51.473
+Then no one will be unhappy about ten minutes delay
+
+27:51.529 --> 27:55.505
+because the trains will simply not go without the driver. If you don't have autonomous
+
+27:55.545 --> 27:59.177
+trains, then let me hit you on one point, is the
+
+27:59.201 --> 28:03.205
+question of course of AI and energy consumption and sustainability.
+
+28:03.625 --> 28:06.785
+So let's say this is also very, how can I say,
+
+28:06.865 --> 28:10.537
+emphatic discussions that they say AI is the
+
+28:10.561 --> 28:14.393
+most waste of energy that you have. And how can we or you at the
+
+28:14.409 --> 28:17.553
+northern native solve this kind of issue? That AI
+
+28:17.609 --> 28:21.057
+needs energy and energy consumption? I mean, the world
+
+28:21.081 --> 28:24.417
+is incredibly energy hungry at the moment. And the introduction
+
+28:24.481 --> 28:28.367
+of AI and all of these AI factories
+
+28:28.551 --> 28:32.303
+has driven up that demand for consumption significantly.
+
+28:32.479 --> 28:36.231
+We're talking doubling up on the amount of power that is
+
+28:36.263 --> 28:40.231
+required for data centers in the next 48 months. So from 17 gigawatts
+
+28:40.263 --> 28:43.463
+to 35 gigawatts in the space of 48 months, that is an
+
+28:43.479 --> 28:47.207
+enormous impact on all of the energy grids and all of the energy
+
+28:47.311 --> 28:51.055
+consumption and sources that we have today. And never
+
+28:51.095 --> 28:54.867
+mind the potential impact from residual heat as
+
+28:54.891 --> 28:58.003
+well as from waste that surrounds that. So for us as
+
+28:58.019 --> 29:01.795
+a business, we've taken a very, very specific stance on
+
+29:01.835 --> 29:05.611
+one. One of the reasons we partner with Nvidia is because it is
+
+29:05.723 --> 29:09.339
+some of the best hardware out there. It's extremely energy efficient,
+
+29:09.467 --> 29:12.835
+and it's also direct to chip, liquid cooled. That means it's
+
+29:12.875 --> 29:16.295
+compliant with our data center environments. It has low.
+
+29:18.655 --> 29:22.235
+Yeah, you're here. O yeah, I can't hear myself.
+
+29:24.135 --> 29:27.735
+And we also position our data centers in places
+
+29:27.775 --> 29:31.167
+where we have full renewable energy sources. And one of the things that's
+
+29:31.191 --> 29:34.687
+really important for us to be able to offer to our customers is that carbo
+
+29:34.751 --> 29:38.311
+free environment. That way we will be able to
+
+29:38.383 --> 29:42.195
+have the benefits of AI without the impact on the environment.
+
+29:43.555 --> 29:47.195
+Roseanne Kincaiate Smith, Michael Bradley Markusako,
+
+29:47.315 --> 29:50.803
+thank you so much for the discussion. Thank you for the exclusive audience here
+
+29:50.979 --> 29:54.427
+for your attention. My name is Daniel Labou. I wish you a very pleasant day
+
+29:54.531 --> 29:57.763
+at the conference and goodbye. Daniel, thank you so
+
+29:57.779 --> 29:59.495
+much for hosting us. Of course.
+
+30:03.795 --> 30:06.455
+Thank you. Rosa still alive.
+
+30:22.255 --> 30:25.991
+Okay. Thank you very much. So stay tuned for our next
+
+30:26.023 --> 30:29.551
+session. The neo architecture of productivity, how work
+
+30:29.623 --> 30:33.715
+environments impact cognitive performance. Ten minutes.
+
+30:34.795 --> 30:35.035
+It.
