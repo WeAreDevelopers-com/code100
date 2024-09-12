@@ -30,5 +30,7 @@ For example:
 }
 ```
 
+Submit your answers [using this form](https://forms.gle/gV7kSJmuyebccWzL8) by Friday, 20th of September 2024.
+
 Good luck! 
 
