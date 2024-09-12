@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Metadata</title>
+    <style>
+        body {
+            font-family: Avenir, 'Avenir Next LT Pro', Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+            font-size: 1em;
+            margin: 1em;
+        }
+        details {
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        details:hover {
+            background-color: aliceblue;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        p {
+            margin: 0.5em;
+            display: flex;
+            gap: 1em;
+        }
+        span {
+            font-weight: bold;
+        }
+        div{
+            text-align: right;
+            padding-inline: 2em;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em;
+            cursor: pointer;
+        }
+        summary {
+            display: flex;
+            justify-content: space-between;
+        }
+        aside {
+            display: flex;
+            gap: 1em;
+        }
+        aside button {
+            background-color: #666;
+        }
+        form {
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Session Metadata</h1>
+    <section>
+    </section>
+    <script>
+        fetch('data.json').then(response => response.json()).then(data => {
+            for(elm in data){
+                let dt = document.createElement('details');
+                dt.innerHTML = `<summary><span>${data[elm].title}</span></summary>`;
+                for(k in data[elm]){
+                    if(k !== 'speakers') {
+                        if(data[elm][k] !== '') {
+                            dt.innerHTML += `<p><span>${k}:</span> ${data[elm][k].replace('?feature=share','')}</p>`;
+                        }
+                    } else {
+                        dt.innerHTML += `<p><span>Speakers</span></p>`;
+                        let s = '';
+                        data[elm].speakers.forEach(speaker => {
+                            s += `<details><summary>${speaker.firstname} ${speaker.lastname}</summary>`;
+                            s += `<p><span>Company:</span>${speaker.company}</p>`;
+                            s += `<p><span>Job Title:</span>${speaker.jobtitle}</p>`;
+                            s += `<p><span>Bio:</span>${speaker.bio}</p>`;
+                            s += `<p><span>Country:</span>${speaker.country}</p></details>`;
+                        })
+                        dt.innerHTML += s;
+                    }
+                };
+                document.querySelector('section').appendChild(dt);
+            };
+        });
+
+    </script>
+    
+</body>
+</html>
