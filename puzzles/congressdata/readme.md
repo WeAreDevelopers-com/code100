@@ -1,6 +1,7 @@
 # WeAreDevelopers World Congress Session analysis
 
 You get a [dataset containing all sessions](data.json) of the WeAreDevelopers World Congress. 
+You can also [browse the data](display.html) instead of reading JSON to get an idea what awaits you.
 
 Write a script that returns a JSON object with the following properties:
 
