@@ -63,3 +63,4 @@ Due to popular demand, we are publishing the challenges and solutions of CODE100
 * [Happy new year](/puzzles/happy-new-year/)
 * [Packed snowflake](/puzzles/packedsnowflake/)
 * [Hitting the Chimney](/puzzles/hitting-the-chimney/)
+* [LIVE days](/puzzles/live/)
