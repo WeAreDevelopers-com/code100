@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different focus states</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+        }
+        a {
+            color: #ccc;
+            transition: 400ms;
+            padding: .5em;
+        }
+        button:active {
+            color: green
+        }
+        a:hover {
+            background-color: powderblue;
+            color: steelblue;
+        }
+        a:focus {
+            background-color: blanchedalmond;
+            outline: none;
+        }
+        button:focus {
+            background-color: yellow;
+            transform: scale(2);
+        }
+        h1:target {
+            background-color: yellow;
+        }
+        li {
+            padding: .5em 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="section1">Main heading</h1>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#" id="mainlink">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>        
+    </ul>
+   <button type="button">Button example</button>
+</body>
+</html>
