@@ -15,7 +15,7 @@
             max-width: 70em;
             background: #fff;
         }
-        h2 {font-size: 1em;}
+        h2 {font-size: 1em;margin-top:0;}
         article {
             display: flex;
             flex-direction: row;
@@ -90,11 +90,9 @@
         </section>
         <section class="fcremoved styled">
             <h2>Focus outline removed</h2>
-<pre>
-a:focus, button:focus {
+<pre>a:focus, button:focus {
     outline: none;
-}
-</pre>
+}</pre>
             <ul>
             <li><a href="#4">Link 1</a></li>
             <li><a href="#5">Link 2</a></li>
@@ -104,14 +102,12 @@ a:focus, button:focus {
         </section>
         <section class="fcboth styled">
             <h2>Focus and hover</h2>
-<pre>
- a:focus, button:focus,
- a:hover, button:hover {
+<pre>a:focus, button:focus,
+a:hover, button:hover {
     background-color: powderblue;
     color: steelblue;
     outline:none;
-}
-</pre>
+}</pre>
             <ul>
             <li><a href="#4">Link 1</a></li>
             <li><a href="#5">Link 2</a></li>
@@ -121,14 +117,12 @@ a:focus, button:focus {
         </section>
         <section class="fcvisible styled">
             <h2>Focus visible</h2>
-            <pre>
-a:focus, button:focus {
+            <pre>a:focus, button:focus {
     outline: .5em dashed firebrick;
 }
 a:focus-visible, button:focus-visible {
     outline: .5em dashed deepskyblue;
-}
-                            </pre>
+}</pre>
                             <ul>
                 <li><a href="#7">Link 1</a></li>
                 <li><a href="#8">Link 2</a></li>
@@ -138,6 +132,10 @@ a:focus-visible, button:focus-visible {
         </section>
         <section class="fcwithin styled">
             <h2>Focus within</h2>
+<pre>ul:focus-within {
+    background-color: yellow;
+}</pre>
+    
             <ul>
                 <li><a href="#7">Link 1</a></li>
                 <li><a href="#8">Link 2</a></li>
