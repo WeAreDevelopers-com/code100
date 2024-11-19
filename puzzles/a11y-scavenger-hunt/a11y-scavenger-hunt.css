@@ -12,6 +12,8 @@ body {
     color: #fff;
     max-width: 60rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 .talks {
     display: flex;
@@ -307,3 +309,9 @@ form .submitbutton:hover {
     color: green;
     border: 5px solid limegreen;
 }
+section:nth-of-type(1) { order: 2; }
+section:nth-of-type(2) { order: 5 }
+section:nth-of-type(3) { order: 3 }
+section:nth-of-type(4) { order: 4 }
+section:nth-of-type(5) { order: 5 }
+footer { order: 6;margin-top: 4em; } 

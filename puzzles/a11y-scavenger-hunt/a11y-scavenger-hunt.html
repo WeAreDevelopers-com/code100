@@ -24,7 +24,36 @@
     <p>WeAreDevelopers LIVE is a free virtual event series with tech talks, coding sessions and workshops about building great software - delivered by proven experts and developers from the community.</p>
 </section>
     
-    <section>
+<section id="signup">
+
+    <h2 id="form">Sign up for LIVE day</h2>
+    
+        <p>We would love to have you watch and comment on the presentation as it means a lot for the presenters. Just fill out the form below and we will send you the details where and when to join.</p>
+        <div class="errors"></div>
+        <form action="#">
+            <div class="formsection"><label>Name:</label><input type="text" name="name" id="name"></div>
+            <div class="formsection"><div class="lbl">Email:</div><input type="email" name="email" id="email"></div>
+            <div class="formsection"><label>Country:</label><input type="text" name="country" id="country"></div>
+            <div class="formsection"><div class="lbl-req">Company:</div><input type="text" name="company" id="company"></div>
+            <div class="formsection">
+                <label for="position">Position:</label> 
+                <select name="position" id="position">
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="manager">Manager</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="formsection"><input type="checkbox" name="privacy" id="privacy">
+            <label for="privacy">I agree to the privacy policy</label></div>
+            <div class="formsection"><input type="checkbox" name="terms" id="terms">
+            <label for="terms">I agree to the terms and conditions</label></div>
+            <div class="formsection"><input type="checkbox" checked name="newsletter" id="newsletter"> Also sign up for the newsletter</div>
+            <div class="submitbutton">Sign up</div>
+        </form>
+    </section>
+
+<section>
 <h2 id="talks">Talks and speakers</h2>
 <div class="talks">   
 <div class="talk">
@@ -91,34 +120,6 @@
 </div>
 </div>
 
-</section>
-<section>
-
-<h2 id="form">Sign up for LIVE day</h2>
-
-    <p>We would love to have you watch and comment on the presentation as it means a lot for the presenters. Just fill out the form below and we will send you the details where and when to join.</p>
-    <div class="errors"></div>
-    <form action="#">
-        <div class="formsection"><label>Name:</label><input type="text" name="name" id="name"></div>
-        <div class="formsection"><div class="lbl">Email:</div><input type="email" name="email" id="email"></div>
-        <div class="formsection"><label>Country:</label><input type="text" name="country" id="country"></div>
-        <div class="formsection"><div class="lbl-req">Company:</div><input type="text" name="company" id="company"></div>
-        <div class="formsection">
-            <label for="position">Position:</label> 
-            <select name="position" id="position">
-                <option value="developer">Developer</option>
-                <option value="designer">Designer</option>
-                <option value="manager">Manager</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <div class="formsection"><input type="checkbox" name="privacy" id="privacy">
-        <label for="privacy">I agree to the privacy policy</label></div>
-        <div class="formsection"><input type="checkbox" name="terms" id="terms">
-        <label for="terms">I agree to the terms and conditions</label></div>
-        <div class="formsection"><input type="checkbox" checked name="newsletter" id="newsletter"> Also sign up for the newsletter</div>
-        <div class="submitbutton">Sign up</div>
-    </form>
 </section>
 
 <section>
