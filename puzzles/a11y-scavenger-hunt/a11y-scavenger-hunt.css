@@ -1,0 +1,350 @@
+:root {
+    interpolate-size: allow-keywords; /* 👈 */
+}
+html {
+      scroll-behavior: smooth;
+}       
+body {
+    font-family: DM Sans, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    max-width: 60rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.talks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+.talks:hover .talk {
+    opacity: 0.04;
+    transition: 400ms;
+}
+.talks:hover .talk:hover {
+    opacity: 1;
+}
+.talk {
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 40%;
+    background: #ddd;
+    flex: 1;
+}
+.share,.watch {
+    align-self: flex-end;
+}
+.talk img {
+    flex: 1;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+}
+.meta {
+    cursor: pointer;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow-y: clip;
+    transition: height 0.35s ease;
+}
+.talk:hover .content {
+    padding-bottom: 1em;
+    height: max-content;
+}
+h3 {
+    font-weight: normal;
+}
+.talk h2 {
+    font-family: Dancing Script;
+    flex: 100%;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: steelblue
+}
+.meta img {
+    min-width: 100px;
+    aspect-ratio: 1/1;
+}
+.company {
+    font-size: .8em;
+}
+.name {
+    font-size: 1.1em;
+}
+.title {
+    font-size: 1em;
+}
+.bio {
+    font-size: .8em;
+}
+.talkdescription {
+    font-size: .9em;
+}
+.watch a {
+    background-color: #ccc;
+    color: #767676;
+    padding: .5em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 400ms;
+}
+.watch a:hover {
+    background-color: steelblue;
+    color: white;
+    padding: .5em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 400ms;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    columns: 3;
+}
+footer li {
+    font-size: .8em;
+}
+footer a {
+    color: #999;
+    display: inline-block;
+    padding: .2em;
+    outline: none;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: row; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    flex: 1;
+    text-align: center;
+    background: #ccc;
+}
+nav a {
+    color: #ccc;
+    background: #369;
+    text-decoration: none;
+    padding:.5em .2em;
+    display: block;
+    position: relative;
+}
+nav a:hover, nav a:active {
+    color: #fff;
+    background: #69c;
+    text-decoration: none;
+    padding:.5em .2em;
+    display: block;
+}
+nav a:active:after, nav a:hover:after{
+    content: "";
+    position:absolute;
+    bottom: -7px;
+    left: calc(50% - 7px);
+    margin:0 0.5em;
+    display:inline-block;
+    border: 7px solid transparent;
+    border-top:8px solid #69c;
+    border-bottom:0 none;
+}
+.twofold {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.cfp img{
+    order:-1;
+}
+.cfp p {
+    flex: 10;
+}
+.cfp img {
+    flex: 1;
+    max-width: 30%;
+}
+.cfp a {
+    align-self: flex-end;
+    background: #369;
+    color: #fff;
+    text-decoration: none;
+    padding:.2em .5em;
+}
+.cfp a:hover {
+    background: #69c;
+    color: #fff;
+}
+.coc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1.5;
+}
+.coc .part {
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+    flex:1;
+}
+.coc svg {
+    align-self: center;
+    flex: 1;
+    min-width:100px;
+}
+.coc h6 {
+    font-size: 1em;
+    margin:0;
+    font-weight: normal;
+    color: limegreen
+}
+.coc a {
+    color: peachpuff;
+}
+footer {
+    background: black;
+    padding: 1em;
+    border-top: 1px solid #ccc;
+}
+p {
+    line-height: 1.5;
+}
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    color: powderblue;
+    font-family: Dancing Script;
+}
+h1 {
+    font-size: 3em;
+    font-weight: normal;
+    color: firebrick;
+    text-align: center;
+}
+
+.wad3__container {
+    margin: 2em 0;
+
+}
+.wad3-ads__heading {
+    font-size:1.1em;
+
+}
+
+.wad3-ads__columns{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    a {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        background: #ccc;
+        padding: .4em;
+        gap: 1em;
+        text-decoration: none;
+        color: #000;
+        img {
+            flex: 1;
+            max-width: 100px;
+            border-radius: 50%;
+        }
+    }
+}
+
+section {
+    display: block;
+    margin-top: 2em;
+}
+section:first-of-type {
+    p {
+        font-size: 1.6em;
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.formsection {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    font-size: 1.6em;
+    input:not([type="checkbox"]),select {
+        flex: 3;
+        background: #ccc;
+        font-family: inherit;
+        padding: .05em;
+        font-size: 1em;
+    }
+    div, label {
+        flex: 1;
+    }
+}
+form .submitbutton {
+    background: #369;
+    color: #fff;
+    padding: .2em;
+    font-size: 2em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: 400ms;
+    border:none;
+    border-radius: .5em ;
+    font-family: inherit;
+}
+form .submitbutton:hover {
+    background: #69c;
+    color: #fff;
+    transition: 400ms;
+}
+.errors {
+    color: red;
+    font-size: 1.2em;
+    padding: 1em;
+    margin: 1em;
+    border: 5px solid firebrick;
+}
+.errors:empty {
+    display: none;
+}
+.errors.yay {
+    color: green;
+    border: 5px solid limegreen;
+}
+section:nth-of-type(1) { order: 2; }
+section:nth-of-type(2) { order: 5 }
+section:nth-of-type(3) { order: 3 }
+section:nth-of-type(4) { order: 4 }
+section:nth-of-type(5) { order: 5 }
+footer { order: 6;margin-top: 4em; } 

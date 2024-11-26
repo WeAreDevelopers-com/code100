@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different focus versions</title>
+    <style>
+        html {
+            background-color: #eee;
+        }
+        body {
+            font-family: helvetica, sans-serif;
+            margin: 1em auto;
+            padding: 1em;
+            max-width: 70em;
+            background: #fff;
+        }
+        h2 {font-size: 1em;margin-top:0;}
+        article {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        section {
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            min-width: 40%;
+        }
+        li {
+            padding: .2em 0;
+        }
+        .styled {
+            a {
+                color: #333;
+                transition: 400ms;
+                padding: .1em;
+            }
+            button {
+                color: #333;
+                background-color: #eee;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: .5em;
+                font-family: inherit;
+                transition: 400ms;
+            }
+            a:hover,button:hover {
+                background-color: powderblue;
+                color: steelblue;
+            }
+        }
+        .fcboth a:focus,.fcboth button:focus {
+            background-color: powderblue;
+            color: steelblue;
+            outline:none;
+        }
+        .fcvisible {
+            a:focus, button:focus {
+            outline: .5em dashed firebrick;
+            }
+        }
+        .fcvisible {
+            a:focus-visible, button:focus-visible {
+            outline: .5em dashed deepskyblue;
+            }
+        }
+        .fcremoved button:focus,.fcremoved a:focus {
+            outline: none;
+        }
+        .fcwithin ul:focus-within {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="section1">Focus states</h1>
+    <article>
+        <section>
+            <h2>Unstyled</h2>
+        <ul>
+            <li><a href="#1">Link 1</a></li>
+            <li><a href="#2" id="mainlink">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>        
+        </ul>
+        <button>One</button>
+        </section>
+        <section class="fcremoved styled">
+            <h2>Focus outline removed</h2>
+<pre>a:focus, button:focus {
+    outline: none;
+}</pre>
+            <ul>
+            <li><a href="#4">Link 1</a></li>
+            <li><a href="#5">Link 2</a></li>
+            <li><a href="#6">Link 3</a></li>        
+        </ul>
+        <button>One</button>
+        </section>
+        <section class="fcboth styled">
+            <h2>Focus and hover</h2>
+<pre>a:focus, button:focus,
+a:hover, button:hover {
+    background-color: powderblue;
+    color: steelblue;
+    outline:none;
+}</pre>
+            <ul>
+            <li><a href="#4">Link 1</a></li>
+            <li><a href="#5">Link 2</a></li>
+            <li><a href="#6">Link 3</a></li>        
+        </ul>
+        <button>One</button>
+        </section>
+        <section class="fcvisible styled">
+            <h2>Focus visible</h2>
+            <pre>a:focus, button:focus {
+    outline: .5em dashed firebrick;
+}
+a:focus-visible, button:focus-visible {
+    outline: .5em dashed deepskyblue;
+}</pre>
+                            <ul>
+                <li><a href="#7">Link 1</a></li>
+                <li><a href="#8">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>        
+            </ul>
+            <button>One</button>
+        </section>
+        <section class="fcwithin styled">
+            <h2>Focus within</h2>
+<pre>ul:focus-within {
+    background-color: yellow;
+}</pre>
+    
+            <ul>
+                <li><a href="#7">Link 1</a></li>
+                <li><a href="#8">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>        
+            </ul>
+            <button>One</button>
+        </section>
+    </article>
+</body>
+</html>
