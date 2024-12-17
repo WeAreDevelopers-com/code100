@@ -60,7 +60,7 @@ For example:
 145: █████      (41) | 146: ████       (32) | 
 ```
 
-You can submit you solutions [using this form](https://forms.gle/2X1Jzdoe91TaoDX98) and we will pick two winners to join us in July in Berlin for the CODE100 final.
+You can submit you solutions [using this form](https://forms.gle/2X1Jzdoe91TaoDX98) and we will pick two winners to join us in July in Berlin for the CODE100 final. If you want to use JavaScript, we already prepared a [Codepen](https://codepen.io/codepo8/pen/vEBgPvg?editors=1111) for you. 
 
 <!-- details -->
 <!-- summary -->
