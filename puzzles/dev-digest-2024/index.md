@@ -5,7 +5,7 @@ layout: challenge
 
 # Dev Digest 2024 barchart challenge
 
-You get a [JSON dataset](newsletterarchive2024.json) with the different editions of the newsletter and the links in each:
+You get a [JSON dataset](https://puzzles.code100.dev/puzzles/dev-digest-2024/newsletterarchive2024.json) with the different editions of the newsletter and the links in each:
 
 ```json
 {
