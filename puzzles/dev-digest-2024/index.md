@@ -5,6 +5,14 @@ layout: challenge
 
 # Dev Digest 2024 barchart challenge
 
+The year is almost over and we released a [weekly newsletter](https://wearedevelopers.com/newsletter) with over 2000 curated links for you to look at. To celebrate, we created [a link archive page](https://devrel.wearedevelopers.com/devdigest2024/) with all the links and [a page to see all the newsletters](https://devrel.wearedevelopers.com/devdigest2024/data.html) and try each link to see just how many are 404 by now.
+
+On the top of the page we have a barchart showing all the newsletters and which have the most links. 
+
+![screen recording of the interactive bar chart in action](barchart.gif)
+
+What we want you to do now is re-create this in ASCII. 
+
 You get a [JSON dataset](https://puzzles.code100.dev/puzzles/dev-digest-2024/newsletterarchive2024.json) with the different editions of the newsletter and the links in each:
 
 ```json
