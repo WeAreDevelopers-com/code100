@@ -1,5 +1,5 @@
 {
-    "total": 2042,
+    "total": 2081,
     "97": {
         "title": "Dev Digest #97: Node your average newsletter",
         "links": [
@@ -2339,6 +2339,50 @@
             "blackentropy.com\/the-quiet-quitting-myth-is-toxic-for-tech\/",
             "newsletter.getdx.com\/p\/factors-contributing-to-bad-developer-days",
             "www.developing.dev\/p\/why-leetcode-is-so-popular"
+        ]
+    },
+    "147": {
+        "title": "147: Free Copilot! Panel: AI and devs! RTO is bad! Pi plays!",
+        "links": [
+            "youtu.be\/bPASGaQQcdc",
+            "www.buzzsprout.com\/1863461",
+            "github.blog\/news-insights\/product-news\/github-copilot-in-vscode-free\/",
+            "arstechnica.com\/ai\/2024\/12\/openais-api-users-get-full-access-to-the-new-o1-model\/",
+            "www.raymondcamden.com\/2024\/12\/03\/using-transformersjs-for-ai-in-the-browser",
+            "www.raymondcamden.com\/2024\/12\/18\/summarizing-with-transformersjs",
+            "bg.addy.ie\/",
+            "www.youtube.com\/watch?v=tF70o1Q8VkM&list=PLNYkxOF6rcIAEVKJ98bDkQRkwvO4grhnt",
+            "github.com\/MicrosoftDocs\/WSL\/pull\/2021",
+            "www.worldlabs.ai\/blog",
+            "towardsdatascience.com\/how-nightshade-works-b1ae14ae76c3",
+            "www.oneusefulthing.org\/p\/15-times-to-use-ai-and-5-not-to",
+            "thehackernews.com\/2024\/12\/390000-wordpress-credentials-stolen-via.html",
+            "securitylab.amnesty.org\/latest\/2024\/12\/serbia-a-digital-prison-spyware-and-cellebrite-used-on-journalists-and-activists\/",
+            "www.businessinsider.com\/russia-tested-cutting-off-internet-access-report-kremlin-runet-2024-12",
+            "www.tomshardware.com\/software\/windows\/microsoft-recall-screenshots-credit-cards-and-social-security-numbers-even-with-the-sensitive-information-filter-enabled",
+            "www.youtube.com\/playlist?list=PLdq8VB0hSfcYjWMBLrItQTNSbhXZ-jElD",
+            "douglascrockfordisnotyourdad.technomancy.us\/",
+            "stripe.com\/blog\/secret-life-of-dns",
+            "jvns.ca\/blog\/2024\/11\/26\/terminal-rules\/",
+            "simonwillison.net\/2024\/Nov\/27\/storing-times-for-human-events\/",
+            "github.com\/vercel\/fun",
+            "chromewebstore.google.com\/detail\/typescript-console\/jkanoakidjoklcefakbdnnhgdenddppg",
+            "marketplace.visualstudio.com\/items?itemName=abdelhakakermi.cursorchat-downloader",
+            "github.com\/microsoft\/markitdown",
+            "www.pcgamer.com\/games\/rpg\/the-mathematical-constant-of-pi-is-playing-pokemon-on-twitchafter-25000-hours-its-curbstomped-two-children-and-power-levelled-its-starter-but-is-yet-to-escape-the-first-town\/",
+            "www.youtube.com\/watch?v=u785lGzVSTo",
+            "www.youtube.com\/watch?v=_ZSFRWJCUY4",
+            "anvaka.github.io\/map-of-github\/",
+            "thegamehosting.site\/scroller\/",
+            "www.joanwestenberg.com\/modern-work-fucking-sucks\/",
+            "www.cia.gov\/static\/5c875f3ec660e092cf893f60b4a288df\/SimpleSabotage.pdf",
+            "specificsuggestions.com\/share\/EN\/7531.html",
+            "read.engineerscodex.com\/p\/simple-software-engineering-habits",
+            "www.ft.com\/content\/cd08b45d-12dc-447e-bd59-1c366a7e6396?accessToken=zwAGKV9bYHFYkdPNCLRdEtxEftO9WRw2an5jlg.MEUCIBLPOpSM78Av9wRV5ZiC1eCLREw6Af85BOagHQbkW5pOAiEA2hvnDJdXGSJEU4IMPUUx_qRepv-ymGg3LXbJ6RwfM4g&sharetype=gift&token=56a62062-81f0-4255-87ec-d021c2ba527b",
+            "www.bleepingcomputer.com\/news\/security\/ftc-warns-of-online-task-job-scams-hooking-victims-like-gambling\/",
+            "www.forbes.com\/sites\/maryroeloffs\/2024\/05\/02\/almost-65000-job-cuts-were-announced-in-april-and-ai-was-blamed-for-the-most-losses-ever\/",
+            "arstechnica.com\/tech-policy\/2024\/12\/companies-issuing-rto-mandates-lose-their-best-talent-study\/",
+            "cdn.arstechnica.net\/wp-content\/uploads\/2024\/12\/5031481.pdf"
         ]
     }
 }
