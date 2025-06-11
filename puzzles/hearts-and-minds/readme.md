@@ -10,3 +10,5 @@ And find out the following details:
 - "straight" means they point fully up, down, left or right at a straight angle
 - How many minds 🧠 are on the left side of the bunch?
 - How many hearts ❤️ are on the right side of the bunch?
+
+* [Submit your solution](https://share.hsforms.com/112g51PxHS6mRE9oxgcxdHg2a0i0) to get a chance to be on stage at WeAreDevelopers World Congress 2025!
