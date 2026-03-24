@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .charts {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .chart {
+            background-color: #eee;
+            display: relative;
+            font-size: .8em;
+        }
+        .chart li {
+            gap: .5em;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            background-color: #eee;
+            transition: 400ms;
+            position: relative;
+            top:0;
+            left:0;
+            margin: 0;
+            padding: 0;
+            transform: rotate(0deg);
+        }
+        h2 {
+            margin: 0;
+             padding: .2em .5em;
+             color: #333;
+             background-color: #fff;
+             font-size: 1em;
+             border-bottom: 2px solid #4caf50;  
+        }
+        .item {
+            display: inline-block;
+            flex: 1;
+        }
+        .bar {
+            flex: 1;
+        }
+        .chart-data {
+            display: relative;
+            list-style: none;
+            padding: 0;
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+        }
+        .value {
+            display: inline-block;
+            height: 1.5em;
+            align-self: self-start;
+            background-color: #4caf50;
+        }
+        body {
+            height: 100vh;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            vertical-align: middle;
+            padding: 20px;
+            justify-content: center;
+        }
+        #buttons {
+            position: absolute;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="charts">
+    </div>
+    <script>
+        const data = {
+            'Languages': ['JavaScript', 'Python', 'Java', 'C#', 'Go', 'Swift'],
+            'Tools': ['VS Code', 'GitHub', 'Docker', 'Jenkins', 'Kubernetes', 'AWS', 'Azure'],
+            'Categories': ['Frontend', 'Backend', 'Full Stack', 'DevOps', 'Data Science', 'Mobile', 'Game'],
+            'AI topics' : ['ML', 'DL', 'NLP', 'MCP', 'genAI', 'AI Ethics']
+        };
+        const charts = document.querySelectorAll('.charts');
+        for(let d in data){ 
+            const chart = document.createElement('div');
+            chart.classList.add('chart');
+            chart.innerHTML = `
+                <h2>${d}</h2>
+                <ul class="chart-data">
+                    ${data[d].map(value => {
+                        let r = Math.floor(Math.random() * 80) + 10; 
+                        return `<li>
+                            <span class="item">${value}</span>
+                            <span class="bar"><span class="value" data-width="${r}" style="width:${r}px"></span></span>
+                        </li>`;
+                    }).join('')}
+                </ul>
+            `;
+            charts[0].appendChild(chart);
+        };
+        const boom = () => {
+            const c = document.querySelector('.charts');
+            const items = document.querySelectorAll('.chart li');
+            items.forEach(item => {
+                let s = '';
+                let scale = Math.random() + 0.5;
+                let rot = Math.floor(Math.random() * 90);
+                if (rot === 45) {
+                    rot++;
+                }
+                let x = Math.floor(Math.random() * 200) - 100;
+                let y = Math.floor(Math.random() * 200) - 100;
+                s += 'transform: translate('+x+'px,'+y+'px) rotate(' + rot + 'deg)';
+                s +='scale('+ scale +');';
+                s += 'transition:all 1s ease;';
+                item.style = s;
+                item.dataset.scale = scale;
+                item.dataset.rotation = rot;
+            });
+        }
+        window.setInterval(boom, 3000);
+    </script>    
+</body>
+</html>
