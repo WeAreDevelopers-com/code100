@@ -39,3 +39,5 @@ Averages:
 - Categories: 78
 - AI topics: 12
 ```
+
+Do you hacve your results? Then why not [apply as a Challenger for the CODE100 in July](https://share.hsforms.com/1Zo4RUx9cTGqbHkq34E-0hQ2a0i0)?
